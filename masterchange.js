@@ -1,1 +1,0 @@
-var practicepull = 2;
