@@ -1,14 +1,25 @@
 <!DOCTYPE html>
-<html lang="">
-<head>
+<html ng-app="myApp">
+  <head>
     <meta charset="utf-8">
-    <script type="text/javascript" src="//d3js.org/d3.v3.min.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
-</head>
+    <!-- <link rel="stylesheet" href="styles/style.css"> -->
+  </head>
+  <body>
 
-<body>
-    <p>Hello!</p>
-</body>
-    <script type="javascript" src="d3practice.js"></script>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
+    <script type="javascript" src="./js/app.js"></script>
+    <script src="../js/app.js"></script>
+
+<!-- ///Our JS Files/// -->
+    <script type="javascript" src="./js/controllers/adminCtrl.js"></script>
+    <script type="javascript" src="./js/services/adminSvc.js"></script>
+    <script type="javascript" src="./js/controllers/financeCtrl.js"></script>
+    <script type="javascript" src="./js/services/financeSvc.js"></script>
+    <script type="javascript" src="./js/controllers/studentCtrl.js"></script>
+    <script type="javascript" src="./js/services/studentSvc.js"></script>
+  </body>
 </html>
