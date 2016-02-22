@@ -13,7 +13,7 @@ angular.module('myApp', ['ui.router'])
     .state('finance', {
       url: '/finance',
       templateUrl: './js/views/financeView.html',
-      // controller: 'financeCtrl'
+      controller: 'financeCtrl'
     })
   .state('admin', {
     url: '/admin',

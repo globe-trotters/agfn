@@ -9,6 +9,7 @@ var session = require('express-session');
 //////files///////
 var passport = require('./services/passport.js');
 var userCtrl = require('./controllers/userCtrl.js');
+var financeCtrl = require('./controllers/financeCtrl.js');
 var config = require('./config.js');
 
 
@@ -66,7 +67,11 @@ app.get('/api/logout', function(req, res, next) {
   req.logout();
   return res.status(200).send("logged out");
 });
-
+/////////FINANCIALS/////////
+app.post('/api/finance', financeCtrl.create);
+app.get('/api/finance', financeCtrl.read);
+app.put('/api/finance/:id', financeCtrl.update);
+app.delete('/api/finance/:id', financeCtrl.delete);
 
 
 
