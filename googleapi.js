@@ -1,5 +1,5 @@
 // <!-- GOOGLE MAPS API IN INDEX.HTML-->
-  //  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAtAP_a3NvJ5NdIfNKXs_wgXaept708HFY&libraries=places"></script>
+  //  <script src="https://maps.googleapis.com/maps/api/js?KEY"></script>
 //geordyns API Key
 // <address-search address-data="newStudentObj.addressData"></address-search>
 
