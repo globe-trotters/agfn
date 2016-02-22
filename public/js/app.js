@@ -32,7 +32,7 @@ angular.module('myApp', ['ui.router'])
             if (res.status != 200) {
               console.log('brack');
               alert('Unauthorized');
-              $state.go('home');
+              $state.go('login');
 
             } else {
               return res.data;
@@ -40,7 +40,7 @@ angular.module('myApp', ['ui.router'])
           }, function(err) {
             console.log('brack');
             alert('Unauthorized');
-            $state.go('home');
+            $state.go('login');
 
           });
       }
