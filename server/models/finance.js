@@ -2,7 +2,7 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var Finance = Schema({
-    title:
+    title: {type: String},
     tuition: {type: String},
     housing: {type: String},
     expenses: {type: String},
