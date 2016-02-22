@@ -1,45 +1,50 @@
 angular.module('myApp', ['ui.router'])
 
-.config(function($stateProvider, $urlRouterProvider) {
+  .config(function($stateProvider, $urlRouterProvider) {
 
 
   $stateProvider
   ///////USER VIEWS///////
     .state('map', {
       url: '/map',
-      templateUrl: './js/views/mapView.html',
+      templateUrl: './js/views/mapView.html'
       // controller: 'mapCtrl',
     })
     .state('finance', {
       url: '/finance',
-      templateUrl: './js/views/financeView.html',
+      templateUrl: './js/views/financeView.html'
       // controller: 'financeCtrl'
+    })
+    .state('login', {
+      url: '/login',
+      templateUrl: './js/views/loginView.html',
+      controller: 'loginCtrl'
     })
   .state('admin', {
     url: '/admin',
     templateUrl: './js/views/adminView.html',
-    // controller: 'adminCtrl',
+    controller: 'adminCtrl',
 
-    // resolve: {
-    //   user: function($state, loginService) {
-    //     return loginService.getCurrentUser()
-    //       .then(function(res) {
-    //         if (res.status != 200) {
-    //           console.log('brack');
-    //           alert('Unauthorized');
-    //           $state.go('home');
-    //
-    //         } else {
-    //           return res.data;
-    //         }
-    //       }, function(err) {
-    //         console.log('brack');
-    //         alert('Unauthorized');
-    //         $state.go('home');
-    //
-    //       });
-    //   }
-    // }
+    resolve: {
+      user: function($state, loginService) {
+        return loginService.getCurrentUser()
+          .then(function(res) {
+            if (res.status != 200) {
+              console.log('brack');
+              alert('Unauthorized');
+              $state.go('home');
+
+            } else {
+              return res.data;
+            }
+          }, function(err) {
+            console.log('brack');
+            alert('Unauthorized');
+            $state.go('home');
+
+          });
+      }
+    }
   });
   $urlRouterProvider.otherwise('/map');
 
