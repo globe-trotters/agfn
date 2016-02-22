@@ -14,7 +14,14 @@ angular.module('myApp')
       return $http({
         method: 'POST',
         url: '/api/finance',
-        data: {}
+        data: {
+          title: newFinance.title,
+          tuition: newFinance.tuition,
+          housing: newFinance.housing,
+          expenses: newFinance.expenses,
+          totalCost: newFinance.totalCost,
+          salary: newFinance.salary
+        }
       });
     };
 
@@ -29,7 +36,15 @@ angular.module('myApp')
       return $http({
         method: 'PUT',
         url: '/api/finance/' + id,
-        data: {}
+        data: {
+          title: editFinance.title,
+          tuition: editFinance.tuition,
+          housing: editFinance.housing,
+          expenses: editFinance.expenses,
+          totalCost: editFinance.totalCost,
+          salary: editFinance.salary
+        }
+
       });
     };
 
