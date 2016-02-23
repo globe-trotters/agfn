@@ -1,4 +1,4 @@
-angular.module("myApp").controller("housingGraphCtrl", function($scope, financeSvc) {
+angular.module("myApp").controller("housingGraphCtrl", function($scope) {
     
     var margin = {top: 20, right: 55, bottom: 30, left: 40},
         width  = 1000 - margin.left - margin.right,
