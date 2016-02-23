@@ -10,6 +10,7 @@ var session = require('express-session');
 var passport = require('./services/passport.js');
 var userCtrl = require('./controllers/userCtrl.js');
 var config = require('./config.js');
+var cohortCtrl = require('./controllers/cohortCtrl.js');
 
 
 
@@ -67,7 +68,10 @@ app.get('/api/logout', function(req, res, next) {
   return res.status(200).send("logged out");
 });
 
-
+//cohort//
+app.post('/api/cohort', cohortCtrl.addCohort);
+app.get('/api/cohort', cohortCtrl.retreive);
+app.delete('/api/cohort/:id', cohortCtrl.remove);
 
 
 
