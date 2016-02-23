@@ -2,28 +2,46 @@
 
   <button ng-click="logout()">logout</button>
 
-<center><h1>Add New Cohort Data</h1></center>
+  <center>
+    <h1>Add New Cohort Data</h1></center>
 
-<input placeholder="DM#" ng-model="newCohort.title"><br/>
-<input placeholder="location" ng-model="newCohort.location"><br/>
-<input type="date" placeholder="Start Date" ng-model="newCohort.startBootcamp"><br/>
-<input type="date" placeholder="End Date" ng-model="newCohort.endBootcamp"><br/>
-<hr/>
+  <input class="typeInput" placeholder="DM#" ng-model="newCohort.title">
+  <br/>
+  <input class="typeInput" placeholder="location" ng-model="newCohort.location">
+  <br/>
+  <input class="typeInput" type="date" placeholder="Start Date" ng-model="newCohort.startBootcamp">
+  <br/>
+  <input class="typeInput" type="date" placeholder="End Date" ng-model="newCohort.endBootcamp">
+  <br/>
 
-<!-- ///dropdown box for cohort ref(newStudent.cohort)/// -->
-<!-- <input placeholder="Student Name" ng-model="newStudent.name[0]"><br/>
-<input placeholder="Previous Location Before DevMountain?" ng-model="newStudent.home"><br/>
-<input placeholder="Location After DevMountain?" ng-model="newStudent.endLocation"><br/>
-<input placeholder="Is This Student Employed?" ng-model="newStudent.job"><br/> -->
+  <center>
+    <button class="adminButton" ng-click="submitNewCohort( newCohort )" type="submit">
+      Submit New Cohort
+    </button>
+  </center>
+  <hr>
 
+  <center>
+    <h1>Add New Student(s)</h1></center>
+  <!-- ///dropdown box for cohort ref(newStudent.cohort)/// ??? -->
+  <input class="typeInput" placeholder="Student Name" ng-model="newStudent.name">
+  <br/>
+  <input class="typeInput" placeholder="Previous Location Before DevMountain?" ng-model="newStudent.home">
+  <br/>
+  <input class="typeInput" placeholder="Location After DevMountain?" ng-model="newStudent.endLocation">
+  <br/>
+  <center>
+    <strong>Is This Student Employed?</strong> <select ng-model="newStudent.job">
+    <option value="true">Yep</option>
+    <option value="false">Nope</option>
+  </select>
 
+  <br/>
+  <br/>
 
-
-
-
-
-<center><button ng-click="submitNewData( newCohort )" type="submit">
+<button class="adminButton" ng-click="submitNewStudent( newStudent )" type="submit">
 Submit New Cohort
-</button></center>
+</button>
+</center>
 
 </div>

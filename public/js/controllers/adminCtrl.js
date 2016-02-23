@@ -7,11 +7,19 @@ angular.module('myApp').controller('adminCtrl', function ($scope, $state, loginS
         });
       };
 
-      $scope.submitNewData = function(newCohort) {
-        adminService.submitNewData(newCohort)
+      $scope.submitNewCohort = function(newCohort) {
+        adminService.submitNewCohort(newCohort)
         .then( function(res){
           alert('new data submitted!');
           $scope.newCohort = null;
+        });
+      };
+
+      $scope.submitNewStudent = function(newStudent) {
+        adminService.submitNewStudent(newStudent)
+        .then( function(res){
+          alert('new data submitted!');
+          $scope.newStudent = null;
         });
       };
 

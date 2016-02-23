@@ -3,7 +3,16 @@
   margin: auto;
   padding: 5%;
 }
-.adminStyle input {
+.adminStyle hr {
+  display: block;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: inset;
+  border-width: 2px;
+}
+.typeInput {
   margin: auto;
   width: 99%;
   margin-bottom: 10px;
@@ -11,8 +20,8 @@
   font-size: 1.1em;
   outline-color: rgba(51, 35, 85, 0.83);
 }
-.adminStyle button {
-  font-size: 1.2em;
+.adminButton {
+  font-size: 1em;
   font-family: sans-serif;
   color: #090311;
   text-shadow: 1px 1px #f9f9f9;
@@ -26,7 +35,6 @@
   margin: 0 0 1px;
   outline: 0;
 }
-
-.adminStyle button:hover {
+.adminButton:hover {
   background: rgba(51, 35, 85, 0.31);
 }
