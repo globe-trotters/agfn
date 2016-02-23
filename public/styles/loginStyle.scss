@@ -1,0 +1,31 @@
+.loginStyle {
+  width: 50%;
+  margin: auto;
+  padding: 5%;
+  input {
+    width: 100%;
+    margin-bottom: 10px;
+    height: 5%;
+    padding: 10px;
+    font-size: 1.1em;
+    outline-color: rgba(51, 35, 85, 0.83);
+  }
+  button {
+    font-size: 1.2em;
+    font-family: sans-serif;
+    color: #090311;
+    text-shadow: 1px 1px #f9f9f9;
+    text-decoration: none;
+    display: inline-block;
+    padding: 0.5em;
+    border-radius: 0.25em;
+    background: #f8f8f8;
+    border: 1px solid #ccc;
+    position: relative;
+    margin: 0 0 1px;
+    outline: 0;
+  }
+  ​ button:hover {
+    background: rgba(51, 35, 85, 0.31);
+  }
+}
