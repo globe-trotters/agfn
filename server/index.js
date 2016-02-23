@@ -12,6 +12,7 @@ var userCtrl = require('./controllers/userCtrl.js');
 var financeCtrl = require('./controllers/financeCtrl.js');
 var config = require('./config.js');
 var cohortCtrl = require('./controllers/cohortCtrl.js');
+var studentCtrl = require('./controllers/studentCtrl.js');
 
 
 
@@ -81,6 +82,11 @@ app.delete('/api/finance/:id', financeCtrl.delete);
 app.post('/api/cohort', cohortCtrl.addCohort);
 app.get('/api/cohort', cohortCtrl.retreive);
 app.delete('/api/cohort/:id', cohortCtrl.remove);
+
+//student//
+app.post('/api/student', studentCtrl.addStudent);
+app.get('/api/student', studentCtrl.retreive);
+app.delete('/api/student/:id', studentCtrl.remove);
 
 
 
