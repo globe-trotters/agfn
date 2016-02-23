@@ -2,23 +2,38 @@
 <html ng-app="myApp">
   <head>
     <meta charset="utf-8">
-    <title></title>
-    <!-- <link rel="stylesheet" href="styles/style.css"> -->
+    <title>Globe-Trotters</title>
+    <link rel="stylesheet" href="./styles/loginStyle.css">
+    <link rel="stylesheet" href="styles/mainStyle.css">
+    <!-- <link rel="stylesheet" href="styles/loginStyle.css"> -->
+    <!-- <link rel="stylesheet" href="styles/loginStyle.css"> -->
+    <!-- <link rel="stylesheet" href="styles/loginStyle.css"> -->
+
   </head>
+
   <body>
 
-  
+<div class="container">
 
+<ui-view></ui-view>
+
+
+</div>
+
+<!-- ////CDNS//// -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.18/angular-ui-router.js"></script>
     <script src="./js/app.js"></script>
 
 <!-- ///Our JS Files/// -->
-    <script src="./js/controllers/adminCtrl.js"></script>
-    <script src="./js/services/adminSvc.js"></script>
+    <script src="./js/controllers/mapCtrl.js"></script>
+    <script src="./js/services/mapSvc.js"></script>
     <script src="./js/controllers/financeCtrl.js"></script>
     <script src="./js/services/financeSvc.js"></script>
-    <script src="./js/controllers/studentCtrl.js"></script>
-    <script src="./js/services/studentSvc.js"></script>
+    <script src="./js/controllers/adminCtrl.js"></script>
+    <script src="./js/services/adminSvc.js"></script>
+    <script src="./js/controllers/loginCtrl.js"></script>
+    <script src="./js/services/loginSvc.js"></script>
+
   </body>
 </html>
