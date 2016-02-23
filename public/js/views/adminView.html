@@ -1,3 +1,29 @@
-<button ng-click="logout()">logout</button>
+<div class="adminStyle">
 
-<h1>Admin cohort and student inputs here</h1>
+  <button ng-click="logout()">logout</button>
+
+<center><h1>Add New Cohort Data</h1></center>
+
+<input placeholder="DM#" ng-model="newCohort.title"><br/>
+<input placeholder="location" ng-model="newCohort.location"><br/>
+<input type="date" placeholder="Start Date" ng-model="newCohort.startBootcamp"><br/>
+<input type="date" placeholder="End Date" ng-model="newCohort.endBootcamp"><br/>
+<hr/>
+
+<!-- ///dropdown box for cohort ref(newStudent.cohort)/// -->
+<!-- <input placeholder="Student Name" ng-model="newStudent.name[0]"><br/>
+<input placeholder="Previous Location Before DevMountain?" ng-model="newStudent.home"><br/>
+<input placeholder="Location After DevMountain?" ng-model="newStudent.endLocation"><br/>
+<input placeholder="Is This Student Employed?" ng-model="newStudent.job"><br/> -->
+
+
+
+
+
+
+
+<center><button ng-click="submitNewData( newCohort )" type="submit">
+Submit New Cohort
+</button></center>
+
+</div>
