@@ -2,17 +2,22 @@
   width: 50%;
   margin: auto;
   padding: 5%;
-
-    input {
+  hr {
+    display: block;
+    margin: 1em auto;
+    border-style: inset;
+    border-width: 2px;
+  }
+  .typeInput {
     margin: auto;
     width: 99%;
     margin-bottom: 10px;
     height: 5%;
     font-size: 1.1em;
     outline-color: rgba(51, 35, 85, 0.83);
-}
-    button {
-    font-size: 1.2em;
+  }
+  .adminButton {
+    font-size: 1em;
     font-family: sans-serif;
     color: #090311;
     text-shadow: 1px 1px #f9f9f9;
@@ -25,9 +30,8 @@
     position: relative;
     margin: 0 0 1px;
     outline: 0;
-}
-
-    button:hover {
+  }
+  .adminButton:hover {
     background: rgba(51, 35, 85, 0.31);
-}
+  }
 }
