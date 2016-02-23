@@ -14,6 +14,8 @@ angular.module('myApp', ['ui.router'])
       url: '/finance',
       templateUrl: './js/views/financeView.html',
        controller: 'housingGraphCtrl'
+      //controller: 'financeCtrl'
+
     })
     .state('login', {
       url: '/login',
