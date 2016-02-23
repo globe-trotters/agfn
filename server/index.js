@@ -9,7 +9,7 @@ var session = require('express-session');
 //////files///////
 var passport = require('./services/passport.js');
 var userCtrl = require('./controllers/userCtrl.js');
-var financeCtrl = require('./controllers/financeCtrl.js');
+var financeCtrl = require('./controllers/financeCtrl.js'); 
 var config = require('./config.js');
 
 

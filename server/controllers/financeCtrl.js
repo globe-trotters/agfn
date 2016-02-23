@@ -1,4 +1,4 @@
-var Finance = require('../models/finance.js');
+var Finance = require('../models/finance.js'); 
 
 module.exports = {
   create: function(req, res) {
