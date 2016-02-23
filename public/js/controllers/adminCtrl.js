@@ -1,4 +1,4 @@
-angular.module('myApp').controller('adminCtrl', function ($scope, $state, loginService) {
+angular.module('myApp').controller('adminCtrl', function ($scope, $state, loginService, adminService) {
 
       $scope.logout = function() {
         loginService.logout()
@@ -7,6 +7,13 @@ angular.module('myApp').controller('adminCtrl', function ($scope, $state, loginS
         });
       };
 
+      $scope.submitNewData = function(newCohort) {
+        adminService.submitNewData(newCohort)
+        .then( function(res){
+          alert('new data submitted!');
+          $scope.newCohort = null;
+        });
+      };
 
 
 });

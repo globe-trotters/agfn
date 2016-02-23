@@ -9,8 +9,9 @@ var session = require('express-session');
 //////files///////
 var passport = require('./services/passport.js');
 var userCtrl = require('./controllers/userCtrl.js');
-var financeCtrl = require('./controllers/financeCtrl.js'); 
+var financeCtrl = require('./controllers/financeCtrl.js');
 var config = require('./config.js');
+var cohortCtrl = require('./controllers/cohortCtrl.js');
 
 
 
@@ -67,11 +68,19 @@ app.get('/api/logout', function(req, res, next) {
   req.logout();
   return res.status(200).send("logged out");
 });
+
 /////////FINANCIALS/////////
 app.post('/api/finance', financeCtrl.create);
 app.get('/api/finance', financeCtrl.read);
 app.put('/api/finance/:id', financeCtrl.update);
 app.delete('/api/finance/:id', financeCtrl.delete);
+
+
+
+//cohort//
+app.post('/api/cohort', cohortCtrl.addCohort);
+app.get('/api/cohort', cohortCtrl.retreive);
+app.delete('/api/cohort/:id', cohortCtrl.remove);
 
 
 
