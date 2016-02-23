@@ -1,110 +1,75 @@
-angular.module("myApp").controller("housingLivingCtrl", function($scope, financeSvc) {
+angular.module("myApp").controller("housingGraphCtrl", function($scope, financeSvc) {
     
-    showGraph();
+    var margin = {top: 20, right: 55, bottom: 30, left: 40},
+        width  = 1000 - margin.left - margin.right,
+        height = 500  - margin.top  - margin.bottom;
+    var x = d3.scale.ordinal()
+    .rangeRoundBands([0, width], .1);
+    var y = d3.scale.linear()
+    .rangeRound([height, 0]);
+    var color = d3.scale.ordinal()
+    .range(["#001c9c","#101b4d","#475003","#9c8305","#d3c47c"]);
+    var svg = d3.select("body").append("svg")
+    .attr("width",  width  + margin.left + margin.right)
+    .attr("height", height + margin.top  + margin.bottom)
+    .append("g")
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
     
-    function showGraph() {
-        
-        var margin = {
-            top: 20,
-            right: 20,
-            bottom: 30,
-            left: 40
-        },
-            width = 1000 - margin.left - margin.right,
-            height = 500 - margin.top - margin.bottom;
-        
-        var x0 = d3.scale.ordinal()
-            .rangeRoundsBands([0, width], .1);
-        var x1 = d3.scale.ordinal();
-        
-        var y = d3.scale.linear()
-            .range([height, 0]);
-        
-        var xAxis = d3.svg.axis()
-            .scale(x0)
-            .orient('bottom');
-        var yAxis = d3.svg.axis()
-            .scale(y)
-            .orient('left')
-            .tickFormat(d3.format('.2s'));
-        
-        var svg = d3.select('#housingGraph').append('svg')
-            .attr('width', width + margin.left + margin.right)
-            .attr('height', height + margin.top + margin.bottom)
-            .append('g')
-            .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-        
-        d3.json('graphData.json', function(err, data) {
-            if (err) {
-                throw err;
-            }
-            var places = d3.keys(data[0]).filter(function(key) {
-                return key !== 'place';
-            });
-            
-            data.forEach(function(d) {
-                d.expenses = places.map(function(place) {
-                    return {place: place, value: +d[place]};
-                });
-            });
-            
-            x0.domain(data.map(function(d) {
-                return d.place;
-            }))
-            x1.domain(places).rangeRoundBands([0, x0.rangeBand()]);
-            y.domain([0, d3.max(data), function(d) {
-                return d3.max(d.expenses, function(d) {
-                    return d.value;
-                });
-            }]);
-            svg.append("g")
-                .attr("class", "x axis")
-                .attr("transform", "translate(0," + height + ")")
-                .call(xAxis);
+  d3.csv("graphData.csv", function(err, data) {
+      var labelVar = 'place';
+      var varNames = d3.keys(data[0])
+        .filter(function(key) {
+            return key !== labelVar;
+        });
+      
+      color.domain(varNames);
+      
+      data.forEach(function(d) {
+          var y0 = 0;
+          d.mapping = varNames.map(function(name) {
+              return {
+                  name: name,
+                  label: d[labelVar],
+                  y0: y0,
+                  y1: y0 += +d[name]
+              };
+          });
+          d.total = d.mapping[d.mapping.length -1].y1;
+      });
+      
+      console.log("data: ", data);
+      
+      x.domain(data.map(function(d) {
+          return d.quarter;
+      }))
+      y.domain([0, d3.max(data, function(d) {
+          return d.total;
+      })]);
+      
+      var selection = svg.selectAll(".series")
+        .data(data)
+      .enter().append("g")
+        .attr("class", "series")
+        .attr("transform", function(d) {
+            return "translate(" + x(d.quarter) + ",0";
+        });
+      
+      selection.selectAll("rect")
+        .data(function(d) {
+          return d.mapping
+      })
+      .enter().append("rect")
+      .attr("width", x.rangeBand())
+      .attr("y", function(d) {
+          return y(d.y1);
+      })
+      .attr("height", function(d) {
+          return y(d.y0) - y(d.y1);
+      })
+      .style("fill", function(d) {
+          return color(d.name);
+      })
+      .style("stroke", "grey");
+  })
 
-            svg.append("g")
-                .attr("class", "y axis")
-                .call(yAxis)
-                .append("text")
-                .attr("transform", "rotate(-90)")
-                .attr("y", 6)
-                .attr("dy", ".71em")
-                .style("text-anchor", "end")
-                .text("Population");
-
-            var state = svg.selectAll(".state")
-            .data(data)
-            .enter().append("g")
-            .attr("class", "state")
-            .attr("transform", function(d) { return "translate(" + x0(d.State) + ",0)"; });
-
-            state.selectAll("rect")
-                .data(function(d) { return d.expenses; })
-                .enter().append("rect")
-                .attr("width", x1.rangeBand())
-                .attr("x", function(d) { return x1(d.name); })
-                .attr("y", function(d) { return y(d.value); })
-                .attr("height", function(d) { return height - y(d.value); })
-                .style("fill", function(d) { return color(d.name); });
-
-            var legend = svg.selectAll(".legend")
-            .data(places.slice().reverse())
-            .enter().append("g")
-            .attr("class", "legend")
-            .attr("transform", function(d, i) { return "translate(0," + i * 20 + ")"; });
-
-            legend.append("rect")
-                .attr("x", width - 18)
-                .attr("width", 18)
-                .attr("height", 18)
-                .style("fill", color);
-
-            legend.append("text")
-                .attr("x", width - 24)
-                .attr("y", 9)
-                .attr("dy", ".35em")
-                .style("text-anchor", "end")
-                .text(function(d) { return d; });
-        })
-    }
 })
