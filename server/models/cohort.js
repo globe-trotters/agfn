@@ -7,7 +7,7 @@ var cohortSchema = Schema({
   location: { type: String, required: 'true' },
   startBootcamp: { type: Date, required: 'true' },
   endBootcamp: { type: Date, required: 'true' }
-  // students: { type: String }
+  // students: { ref }
 });
 
 

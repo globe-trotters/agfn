@@ -1,7 +1,7 @@
 angular.module('myApp').service('adminService', function($http, $state) {
 
 
-    this.submitNewData = function(newCohort) {
+    this.submitNewCohort = function(newCohort) {
       return $http({
         method: 'POST',
         url: '/api/cohort',
@@ -15,6 +15,23 @@ angular.module('myApp').service('adminService', function($http, $state) {
         console.log('cohort posted');
       });
     };
+
+
+    this.submitNewStudent = function(newStudent) {
+      return $http({
+        method: 'POST',
+        url: '/api/student',
+        data: {
+          name: newStudent.name,
+          home: newStudent.home,
+          endLocation: newStudent.endLocation,
+          job: newStudent.job
+        }
+      }).then(function(res) {
+        console.log('student posted');
+      });
+    };
+
 
 
   });
