@@ -87,11 +87,11 @@ angular.module('myApp', ['ui.router'])
 
 .directive('housingGraph', function() {
     return {
-        templateUrl: './js/directives/location/financeView.html',
+        templateUrl: './js/directives/finance/housingGraphTmpl.html',
         restrict: 'E',
         scope: {
             afterData: '='
         },
         controller: 'housingGraphCtrl'
-    };   
+    };
 });
