@@ -63,6 +63,7 @@ angular.module('myApp', ['ui.router'])
   };
 })
 
+
 .directive('homeSearch', function() {
   return {
     templateUrl: './js/directives/location/homeLocation.html',
