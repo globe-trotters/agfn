@@ -3,11 +3,11 @@ var Schema = mongoose.Schema;
 
 
 var studentSchema = Schema({
-  name: { type: String },
-  // cohort: {ref},
-  home: { type: String },
-  endLocation: { type: String },
-  job: { type: Boolean },
+  cohort: { type: Schema.Types.ObjectId, ref: 'Cohort', required: 'true'  },
+  name: { type: String,  required: 'true' },
+  home: { type: Object,  required: 'true' },
+  after: { type: Object,  required: 'true' },
+  job: { type: Boolean,  required: 'true' },
 });
 
 
