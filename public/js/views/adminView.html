@@ -5,9 +5,11 @@
   <center>
     <h1>Add New Cohort Data</h1></center>
 
+
   <input class="typeInput" placeholder="DM#" ng-model="newCohort.title">
   <br/>
-  <input class="typeInput" placeholder="location" ng-model="newCohort.location">
+  <cohort-search cohort-data="newCohort.cohortData"></cohort-search>
+  <!-- <input class="typeInput" type="text" placeholder="location" ng-model="newCohort.location"> -->
   <br/>
   <input class="typeInput" type="date" placeholder="Start Date" ng-model="newCohort.startBootcamp">
   <br/>
@@ -24,11 +26,16 @@
   <center>
     <h1>Add New Student(s)</h1></center>
   <!-- ///dropdown box for cohort ref(newStudent.cohort)/// ??? -->
+  <select class="typeInput" ng-options="cohort as cohort.display for cohort in cohorts track by cohort._id" ng-model="newStudent.cohort"></select>
+  </select>
+
   <input class="typeInput" placeholder="Student Name" ng-model="newStudent.name">
   <br/>
-  <input class="typeInput" placeholder="Previous Location Before DevMountain?" ng-model="newStudent.home">
+  <home-search home-data="newStudent.homeData"></home-search>
+  <!-- <input class="typeInput" placeholder="Previous Location Before DevMountain?" ng-model="newStudent.home"> -->
   <br/>
-  <input class="typeInput" placeholder="Location After DevMountain?" ng-model="newStudent.endLocation">
+  <after-search after-data="newStudent.afterData"></after-search>
+  <!-- <input class="typeInput" placeholder="Location After DevMountain?" ng-model="newStudent.endLocation"> -->
   <br/>
   <center>
     <strong>Is This Student Employed?</strong> <select ng-model="newStudent.job">

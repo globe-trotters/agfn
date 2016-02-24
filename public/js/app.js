@@ -1,6 +1,6 @@
 angular.module('myApp', ['ui.router'])
 
-  .config(function($stateProvider, $urlRouterProvider) {
+.config(function($stateProvider, $urlRouterProvider) {
 
 
   $stateProvider
@@ -8,7 +8,7 @@ angular.module('myApp', ['ui.router'])
     .state('map', {
       url: '/map',
       templateUrl: './js/views/mapView.html'
-      // controller: 'mapCtrl',
+        // controller: 'mapCtrl',
     })
     .state('finance', {
       url: '/finance',
@@ -22,41 +22,65 @@ angular.module('myApp', ['ui.router'])
       templateUrl: './js/views/loginView.html',
       controller: 'loginCtrl'
     })
-  .state('admin', {
-    url: '/admin',
-    templateUrl: './js/views/adminView.html',
-    controller: 'adminCtrl',
+    .state('admin', {
+      url: '/admin',
+      templateUrl: './js/views/adminView.html',
+      controller: 'adminCtrl',
 
-    resolve: {
-      user: function($state, loginService) {
-        return loginService.getCurrentUser()
-          .then(function(res) {
-            if (res.status != 200) {
+      resolve: {
+        user: function($state, loginService) {
+          return loginService.getCurrentUser()
+            .then(function(res) {
+              if (res.status != 200) {
+                console.log('brack');
+                alert('Unauthorized');
+                $state.go('login');
+
+              } else {
+                return res.data;
+              }
+            }, function(err) {
               console.log('brack');
               alert('Unauthorized');
               $state.go('login');
 
-            } else {
-              return res.data;
-            }
-          }, function(err) {
-            console.log('brack');
-            alert('Unauthorized');
-            $state.go('login');
-
-          });
+            });
+        }
       }
-    }
-  });
+    });
   $urlRouterProvider.otherwise('/map');
 
-});
+})
 
-// .directive('navDir', function() {
-//     return {
-//       templateUrl: './dirs/navDir.html',
-//       restrict: 'E', //directive can only be used as a full element
-//       //restrict: 'A' restricts attributes
-//       //can also use both 'EA'
-//     };
-//   });
+.directive('cohortSearch', function() {
+  return {
+    templateUrl: './js/directives/location/cohortLocation.html',
+    restrict: 'E',
+    scope: {
+      cohortData: '='
+    },
+    controller: 'cohortSearchCtrl'
+  };
+})
+
+.directive('homeSearch', function() {
+  return {
+    templateUrl: './js/directives/location/homeLocation.html',
+    restrict: 'E',
+    scope: {
+      homeData: '='
+    },
+    controller: 'homeSearchCtrl'
+  };
+})
+
+.directive('afterSearch', function() {
+  return {
+    templateUrl: './js/directives/location/afterLocation.html',
+    restrict: 'E',
+    scope: {
+      afterData: '='
+    },
+    controller: 'afterSearchCtrl'
+  };
+});
