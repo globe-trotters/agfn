@@ -6,7 +6,8 @@ angular.module('myApp').service('adminService', function($http, $state) {
       method: 'POST',
       url: '/api/cohort',
       data: {
-        title: newCohort.title + " - " + newCohort.cohortData.locationString,
+        display: newCohort.title + " - " + newCohort.cohortData.locationString,
+        title: newCohort.title,
         location: newCohort.cohortData,
         startBootcamp: newCohort.startBootcamp,
         endBootcamp: newCohort.endBootcamp
@@ -22,6 +23,7 @@ angular.module('myApp').service('adminService', function($http, $state) {
       method: 'POST',
       url: '/api/student',
       data: {
+        cohort: newStudent.cohort,
         name: newStudent.name,
         home: newStudent.homeData,
         after: newStudent.afterData,

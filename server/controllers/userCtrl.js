@@ -3,13 +3,14 @@ var User = require('../models/user.js');
 module.exports = {
 
 	addUser: function(req, res) {
-    console.log('running');
+    console.log(req.body);
 		new User(req.body).save(function(err, user) {
 			if (err) {
         console.error('error: ', err);
 				res.status(500).send(err);
 			} else {
         console.log('success');
+				console.log(user);
 				res.send(user);
 			}
 		});

@@ -26,7 +26,7 @@
   <center>
     <h1>Add New Student(s)</h1></center>
   <!-- ///dropdown box for cohort ref(newStudent.cohort)/// ??? -->
-  <select class="typeInput" ng-options="cohort as cohort.title for cohort in cohorts track by cohort._id" ng-model="newStudent.cohort"></select>
+  <select class="typeInput" ng-options="cohort as cohort.display for cohort in cohorts track by cohort._id" ng-model="newStudent.cohort"></select>
   </select>
 
   <input class="typeInput" placeholder="Student Name" ng-model="newStudent.name">
