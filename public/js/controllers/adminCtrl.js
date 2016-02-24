@@ -1,5 +1,7 @@
 angular.module('myApp').controller('adminCtrl', function($scope, $state, loginService, adminService) {
 
+$scope.show = 1;
+
   $scope.getCohorts = function() {
     adminService.getCohorts()
     .then(function (res) {
@@ -16,6 +18,7 @@ $scope.getCohorts();
   };
 
   $scope.submitNewCohort = function(newCohort) {
+    console.log("controller", newCohort);
     adminService.submitNewCohort(newCohort)
       .then(function(res) {
         alert('new data submitted!');
@@ -31,5 +34,6 @@ $scope.getCohorts();
         $scope.newStudent = null;
       });
   };
+
 
 });

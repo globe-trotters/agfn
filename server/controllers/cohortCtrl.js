@@ -4,10 +4,11 @@ module.exports = {
 
 
   addCohort: function(req, res) {
-        // console.log('req.query: ', req.query);
+        console.log('req.body: ', req.body);
         var newCohort = new Cohort(req.body);
         newCohort.save(function(err, result) {
           if (err) {
+              console.error('Save Error: ', err);
               return res.status(500).send(err);
           } else {
               res.send(result);

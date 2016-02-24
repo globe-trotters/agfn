@@ -1,4 +1,4 @@
-angular.module('myApp').controller('afterSearchCtrl', function($scope) {
+angular.module('myApp').controller('afterSearchCtrl', function($scope, $element) {
 
     //lets search the entire world
     var bounds = new google.maps.LatLngBounds(
@@ -6,7 +6,7 @@ angular.module('myApp').controller('afterSearchCtrl', function($scope) {
       new google.maps.LatLng(90, 180));
 
     //finds the element that's typed into
-    var input = document.getElementById('after-search-input');
+    var input = $element[0].children[0];
 
     var options = {
       bounds: bounds,

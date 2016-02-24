@@ -3,7 +3,7 @@ var Schema = mongoose.Schema;
 
 
 var studentSchema = Schema({
-  cohort: { type: Schema.Types.ObjectId, ref: 'Cohort', required: 'true'  },
+  cohort: { type: String },
   name: { type: String,  required: 'true' },
   home: { type: Object,  required: 'true' },
   after: { type: Object,  required: 'true' },
