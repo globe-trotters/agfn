@@ -13,8 +13,7 @@ angular.module('myApp', ['ui.router'])
     .state('finance', {
       url: '/finance',
       templateUrl: './js/views/financeView.html',
-       controller: 'housingGraphCtrl'
-      //controller: 'financeCtrl'
+      controller: 'financeCtrl'
 
     })
     .state('login', {
@@ -84,4 +83,15 @@ angular.module('myApp', ['ui.router'])
     },
     controller: 'afterSearchCtrl'
   };
+})
+
+.directive('housingGraph', function() {
+    return {
+        templateUrl: './js/directives/location/financeView.html',
+        restrict: 'E',
+        scope: {
+            afterData: '='
+        },
+        controller: 'afterSearchCtrl'
+    };   
 });

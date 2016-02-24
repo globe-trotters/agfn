@@ -1,75 +1,163 @@
-angular.module("myApp").controller("housingGraphCtrl", function($scope) {
-    
-    var margin = {top: 20, right: 55, bottom: 30, left: 40},
-        width  = 1000 - margin.left - margin.right,
-        height = 500  - margin.top  - margin.bottom;
-    var x = d3.scale.ordinal()
-    .rangeRoundBands([0, width], .1);
-    var y = d3.scale.linear()
-    .rangeRound([height, 0]);
-    var color = d3.scale.ordinal()
-    .range(["#001c9c","#101b4d","#475003","#9c8305","#d3c47c"]);
-    var svg = d3.select("body").append("svg")
-    .attr("width",  width  + margin.left + margin.right)
-    .attr("height", height + margin.top  + margin.bottom)
-    .append("g")
-    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-    
-  d3.csv("graphData.csv", function(err, data) {
-      var labelVar = 'place';
-      var varNames = d3.keys(data[0])
-        .filter(function(key) {
-            return key !== labelVar;
-        });
-      
-      color.domain(varNames);
-      
-      data.forEach(function(d) {
-          var y0 = 0;
-          d.mapping = varNames.map(function(name) {
-              return {
-                  name: name,
-                  label: d[labelVar],
-                  y0: y0,
-                  y1: y0 += +d[name]
-              };
-          });
-          d.total = d.mapping[d.mapping.length -1].y1;
-      });
-      
-      console.log("data: ", data);
-      
-      x.domain(data.map(function(d) {
-          return d.quarter;
-      }))
-      y.domain([0, d3.max(data, function(d) {
-          return d.total;
-      })]);
-      
-      var selection = svg.selectAll(".series")
-        .data(data)
-      .enter().append("g")
-        .attr("class", "series")
-        .attr("transform", function(d) {
-            return "translate(" + x(d.quarter) + ",0";
-        });
-      
-      selection.selectAll("rect")
-        .data(function(d) {
-          return d.mapping
-      })
-      .enter().append("rect")
-      .attr("width", x.rangeBand())
-      .attr("y", function(d) {
-          return y(d.y1);
-      })
-      .attr("height", function(d) {
-          return y(d.y0) - y(d.y1);
-      })
-      .style("fill", function(d) {
-          return color(d.name);
-      })
-      .style("stroke", "grey");
-  })
+angular.module('myApp').controller('housingGraphCtrl', function($scope) {
 
+showChart();
+
+function showChart() {
+
+    var barData = [{
+        'x': 'DevMountain',
+        'y': 300,
+        'z': 900
+    }, {
+        'x': 'Utah',
+        'y': 1200,
+        'z': 900
+    },  {
+        'x': 'New York',
+        'y': 1850,
+        'z': 1000
+    }, {
+        'x': 'San Francisco',
+        'y': 2500,
+        'z': 1200
+    }];
+
+    //Chart Parameters
+    var chart = d3.select('#chart'),
+        margins = {
+            top: 20,
+            right: 20,
+            bottom: 20,
+            left: 80
+        },
+        width = 1000 - margins.left - margins.right,
+        height = 500 - margins.top - margins.bottom,
+        xRange = d3.scale.ordinal().rangeRoundBands([margins.left, width - margins.right], 0.1).domain(barData.map(function (d) {
+            return d.x;
+        })),
+
+        yRange = d3.scale.linear().range([height - margins.top, margins.bottom]).domain([0,3000]),
+
+        xAxis = d3.svg.axis()
+            .scale(xRange)
+            .tickSize(5)
+            .tickSubdivide(true),
+
+        yAxis = d3.svg.axis()
+            .scale(yRange)
+            .tickSize(5)
+            .orient("left")
+            .tickSubdivide(true);
+
+    //Set x-axis
+    chart.append('svg:g')
+        .attr('class', 'x axis')
+        .attr('transform', 'translate(0,' + (height - margins.bottom) + ')')
+        .call(xAxis)
+        .attr('fill', '#ffffff')
+        .append("text")
+        .attr("x", width / 2)
+        .attr("y", height - 400)
+        .style("text-anchor", "middle")
+        .text("Location")
+        .attr('fill', '#ffffff')
+        .style("font-size","34px")
+        .style("font-family","Josefin Slab");
+
+    //Set y-axis
+    chart.append('svg:g')
+        .attr('class', 'y axis')
+        .attr('transform', 'translate(' + (margins.left) + ',0)')
+        .call(yAxis)
+        .attr('fill', '#ffffff')
+        .append("text")
+        .attr("transform", "rotate(-90)")
+        .attr("y", -77)
+        .attr("x",0 - (height / 2))
+        .attr("dy", ".71em")
+        .style("text-anchor", "middle")
+        .text("Cost in $")
+        .attr('fill', '#ffffff')
+        .style("font-size","34px")
+        .style("font-family","Josefin Slab");
+
+    //Show Housing Bars
+    chart.selectAll('rect')
+        .data(barData)
+        .enter()
+        .append('rect')
+        .attr('height', 0)
+        .transition().duration(2000)
+        .attr('x', function(d) {
+        return xRange(d.x)+xRange.rangeBand()/2;
+    })
+        .attr('y', function(d) {
+        return yRange(d.y);
+    })
+        .attr('width', xRange.rangeBand()/2)
+        .attr('height', function (d) {
+        return ((height - margins.bottom) - yRange(d.y));
+    })
+        .attr('fill', '#C1CED4')
+
+    //Show Expenses Bars
+    chart.selectAll('rect2')
+        .data(barData)
+        .enter()
+        .append('rect')
+        .attr('height', 0)
+        .transition().duration(2000)
+        .attr('x', function(d) {
+        return xRange(d.x);
+    })
+        .attr('y', function(d) {
+        return yRange(d.z);
+    })
+        .attr('width', xRange.rangeBand()/2)
+        .attr('height', function (d) {
+        return ((height - margins.bottom) - yRange(d.z));
+    })
+        .attr('fill', '#05A8E6');
+
+    //Legend
+    var colors = ['#05A8E6', '#C1CED4'];
+    var legendData= ['Expenses', 'Housing'];
+
+    var legend = chart.append("g")
+    .attr("class", "legend")
+    .attr("height", 100)
+    .attr("width", 100)
+    .attr('transform', 'translate(-20,30)');
+
+    var legendRect = legend.selectAll('rect').data(colors);
+
+    legendRect.enter()
+        .append("rect")
+        .attr("x", width - 65)
+        .attr("width", 10)
+        .attr("height", 10);
+
+    legendRect
+        .attr("y", function(d, i) {
+        return i * 20;
+    })
+        .style("fill", function(d) {
+        return d;
+    });
+
+    var legendText = legend.selectAll('text').data(legendData);
+
+    legendText.enter()
+        .append("text")
+        .attr("x", width - 45)
+        .attr('fill', '#ffffff');
+
+    legendText
+        .attr("y", function(d, i) {
+        return i * 20 + 9;
+    })
+        .text(function(d) {
+        return d;
+    }); 
+}
 })
