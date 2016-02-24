@@ -6,7 +6,7 @@ angular.module('myApp').service('adminService', function($http, $state) {
       method: 'POST',
       url: '/api/cohort',
       data: {
-        title: newCohort.title,
+        title: newCohort.title + " - " + newCohort.cohortData.locationString,
         location: newCohort.cohortData,
         startBootcamp: newCohort.startBootcamp,
         endBootcamp: newCohort.endBootcamp
@@ -41,6 +41,6 @@ angular.module('myApp').service('adminService', function($http, $state) {
     });
   };
 
-  
+
 
 });

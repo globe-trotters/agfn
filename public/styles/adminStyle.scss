@@ -10,11 +10,14 @@
   }
   .typeInput {
     margin: auto;
-    width: 99%;
+    width: 60%;
     margin-bottom: 10px;
     height: 5%;
     font-size: 1.1em;
     outline-color: rgba(51, 35, 85, 0.83);
+    border:1px solid gray;
+    border-right:0px;
+    outline:none;
   }
   .adminButton {
     font-size: 1em;
