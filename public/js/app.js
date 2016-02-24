@@ -92,6 +92,6 @@ angular.module('myApp', ['ui.router'])
         scope: {
             afterData: '='
         },
-        controller: 'afterSearchCtrl'
+        controller: 'housingGraphCtrl'
     };   
 });
