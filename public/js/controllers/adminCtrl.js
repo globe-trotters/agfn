@@ -16,6 +16,7 @@ $scope.getCohorts();
   };
 
   $scope.submitNewCohort = function(newCohort) {
+    console.log("controller", newCohort);
     adminService.submitNewCohort(newCohort)
       .then(function(res) {
         alert('new data submitted!');
@@ -31,5 +32,6 @@ $scope.getCohorts();
         $scope.newStudent = null;
       });
   };
+
 
 });

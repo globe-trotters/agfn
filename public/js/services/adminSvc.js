@@ -2,16 +2,11 @@ angular.module('myApp').service('adminService', function($http, $state) {
 
 
   this.submitNewCohort = function(newCohort) {
+    console.log("service", newCohort);
     return $http({
       method: 'POST',
       url: '/api/cohort',
-      data: {
-        display: newCohort.title + " - " + newCohort.cohortData.locationString,
-        title: newCohort.title,
-        location: newCohort.cohortData,
-        startBootcamp: newCohort.startBootcamp,
-        endBootcamp: newCohort.endBootcamp
-      }
+      data: newCohort
     }).then(function(res) {
       console.log('cohort posted');
     });

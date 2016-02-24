@@ -16,29 +16,25 @@
   <input class="typeInput" type="date" placeholder="End Date" ng-model="newCohort.endBootcamp">
   <br/>
 
-  <center>
-    <button class="adminButton" ng-click="submitNewCohort( newCohort )" type="submit">
-      Submit New Cohort
-    </button>
-  </center>
   <hr>
 
   <center>
     <h1>Add New Student(s)</h1></center>
   <!-- ///dropdown box for cohort ref(newStudent.cohort)/// ??? -->
-  <select class="typeInput" ng-options="cohort as cohort.display for cohort in cohorts track by cohort._id" ng-model="newStudent.cohort"></select>
-  </select>
+  <!-- <select class="typeInput" ng-options="cohort as cohort.display for cohort in cohorts track by cohort._id" ng-model="newCohort.cohort"></select>
+  </select> -->
 
-  <input class="typeInput" placeholder="Student Name" ng-model="newStudent.name">
+  <input class="typeInput" placeholder="Student Name" ng-model="newCohort.students[0].name">
   <br/>
-  <home-search home-data="newStudent.homeData"></home-search>
+  <home-search home-data="newCohort.students[0].homeData"></home-search>
   <!-- <input class="typeInput" placeholder="Previous Location Before DevMountain?" ng-model="newStudent.home"> -->
   <br/>
-  <after-search after-data="newStudent.afterData"></after-search>
+  <after-search after-data="newCohort.students[0].afterData"></after-search>
   <!-- <input class="typeInput" placeholder="Location After DevMountain?" ng-model="newStudent.endLocation"> -->
   <br/>
   <center>
-    <strong>Is This Student Employed?</strong> <select ng-model="newStudent.job">
+    <strong>Is This Student Employed?</strong>
+    <select class="selectJob" ng-model="newCohort.students[0].job">
     <option value="true">Yep</option>
     <option value="false">Nope</option>
   </select>
@@ -46,9 +42,692 @@
   <br/>
   <br/>
 
-<button class="adminButton" ng-click="submitNewStudent( newStudent )" type="submit">
-Submit New Cohort
-</button>
 </center>
 
+<!-- //////////////////////// -->
+
+
+
+<input class="typeInput" placeholder="Student Name" ng-model="newCohort.students[1].name">
+<br/>
+<home-search home-data="newCohort.students[1].homeData"></home-search>
+<!-- <input class="typeInput" placeholder="Previous Location Before DevMountain?" ng-model="newStudent.home"> -->
+<br/>
+<after-search after-data="newCohort.students[1].afterData"></after-search>
+<!-- <input class="typeInput" placeholder="Location After DevMountain?" ng-model="newStudent.endLocation"> -->
+<br/>
+<center>
+  <strong>Is This Student Employed?</strong> <select class="selectJob" ng-model="newCohort.students[1].job">
+  <option value="true">Yep</option>
+  <option value="false">Nope</option>
+</select>
+</center>
+
+<!-- //////////////////// -->
+
+<input class="typeInput" placeholder="Student Name" ng-model="newCohort.students[2].name">
+<br/>
+<home-search home-data="newCohort.students[2].homeData"></home-search>
+<!-- <input class="typeInput" placeholder="Previous Location Before DevMountain?" ng-model="newStudent.home"> -->
+<br/>
+<after-search after-data="newCohort.students[2].afterData"></after-search>
+<!-- <input class="typeInput" placeholder="Location After DevMountain?" ng-model="newStudent.endLocation"> -->
+<br/>
+<center>
+  <strong>Is This Student Employed?</strong> <select class="selectJob" ng-model="newCohort.students[2].job">
+  <option value="true">Yep</option>
+  <option value="false">Nope</option>
+</select>
+</center>
+
+<!-- //////////////////// -->
+
+<input class="typeInput" placeholder="Student Name" ng-model="newCohort.students[3].name">
+<br/>
+<home-search home-data="newCohort.students[3].homeData"></home-search>
+<!-- <input class="typeInput" placeholder="Previous Location Before DevMountain?" ng-model="newStudent.home"> -->
+<br/>
+<after-search after-data="newCohort.students[3].afterData"></after-search>
+<!-- <input class="typeInput" placeholder="Location After DevMountain?" ng-model="newStudent.endLocation"> -->
+<br/>
+<center>
+  <strong>Is This Student Employed?</strong> <select class="selectJob" ng-model="newCohort.students[3].job">
+  <option value="true">Yep</option>
+  <option value="false">Nope</option>
+</select>
+</center>
+
+<!-- //////////////////// -->
+
+<input class="typeInput" placeholder="Student Name" ng-model="newCohort.students[4].name">
+<br/>
+<home-search home-data="newCohort.students[4].homeData"></home-search>
+<!-- <input class="typeInput" placeholder="Previous Location Before DevMountain?" ng-model="newStudent.home"> -->
+<br/>
+<after-search after-data="newCohort.students[4].afterData"></after-search>
+<!-- <input class="typeInput" placeholder="Location After DevMountain?" ng-model="newStudent.endLocation"> -->
+<br/>
+<center>
+  <strong>Is This Student Employed?</strong> <select class="selectJob" ng-model="newCohort.students[4].job">
+  <option value="true">Yep</option>
+  <option value="false">Nope</option>
+</select>
+</center>
+
+<!-- //////////////////// -->
+
+<input class="typeInput" placeholder="Student Name" ng-model="newCohort.students[5].name">
+<br/>
+<home-search home-data="newCohort.students[5].homeData"></home-search>
+<!-- <input class="typeInput" placeholder="Previous Location Before DevMountain?" ng-model="newStudent.home"> -->
+<br/>
+<after-search after-data="newCohort.students[5].afterData"></after-search>
+<!-- <input class="typeInput" placeholder="Location After DevMountain?" ng-model="newStudent.endLocation"> -->
+<br/>
+<center>
+  <strong>Is This Student Employed?</strong> <select class="selectJob" ng-model="newCohort.students[5].job">
+  <option value="true">Yep</option>
+  <option value="false">Nope</option>
+</select>
+</center>
+
+<!-- //////////////////// -->
+
+<input class="typeInput" placeholder="Student Name" ng-model="newCohort.students[6].name">
+<br/>
+<home-search home-data="newCohort.students[6].homeData"></home-search>
+<!-- <input class="typeInput" placeholder="Previous Location Before DevMountain?" ng-model="newStudent.home"> -->
+<br/>
+<after-search after-data="newCohort.students[6].afterData"></after-search>
+<!-- <input class="typeInput" placeholder="Location After DevMountain?" ng-model="newStudent.endLocation"> -->
+<br/>
+<center>
+  <strong>Is This Student Employed?</strong> <select class="selectJob" ng-model="newCohort.students[6].job">
+  <option value="true">Yep</option>
+  <option value="false">Nope</option>
+</select>
+</center>
+
+<!-- //////////////////// -->
+
+<input class="typeInput" placeholder="Student Name" ng-model="newCohort.students[7].name">
+<br/>
+<home-search home-data="newCohort.students[7].homeData"></home-search>
+<!-- <input class="typeInput" placeholder="Previous Location Before DevMountain?" ng-model="newStudent.home"> -->
+<br/>
+<after-search after-data="newCohort.students[7].afterData"></after-search>
+<!-- <input class="typeInput" placeholder="Location After DevMountain?" ng-model="newStudent.endLocation"> -->
+<br/>
+<center>
+  <strong>Is This Student Employed?</strong> <select class="selectJob" ng-model="newCohort.students[7].job">
+  <option value="true">Yep</option>
+  <option value="false">Nope</option>
+</select>
+</center>
+
+<!-- //////////////////// -->
+
+<input class="typeInput" placeholder="Student Name" ng-model="newCohort.students[8].name">
+<br/>
+<home-search home-data="newCohort.students[8].homeData"></home-search>
+<!-- <input class="typeInput" placeholder="Previous Location Before DevMountain?" ng-model="newStudent.home"> -->
+<br/>
+<after-search after-data="newCohort.students[8].afterData"></after-search>
+<!-- <input class="typeInput" placeholder="Location After DevMountain?" ng-model="newStudent.endLocation"> -->
+<br/>
+<center>
+  <strong>Is This Student Employed?</strong> <select class="selectJob" ng-model="newCohort.students[8].job">
+  <option value="true">Yep</option>
+  <option value="false">Nope</option>
+</select>
+</center>
+
+<!-- //////////////////// -->
+
+
+<input class="typeInput" placeholder="Student Name" ng-model="newCohort.students[9].name">
+<br/>
+<home-search home-data="newCohort.students[9].homeData"></home-search>
+<!-- <input class="typeInput" placeholder="Previous Location Before DevMountain?" ng-model="newStudent.home"> -->
+<br/>
+<after-search after-data="newCohort.students[9].afterData"></after-search>
+<!-- <input class="typeInput" placeholder="Location After DevMountain?" ng-model="newStudent.endLocation"> -->
+<br/>
+<center>
+  <strong>Is This Student Employed?</strong> <select class="selectJob" ng-model="newCohort.students[9].job">
+  <option value="true">Yep</option>
+  <option value="false">Nope</option>
+</select>
+</center>
+
+<!-- //////////////////// -->
+
+<input class="typeInput" placeholder="Student Name" ng-model="newCohort.students[10].name">
+<br/>
+<home-search home-data="newCohort.students[10].homeData"></home-search>
+<!-- <input class="typeInput" placeholder="Previous Location Before DevMountain?" ng-model="newStudent.home"> -->
+<br/>
+<after-search after-data="newCohort.students[10].afterData"></after-search>
+<!-- <input class="typeInput" placeholder="Location After DevMountain?" ng-model="newStudent.endLocation"> -->
+<br/>
+<center>
+  <strong>Is This Student Employed?</strong> <select class="selectJob" ng-model="newCohort.students[10].job">
+  <option value="true">Yep</option>
+  <option value="false">Nope</option>
+</select>
+</center>
+
+<!-- //////////////////// -->
+
+<input class="typeInput" placeholder="Student Name" ng-model="newCohort.students[11].name">
+<br/>
+<home-search home-data="newCohort.students[11].homeData"></home-search>
+<!-- <input class="typeInput" placeholder="Previous Location Before DevMountain?" ng-model="newStudent.home"> -->
+<br/>
+<after-search after-data="newCohort.students[11].afterData"></after-search>
+<!-- <input class="typeInput" placeholder="Location After DevMountain?" ng-model="newStudent.endLocation"> -->
+<br/>
+<center>
+  <strong>Is This Student Employed?</strong> <select class="selectJob" ng-model="newCohort.students[11].job">
+  <option value="true">Yep</option>
+  <option value="false">Nope</option>
+</select>
+</center>
+
+<!-- //////////////////// -->
+
+<input class="typeInput" placeholder="Student Name" ng-model="newCohort.students[12].name">
+<br/>
+<home-search home-data="newCohort.students[12].homeData"></home-search>
+<!-- <input class="typeInput" placeholder="Previous Location Before DevMountain?" ng-model="newStudent.home"> -->
+<br/>
+<after-search after-data="newCohort.students[12].afterData"></after-search>
+<!-- <input class="typeInput" placeholder="Location After DevMountain?" ng-model="newStudent.endLocation"> -->
+<br/>
+<center>
+  <strong>Is This Student Employed?</strong> <select class="selectJob" ng-model="newCohort.students[12].job">
+  <option value="true">Yep</option>
+  <option value="false">Nope</option>
+</select>
+</center>
+
+<!-- //////////////////// -->
+
+<input class="typeInput" placeholder="Student Name" ng-model="newCohort.students[13].name">
+<br/>
+<home-search home-data="newCohort.students[13].homeData"></home-search>
+<!-- <input class="typeInput" placeholder="Previous Location Before DevMountain?" ng-model="newStudent.home"> -->
+<br/>
+<after-search after-data="newCohort.students[13].afterData"></after-search>
+<!-- <input class="typeInput" placeholder="Location After DevMountain?" ng-model="newStudent.endLocation"> -->
+<br/>
+<center>
+  <strong>Is This Student Employed?</strong> <select class="selectJob" ng-model="newCohort.students[13].job">
+  <option value="true">Yep</option>
+  <option value="false">Nope</option>
+</select>
+</center>
+
+<!-- //////////////////// -->
+
+<input class="typeInput" placeholder="Student Name" ng-model="newCohort.students[14].name">
+<br/>
+<home-search home-data="newCohort.students[14].homeData"></home-search>
+<!-- <input class="typeInput" placeholder="Previous Location Before DevMountain?" ng-model="newStudent.home"> -->
+<br/>
+<after-search after-data="newCohort.students[14].afterData"></after-search>
+<!-- <input class="typeInput" placeholder="Location After DevMountain?" ng-model="newStudent.endLocation"> -->
+<br/>
+<center>
+  <strong>Is This Student Employed?</strong> <select class="selectJob" ng-model="newCohort.students[14].job">
+  <option value="true">Yep</option>
+  <option value="false">Nope</option>
+</select>
+</center>
+
+<!-- //////////////////// -->
+
+<input class="typeInput" placeholder="Student Name" ng-model="newCohort.students[15].name">
+<br/>
+<home-search home-data="newCohort.students[15].homeData"></home-search>
+<!-- <input class="typeInput" placeholder="Previous Location Before DevMountain?" ng-model="newStudent.home"> -->
+<br/>
+<after-search after-data="newCohort.students[15].afterData"></after-search>
+<!-- <input class="typeInput" placeholder="Location After DevMountain?" ng-model="newStudent.endLocation"> -->
+<br/>
+<center>
+  <strong>Is This Student Employed?</strong> <select class="selectJob" ng-model="newCohort.students[15].job">
+  <option value="true">Yep</option>
+  <option value="false">Nope</option>
+</select>
+</center>
+
+<!-- //////////////////// -->
+
+<input class="typeInput" placeholder="Student Name" ng-model="newCohort.students[16].name">
+<br/>
+<home-search home-data="newCohort.students[16].homeData"></home-search>
+<!-- <input class="typeInput" placeholder="Previous Location Before DevMountain?" ng-model="newStudent.home"> -->
+<br/>
+<after-search after-data="newCohort.students[16].afterData"></after-search>
+<!-- <input class="typeInput" placeholder="Location After DevMountain?" ng-model="newStudent.endLocation"> -->
+<br/>
+<center>
+  <strong>Is This Student Employed?</strong> <select class="selectJob" ng-model="newCohort.students[16].job">
+  <option value="true">Yep</option>
+  <option value="false">Nope</option>
+</select>
+</center>
+
+<!-- //////////////////// -->
+
+<input class="typeInput" placeholder="Student Name" ng-model="newCohort.students[17].name">
+<br/>
+<home-search home-data="newCohort.students[17].homeData"></home-search>
+<!-- <input class="typeInput" placeholder="Previous Location Before DevMountain?" ng-model="newStudent.home"> -->
+<br/>
+<after-search after-data="newCohort.students[17].afterData"></after-search>
+<!-- <input class="typeInput" placeholder="Location After DevMountain?" ng-model="newStudent.endLocation"> -->
+<br/>
+<center>
+  <strong>Is This Student Employed?</strong> <select class="selectJob" ng-model="newCohort.students[17].job">
+  <option value="true">Yep</option>
+  <option value="false">Nope</option>
+</select>
+</center>
+
+<!-- //////////////////// -->
+
+<input class="typeInput" placeholder="Student Name" ng-model="newCohort.students[18].name">
+<br/>
+<home-search home-data="newCohort.students[18].homeData"></home-search>
+<!-- <input class="typeInput" placeholder="Previous Location Before DevMountain?" ng-model="newStudent.home"> -->
+<br/>
+<after-search after-data="newCohort.students[18].afterData"></after-search>
+<!-- <input class="typeInput" placeholder="Location After DevMountain?" ng-model="newStudent.endLocation"> -->
+<br/>
+<center>
+  <strong>Is This Student Employed?</strong> <select class="selectJob" ng-model="newCohort.students[18].job">
+  <option value="true">Yep</option>
+  <option value="false">Nope</option>
+</select>
+</center>
+
+<!-- //////////////////// -->
+
+<input class="typeInput" placeholder="Student Name" ng-model="newCohort.students[19].name">
+<br/>
+<home-search home-data="newCohort.students[19].homeData"></home-search>
+<!-- <input class="typeInput" placeholder="Previous Location Before DevMountain?" ng-model="newStudent.home"> -->
+<br/>
+<after-search after-data="newCohort.students[19].afterData"></after-search>
+<!-- <input class="typeInput" placeholder="Location After DevMountain?" ng-model="newStudent.endLocation"> -->
+<br/>
+<center>
+  <strong>Is This Student Employed?</strong> <select class="selectJob" ng-model="newCohort.students[19].job">
+  <option value="true">Yep</option>
+  <option value="false">Nope</option>
+</select>
+</center>
+
+<!-- //////////////////// -->
+
+<input class="typeInput" placeholder="Student Name" ng-model="newCohort.students[20].name">
+<br/>
+<home-search home-data="newCohort.students[20].homeData"></home-search>
+<!-- <input class="typeInput" placeholder="Previous Location Before DevMountain?" ng-model="newStudent.home"> -->
+<br/>
+<after-search after-data="newCohort.students[20].afterData"></after-search>
+<!-- <input class="typeInput" placeholder="Location After DevMountain?" ng-model="newStudent.endLocation"> -->
+<br/>
+<center>
+  <strong>Is This Student Employed?</strong> <select class="selectJob" ng-model="newCohort.students[20].job">
+  <option value="true">Yep</option>
+  <option value="false">Nope</option>
+</select>
+</center>
+
+<!-- //////////////////// -->
+
+<input class="typeInput" placeholder="Student Name" ng-model="newCohort.students[21].name">
+<br/>
+<home-search home-data="newCohort.students[21].homeData"></home-search>
+<!-- <input class="typeInput" placeholder="Previous Location Before DevMountain?" ng-model="newStudent.home"> -->
+<br/>
+<after-search after-data="newCohort.students[21].afterData"></after-search>
+<!-- <input class="typeInput" placeholder="Location After DevMountain?" ng-model="newStudent.endLocation"> -->
+<br/>
+<center>
+  <strong>Is This Student Employed?</strong> <select class="selectJob" ng-model="newCohort.students[21].job">
+  <option value="true">Yep</option>
+  <option value="false">Nope</option>
+</select>
+</center>
+
+<!-- //////////////////// -->
+
+<input class="typeInput" placeholder="Student Name" ng-model="newCohort.students[22].name">
+<br/>
+<home-search home-data="newCohort.students[22].homeData"></home-search>
+<!-- <input class="typeInput" placeholder="Previous Location Before DevMountain?" ng-model="newStudent.home"> -->
+<br/>
+<after-search after-data="newCohort.students[22].afterData"></after-search>
+<!-- <input class="typeInput" placeholder="Location After DevMountain?" ng-model="newStudent.endLocation"> -->
+<br/>
+<center>
+  <strong>Is This Student Employed?</strong> <select class="selectJob" ng-model="newCohort.students[22].job">
+  <option value="true">Yep</option>
+  <option value="false">Nope</option>
+</select>
+</center>
+
+<!-- //////////////////// -->
+
+<input class="typeInput" placeholder="Student Name" ng-model="newCohort.students[23].name">
+<br/>
+<home-search home-data="newCohort.students[23].homeData"></home-search>
+<!-- <input class="typeInput" placeholder="Previous Location Before DevMountain?" ng-model="newStudent.home"> -->
+<br/>
+<after-search after-data="newCohort.students[23].afterData"></after-search>
+<!-- <input class="typeInput" placeholder="Location After DevMountain?" ng-model="newStudent.endLocation"> -->
+<br/>
+<center>
+  <strong>Is This Student Employed?</strong> <select class="selectJob" ng-model="newCohort.students[23].job">
+  <option value="true">Yep</option>
+  <option value="false">Nope</option>
+</select>
+</center>
+
+<!-- //////////////////// -->
+
+<input class="typeInput" placeholder="Student Name" ng-model="newCohort.students[24].name">
+<br/>
+<home-search home-data="newCohort.students[24].homeData"></home-search>
+<!-- <input class="typeInput" placeholder="Previous Location Before DevMountain?" ng-model="newStudent.home"> -->
+<br/>
+<after-search after-data="newCohort.students[24].afterData"></after-search>
+<!-- <input class="typeInput" placeholder="Location After DevMountain?" ng-model="newStudent.endLocation"> -->
+<br/>
+<center>
+  <strong>Is This Student Employed?</strong> <select class="selectJob" ng-model="newCohort.students[24].job">
+  <option value="true">Yep</option>
+  <option value="false">Nope</option>
+</select>
+</center>
+
+<!-- //////////////////// -->
+
+<input class="typeInput" placeholder="Student Name" ng-model="newCohort.students[25].name">
+<br/>
+<home-search home-data="newCohort.students[25].homeData"></home-search>
+<!-- <input class="typeInput" placeholder="Previous Location Before DevMountain?" ng-model="newStudent.home"> -->
+<br/>
+<after-search after-data="newCohort.students[25].afterData"></after-search>
+<!-- <input class="typeInput" placeholder="Location After DevMountain?" ng-model="newStudent.endLocation"> -->
+<br/>
+<center>
+  <strong>Is This Student Employed?</strong> <select class="selectJob" ng-model="newCohort.students[25].job">
+  <option value="true">Yep</option>
+  <option value="false">Nope</option>
+</select>
+</center>
+
+<!-- //////////////////// -->
+
+<input class="typeInput" placeholder="Student Name" ng-model="newCohort.students[26].name">
+<br/>
+<home-search home-data="newCohort.students[26].homeData"></home-search>
+<!-- <input class="typeInput" placeholder="Previous Location Before DevMountain?" ng-model="newStudent.home"> -->
+<br/>
+<after-search after-data="newCohort.students[26].afterData"></after-search>
+<!-- <input class="typeInput" placeholder="Location After DevMountain?" ng-model="newStudent.endLocation"> -->
+<br/>
+<center>
+  <strong>Is This Student Employed?</strong> <select class="selectJob" ng-model="newCohort.students[26].job">
+  <option value="true">Yep</option>
+  <option value="false">Nope</option>
+</select>
+</center>
+
+<!-- //////////////////// -->
+
+
+<input class="typeInput" placeholder="Student Name" ng-model="newCohort.students[27].name">
+<br/>
+<home-search home-data="newCohort.students[27].homeData"></home-search>
+<!-- <input class="typeInput" placeholder="Previous Location Before DevMountain?" ng-model="newStudent.home"> -->
+<br/>
+<after-search after-data="newCohort.students[27].afterData"></after-search>
+<!-- <input class="typeInput" placeholder="Location After DevMountain?" ng-model="newStudent.endLocation"> -->
+<br/>
+<center>
+  <strong>Is This Student Employed?</strong> <select class="selectJob" ng-model="newCohort.students[27].job">
+  <option value="true">Yep</option>
+  <option value="false">Nope</option>
+</select>
+</center>
+
+<!-- //////////////////// -->
+
+<input class="typeInput" placeholder="Student Name" ng-model="newCohort.students[28].name">
+<br/>
+<home-search home-data="newCohort.students[28].homeData"></home-search>
+<!-- <input class="typeInput" placeholder="Previous Location Before DevMountain?" ng-model="newStudent.home"> -->
+<br/>
+<after-search after-data="newCohort.students[28].afterData"></after-search>
+<!-- <input class="typeInput" placeholder="Location After DevMountain?" ng-model="newStudent.endLocation"> -->
+<br/>
+<center>
+  <strong>Is This Student Employed?</strong> <select class="selectJob" ng-model="newCohort.students[28].job">
+  <option value="true">Yep</option>
+  <option value="false">Nope</option>
+</select>
+</center>
+
+<!-- //////////////////// -->
+
+<input class="typeInput" placeholder="Student Name" ng-model="newCohort.students[29].name">
+<br/>
+<home-search home-data="newCohort.students[29].homeData"></home-search>
+<!-- <input class="typeInput" placeholder="Previous Location Before DevMountain?" ng-model="newStudent.home"> -->
+<br/>
+<after-search after-data="newCohort.students[29].afterData"></after-search>
+<!-- <input class="typeInput" placeholder="Location After DevMountain?" ng-model="newStudent.endLocation"> -->
+<br/>
+<center>
+  <strong>Is This Student Employed?</strong> <select class="selectJob" ng-model="newCohort.students[29].job">
+  <option value="true">Yep</option>
+  <option value="false">Nope</option>
+</select>
+</center>
+
+<!-- //////////////////// -->
+
+<input class="typeInput" placeholder="Student Name" ng-model="newCohort.students[30].name">
+<br/>
+<home-search home-data="newCohort.students[30].homeData"></home-search>
+<!-- <input class="typeInput" placeholder="Previous Location Before DevMountain?" ng-model="newStudent.home"> -->
+<br/>
+<after-search after-data="newCohort.students[30].afterData"></after-search>
+<!-- <input class="typeInput" placeholder="Location After DevMountain?" ng-model="newStudent.endLocation"> -->
+<br/>
+<center>
+  <strong>Is This Student Employed?</strong> <select class="selectJob" ng-model="newCohort.students[30].job">
+  <option value="true">Yep</option>
+  <option value="false">Nope</option>
+</select>
+</center>
+
+<!-- //////////////////// -->
+
+<input class="typeInput" placeholder="Student Name" ng-model="newCohort.students[31].name">
+<br/>
+<home-search home-data="newCohort.students[31].homeData"></home-search>
+<!-- <input class="typeInput" placeholder="Previous Location Before DevMountain?" ng-model="newStudent.home"> -->
+<br/>
+<after-search after-data="newCohort.students[31].afterData"></after-search>
+<!-- <input class="typeInput" placeholder="Location After DevMountain?" ng-model="newStudent.endLocation"> -->
+<br/>
+<center>
+  <strong>Is This Student Employed?</strong> <select class="selectJob" ng-model="newCohort.students[31].job">
+  <option value="true">Yep</option>
+  <option value="false">Nope</option>
+</select>
+</center>
+
+<!-- //////////////////// -->
+
+<input class="typeInput" placeholder="Student Name" ng-model="newCohort.students[32].name">
+<br/>
+<home-search home-data="newCohort.students[32].homeData"></home-search>
+<!-- <input class="typeInput" placeholder="Previous Location Before DevMountain?" ng-model="newStudent.home"> -->
+<br/>
+<after-search after-data="newCohort.students[32].afterData"></after-search>
+<!-- <input class="typeInput" placeholder="Location After DevMountain?" ng-model="newStudent.endLocation"> -->
+<br/>
+<center>
+  <strong>Is This Student Employed?</strong> <select class="selectJob" ng-model="newCohort.students[32].job">
+  <option value="true">Yep</option>
+  <option value="false">Nope</option>
+</select>
+</center>
+
+<!-- //////////////////// -->
+
+<input class="typeInput" placeholder="Student Name" ng-model="newCohort.students[33].name">
+<br/>
+<home-search home-data="newCohort.students[33].homeData"></home-search>
+<!-- <input class="typeInput" placeholder="Previous Location Before DevMountain?" ng-model="newStudent.home"> -->
+<br/>
+<after-search after-data="newCohort.students[33].afterData"></after-search>
+<!-- <input class="typeInput" placeholder="Location After DevMountain?" ng-model="newStudent.endLocation"> -->
+<br/>
+<center>
+  <strong>Is This Student Employed?</strong> <select class="selectJob" ng-model="newCohort.students[33].job">
+  <option value="true">Yep</option>
+  <option value="false">Nope</option>
+</select>
+</center>
+
+<!-- //////////////////// -->
+
+<input class="typeInput" placeholder="Student Name" ng-model="newCohort.students[34].name">
+<br/>
+<home-search home-data="newCohort.students[34].homeData"></home-search>
+<!-- <input class="typeInput" placeholder="Previous Location Before DevMountain?" ng-model="newStudent.home"> -->
+<br/>
+<after-search after-data="newCohort.students[34].afterData"></after-search>
+<!-- <input class="typeInput" placeholder="Location After DevMountain?" ng-model="newStudent.endLocation"> -->
+<br/>
+<center>
+  <strong>Is This Student Employed?</strong> <select class="selectJob" ng-model="newCohort.students[34].job">
+  <option value="true">Yep</option>
+  <option value="false">Nope</option>
+</select>
+</center>
+
+<!-- //////////////////// -->
+
+<input class="typeInput" placeholder="Student Name" ng-model="newCohort.students[35].name">
+<br/>
+<home-search home-data="newCohort.students[35].homeData"></home-search>
+<!-- <input class="typeInput" placeholder="Previous Location Before DevMountain?" ng-model="newStudent.home"> -->
+<br/>
+<after-search after-data="newCohort.students[35].afterData"></after-search>
+<!-- <input class="typeInput" placeholder="Location After DevMountain?" ng-model="newStudent.endLocation"> -->
+<br/>
+<center>
+  <strong>Is This Student Employed?</strong> <select class="selectJob" ng-model="newCohort.students[35].job">
+  <option value="true">Yep</option>
+  <option value="false">Nope</option>
+</select>
+</center>
+
+<!-- //////////////////// -->
+
+<input class="typeInput" placeholder="Student Name" ng-model="newCohort.students[36].name">
+<br/>
+<home-search home-data="newCohort.students[36].homeData"></home-search>
+<!-- <input class="typeInput" placeholder="Previous Location Before DevMountain?" ng-model="newStudent.home"> -->
+<br/>
+<after-search after-data="newCohort.students[36].afterData"></after-search>
+<!-- <input class="typeInput" placeholder="Location After DevMountain?" ng-model="newStudent.endLocation"> -->
+<br/>
+<center>
+  <strong>Is This Student Employed?</strong> <select class="selectJob" ng-model="newCohort.students[36].job">
+  <option value="true">Yep</option>
+  <option value="false">Nope</option>
+</select>
+</center>
+
+<!-- //////////////////// -->
+
+<input class="typeInput" placeholder="Student Name" ng-model="newCohort.students[37].name">
+<br/>
+<home-search home-data="newCohort.students[37].homeData"></home-search>
+<!-- <input class="typeInput" placeholder="Previous Location Before DevMountain?" ng-model="newStudent.home"> -->
+<br/>
+<after-search after-data="newCohort.students[37].afterData"></after-search>
+<!-- <input class="typeInput" placeholder="Location After DevMountain?" ng-model="newStudent.endLocation"> -->
+<br/>
+<center>
+  <strong>Is This Student Employed?</strong> <select class="selectJob" ng-model="newCohort.students[37].job">
+  <option value="true">Yep</option>
+  <option value="false">Nope</option>
+</select>
+</center>
+
+<!-- //////////////////// -->
+
+<input class="typeInput" placeholder="Student Name" ng-model="newCohort.students[38].name">
+<br/>
+<home-search home-data="newCohort.students[38].homeData"></home-search>
+<!-- <input class="typeInput" placeholder="Previous Location Before DevMountain?" ng-model="newStudent.home"> -->
+<br/>
+<after-search after-data="newCohort.students[38].afterData"></after-search>
+<!-- <input class="typeInput" placeholder="Location After DevMountain?" ng-model="newStudent.endLocation"> -->
+<br/>
+<center>
+  <strong>Is This Student Employed?</strong> <select class="selectJob" ng-model="newCohort.students[38].job">
+  <option value="true">Yep</option>
+  <option value="false">Nope</option>
+</select>
+</center>
+
+<!-- //////////////////// -->
+
+<input class="typeInput" placeholder="Student Name" ng-model="newCohort.students[39].name">
+<br/>
+<home-search home-data="newCohort.students[39].homeData"></home-search>
+<!-- <input class="typeInput" placeholder="Previous Location Before DevMountain?" ng-model="newStudent.home"> -->
+<br/>
+<after-search after-data="newCohort.students[39].afterData"></after-search>
+<!-- <input class="typeInput" placeholder="Location After DevMountain?" ng-model="newStudent.endLocation"> -->
+<br/>
+<center>
+  <strong>Is This Student Employed?</strong> <select class="selectJob" ng-model="newCohort.students[39].job">
+  <option value="true">Yep</option>
+  <option value="false">Nope</option>
+</select>
+</center>
+
+<!-- //////////////////// -->
+
+<center>
+  <button class="adminButton" ng-click="submitNewCohort( newCohort )" type="submit">
+    Submit New Cohort
+  </button>
+</center>
+
+
+
+
+
+
+
+
+
+
+
+<!-- /////////admin style div ends///////////// -->
 </div>
