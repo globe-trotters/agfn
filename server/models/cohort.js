@@ -1,14 +1,19 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
+var studentSchema = require('./student');
 
 
 var cohortSchema = Schema({
-  display: { type: String, required: 'true' },
   title: { type: String, required: 'true' },
-  location: { type: Object, required: 'true' },
+  cohortData: { type: Object, required: 'true' },
   startBootcamp: { type: Date, required: 'true' },
-  endBootcamp: { type: Date, required: 'true' }
-  // students: { ref }
+  endBootcamp: { type: Date, required: 'true' },
+  students: [{
+    name: { type: String },
+    homeData: { type: Object },
+    afterData: { type: Object },
+    job: { type: Boolean },
+  }]
 });
 
 
