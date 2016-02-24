@@ -4,7 +4,7 @@ var Schema = mongoose.Schema;
 
 var cohortSchema = Schema({
   title: { type: String, required: 'true' },
-  location: { type: String, required: 'true' },
+  location: { type: Object, required: 'true' },
   startBootcamp: { type: Date, required: 'true' },
   endBootcamp: { type: Date, required: 'true' }
   // students: { ref }
