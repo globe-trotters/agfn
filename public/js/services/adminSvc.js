@@ -9,6 +9,8 @@ angular.module('myApp').service('adminService', function($http, $state) {
       data: newCohort
     }).then(function(res) {
       console.log('cohort posted');
+    }).catch(function(err) {
+      console.error('cohort failed: ', err);
     });
   };
 

@@ -1,75 +1,128 @@
 .adminStyle {
   width: 50%;
   margin: auto;
-  padding: 5%;
-}
-.adminStyle hr {
-  display: block;
-  margin: 1em auto;
-  border-style: inset;
-  border-width: 2px;
-}
-.adminStyle .typeInput {
-  margin: auto;
-  width: 99%;
-  margin-bottom: 10px;
-  height: 5%;
-  font-size: 1.1em;
-  outline-color: rgba(51, 35, 85, 0.83);
-}
-.adminStyle .adminButton {
-  font-size: 1em;
-  font-family: sans-serif;
-  color: #090311;
-  text-shadow: 1px 1px #f9f9f9;
-  text-decoration: none;
-  display: inline-block;
-  padding: 0.5em;
-  border-radius: 0.25em;
-  background: #f8f8f8;
-  border: 1px solid #ccc;
-  position: relative;
-  margin: 0 0 1px;
-  outline: 0;
-}
-.adminStyle .adminButton:hover {
-  background: rgba(51, 35, 85, 0.31);
-}
+  padding: 5%; }
+  .adminStyle hr {
+    display: block;
+    margin: 1em auto;
+    border-style: inset;
+    border-width: 2px; }
+  .adminStyle .studentDiv {
+    padding: 5px;
+    margin-top: 10px;
+    border: 1px dashed #25AAE1; }
+  .adminStyle .typeInput {
+    margin: auto;
+    width: 100%;
+    margin-bottom: 10px;
+    height: 5%;
+    font-size: 1.1em;
+    outline-color: rgba(51, 35, 85, 0.83);
+    border: 1px solid gray;
+    outline: none; }
+  .adminStyle [data-tip] {
+    position: relative; }
+  .adminStyle [data-tip]:before {
+    content: '';
+    /* hides the tooltip when not hovered */
+    display: none;
+    content: '';
+    display: none;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid #1a1a1a;
+    position: absolute;
+    z-index: 8;
+    font-size: 0;
+    line-height: 0;
+    position: absolute;
+    top: 30px;
+    left: 35px;
+    z-index: 8;
+    font-size: 0;
+    line-height: 0;
+    width: 0;
+    height: 0; }
+  .adminStyle [data-tip]:after {
+    display: none;
+    content: attr(data-tip);
+    position: absolute;
+    top: 35px;
+    left: 0;
+    padding: 5px 8px;
+    background: #1a1a1a;
+    color: #fff;
+    z-index: 9;
+    font-size: 0.75em;
+    height: 18px;
+    line-height: 18px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    white-space: nowrap;
+    word-wrap: normal; }
+  .adminStyle [data-tip]:hover:before,
+  .adminStyle [data-tip]:hover:after {
+    display: block; }
+  .adminStyle .selectStudents {
+    width: 50%;
+    margin: 0;
+    outline: none;
+    font-size: 1.3em; }
+  .adminStyle .studentNumLabel {
+    margin: 0;
+    font-size: 1.3em; }
+  .adminStyle .selectJob {
+    margin: 10px; }
+  .adminStyle .adminButton {
+    font-size: 1em;
+    font-family: sans-serif;
+    color: #090311;
+    text-shadow: 1px 1px #f9f9f9;
+    text-decoration: none;
+    display: inline-block;
+    padding: 0.5em;
+    border-radius: 0.25em;
+    background: #f8f8f8;
+    border: 1px solid #ccc;
+    position: relative;
+    margin: 10px;
+    outline: 0; }
+  .adminStyle .adminButton:hover {
+    background: rgba(51, 35, 85, 0.31); }
+
+@charset "UTF-8";
 .loginStyle {
   width: 50%;
   margin: auto;
-  padding: 5%;
-}
-.loginStyle input {
-  width: 100%;
-  margin-bottom: 10px;
-  height: 5%;
-  padding: 10px;
-  font-size: 1.1em;
-  outline-color: rgba(51, 35, 85, 0.83);
-}
-.loginStyle button {
-  font-size: 1.2em;
-  font-family: sans-serif;
-  color: #090311;
-  text-shadow: 1px 1px #f9f9f9;
-  text-decoration: none;
-  display: inline-block;
-  padding: 0.5em;
-  border-radius: 0.25em;
-  background: #f8f8f8;
-  border: 1px solid #ccc;
-  position: relative;
-  margin: 0 0 1px;
-  outline: 0;
-}
-.loginStyle ​ button:hover {
-  background: rgba(51, 35, 85, 0.31);
-}
+  padding: 5%; }
+  .loginStyle input {
+    width: 100%;
+    margin-bottom: 10px;
+    height: 5%;
+    padding: 10px;
+    font-size: 1.1em;
+    outline-color: rgba(51, 35, 85, 0.83); }
+  .loginStyle button {
+    font-size: 1.2em;
+    font-family: sans-serif;
+    color: #090311;
+    text-shadow: 1px 1px #f9f9f9;
+    text-decoration: none;
+    display: inline-block;
+    padding: 0.5em;
+    border-radius: 0.25em;
+    background: #f8f8f8;
+    border: 1px solid #ccc;
+    position: relative;
+    margin: 0 0 1px;
+    outline: 0; }
+  .loginStyle ​ button:hover {
+    background: rgba(51, 35, 85, 0.31); }
+
 body {
   box-sizing: border-box;
-  font-size: 1em;
-}
-body .container {
-  padding: 10px;
-}
+  font-size: 1em; }
+  body .container {
+    padding: 10px; }
+
