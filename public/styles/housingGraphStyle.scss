@@ -1,6 +1,8 @@
+@import 'variables';
+
 .graph {
-  background-image: url('./../images/wood_1.png');;
-  min-height: 100vh;;
+  background-image: $backgroundImage;
+  min-height: 100vh;
     margin: auto;
     text-align: center;
     .axis path, .axis line {
@@ -8,8 +10,9 @@
         stroke: #777;
     }
     .axis text {
-        font-family: 'Josefin Slab';
+        font-family: $graphFont;
         font-size: 13px;
+        fill: $graphPrimaryColor;
     }
     .tick {
         stroke-dasharray: 1, 2;

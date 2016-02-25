@@ -94,4 +94,14 @@ angular.module('myApp', ['ui.router'])
         },
         controller: 'housingGraphCtrl'
     };
+})
+.directive('employmentGraph', function() {
+    return {
+        templateUrl: './js/directives/finance/employmentGraphTmpl.html',
+        restrict: 'E',
+        scope: {
+            afterData: '='
+        },
+        controller: 'employmentGraphCtrl'
+    };
 });
