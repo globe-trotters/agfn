@@ -2,212 +2,7 @@
   width: 100%;
   min-height: 100vh;
   background-image: url("./../images/wood_1.png");
-  color: white;
-}
-.adminContainer .adminStyle {
-  width: 50%;
-  margin: auto;
-  padding: 5%;
-}
-.adminContainer .adminStyle hr {
-  display: block;
-  margin: 1em auto;
-  border-style: inset;
-  border-width: 2px;
-}
-.adminContainer .adminStyle .studentDiv {
-  padding: 5px;
-  margin-top: 10px;
-  border: 1px dashed #25AAE1;
-}
-.adminContainer .adminStyle .typeInput {
-  margin: auto;
-  width: 100%;
-  margin-bottom: 10px;
-  height: 5%;
-  font-size: 1.1em;
-  outline-color: rgba(51, 35, 85, 0.83);
-  border: 1px solid gray;
-  outline: none;
-}
-.adminContainer .adminStyle [data-tip] {
-  position: relative;
-}
-.adminContainer .adminStyle [data-tip]:before {
-  content: '';
-  /* hides the tooltip when not hovered */
-  display: none;
-  content: '';
-  display: none;
-  border-left: 5px solid transparent;
-  border-right: 5px solid transparent;
-  border-bottom: 5px solid #1a1a1a;
-  position: absolute;
-  z-index: 8;
-  font-size: 0;
-  line-height: 0;
-  position: absolute;
-  top: 30px;
-  left: 35px;
-  z-index: 8;
-  font-size: 0;
-  line-height: 0;
-  width: 0;
-  height: 0;
-}
-.adminContainer .adminStyle [data-tip]:after {
-  display: none;
-  content: attr(data-tip);
-  position: absolute;
-  top: 35px;
-  left: 0;
-  padding: 5px 8px;
-  background: #1a1a1a;
-  color: #fff;
-  z-index: 9;
-  font-size: 0.75em;
-  height: 18px;
-  line-height: 18px;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
-  white-space: nowrap;
-  word-wrap: normal;
-}
-.adminContainer .adminStyle [data-tip]:hover:before, .adminContainer .adminStyle [data-tip]:hover:after {
-  display: block;
-}
-.adminContainer .adminStyle .selectStudents {
-  width: 50%;
-  margin: 0;
-  outline: none;
-  font-size: 1.3em;
-}
-.adminContainer .adminStyle .studentNumLabel {
-  margin: 0;
-  font-size: 1.3em;
-}
-.adminContainer .adminStyle .selectJob {
-  margin: 10px;
-}
-.adminContainer .adminStyle .adminButton {
-  font-size: 1em;
-  font-family: sans-serif;
-  color: #090311;
-  text-shadow: 1px 1px #f9f9f9;
-  text-decoration: none;
-  display: inline-block;
-  padding: 0.5em;
-  border-radius: 0.25em;
-  background: #f8f8f8;
-  border: 1px solid #ccc;
-  position: relative;
-  margin: 10px;
-  outline: 0;
-}
-.adminContainer .adminStyle .adminButton:hover {
-  background: rgba(51, 35, 85, 0.31);
-}
-.finance {
-  background-image: url("./../images/wood_1.png");
-}
-.finance h1 {
-  margin: 0;
-  padding: 20px 20px 30px;
-  text-align: center;
-  font-family: "Josefin Slab";
-  color: #C1CED4;
-  font-size: 3em;
-}
-.finance h2 {
-  margin: 0;
-  padding: 15px 15px 30px;
-  text-align: center;
-  font-family: "Josefin Slab";
-  color: #25AAE1;
-  font-size: 2.2em;
-}
-#donut {
-  width: 29rem;
-  height: 29rem;
-  margin: 0 auto;
-  display: inline-block;
-  padding: 10px;
-  margin-left: 100px;
-  padding-left: 50px;
-}
-#donut text {
-  font-family: "Josefin Slab";
-  font-size: 7rem;
-  font-weight: 400;
-  line-height: 16rem;
-  fill: #25AAE1;
-}
-#donut h2 {
-  color: #25AAE1;
-  font-size: 2em;
-  font-family: "Josefin Slab";
-  margin-bottom: 25px;
-  margin-right: 50px;
-  padding-right: 110px;
-}
-#donut2 {
-  width: 20rem;
-  height: 29rem;
-  margin: 0 auto;
-  display: inline-block;
-  margin-left: 50px;
-  padding: 10px;
-}
-#donut2 text {
-  font-family: "Josefin Slab";
-  font-size: 7rem;
-  font-weight: 400;
-  line-height: 16rem;
-  fill: #25AAE1;
-}
-#donut2 h2 {
-  color: #25AAE1;
-  font-size: 2em;
-  font-family: "Josefin Slab";
-  margin-bottom: 15px;
-  margin-right: 40px;
-  padding-left: 10px;
-}
-path.color0 {
-  fill: #25AAE1;
-}
-path.color1 {
-  fill: #C1CED4;
-}
-.graph {
-  background-image: url("./../images/wood_1.png");
-  min-height: 100vh;
-  margin: auto;
-  text-align: center;
-}
-.graph .axis path, .graph .axis line {
-  fill: none;
-  stroke: #777;
-}
-.graph .axis text {
-  font-family: "Josefin Slab";
-  font-size: 13px;
-  fill: #25AAE1;
-}
-.graph .tick {
-  stroke-dasharray: 1, 2;
-}
-.graph .graph {
-  margin: auto;
-  text-align: center;
-}
-.graph .legend {
-  font-size: 12px;
-}
-.graph rect {
-  stroke-width: 2;
-}
+  color: white; }
   .adminContainer .adminStyle {
     width: 50%;
     margin: auto;
@@ -301,70 +96,129 @@ path.color1 {
     .adminContainer .adminStyle .adminButton:hover {
       background: rgba(51, 35, 85, 0.31); }
 
-.housingContainer {
-  padding-top: 5%;
-  width: 100%;
-  height: 100%;
+.finance {
   background-image: url("./../images/wood_1.png"); }
-  .housingContainer .graph {
+  .finance h1 {
+    margin: 0;
+    padding: 20px 20px 30px;
+    text-align: center;
+    font-family: "Josefin Slab";
+    color: #C1CED4;
+    font-size: 3em; }
+  .finance h2 {
+    margin: 0;
+    padding: 15px 15px 30px;
+    text-align: center;
+    font-family: "Josefin Slab";
+    color: #25AAE1;
+    font-size: 2.2em; }
+
+#donut {
+  width: 29rem;
+  height: 29rem;
+  margin: 0 auto;
+  display: inline-block;
+  padding: 10px;
+  margin-left: 100px;
+  padding-left: 50px; }
+  #donut text {
+    font-family: "Josefin Slab";
+    font-size: 7rem;
+    font-weight: 400;
+    line-height: 16rem;
+    fill: #25AAE1; }
+  #donut h2 {
+    color: #25AAE1;
+    font-size: 2em;
+    font-family: "Josefin Slab";
+    margin-bottom: 25px;
+    margin-right: 50px;
+    padding-right: 110px; }
+
+#donut2 {
+  width: 20rem;
+  height: 29rem;
+  margin: 0 auto;
+  display: inline-block;
+  margin-left: 50px;
+  padding: 10px; }
+  #donut2 text {
+    font-family: "Josefin Slab";
+    font-size: 7rem;
+    font-weight: 400;
+    line-height: 16rem;
+    fill: #25AAE1; }
+  #donut2 h2 {
+    color: #25AAE1;
+    font-size: 2em;
+    font-family: "Josefin Slab";
+    margin-bottom: 15px;
+    margin-right: 40px;
+    padding-left: 10px; }
+
+path.color0 {
+  fill: #25AAE1; }
+
+path.color1 {
+  fill: #C1CED4; }
+
+.graph {
+  background-image: url("./../images/wood_1.png"); }
+  .graph .graph {
     margin: auto;
     margin: 5%;
     text-align: center; }
-    .housingContainer .graph .axis path,
-    .housingContainer .graph .axis line {
+    .graph .graph .axis path,
+    .graph .graph .axis line {
       fill: none;
       stroke: #777; }
-    .housingContainer .graph .axis text {
-      font-family: 'Josefin Slab';
-      font-size: 13px; }
-    .housingContainer .graph .tick {
+    .graph .graph .axis text {
+      font-family: "Josefin Slab";
+      font-size: 13px;
+      fill: #25AAE1; }
+    .graph .graph .tick {
       stroke-dasharray: 1, 2; }
-    .housingContainer .graph .graph {
+    .graph .graph .graph {
       margin: auto;
       text-align: center; }
-    .housingContainer .graph .legend {
+    .graph .graph .legend {
       font-size: 12px; }
-    .housingContainer .graph rect {
+    .graph .graph rect {
       stroke-width: 2; }
 
 @charset "UTF-8";
 .loginStyle {
   width: 50%;
   margin: auto;
-  padding: 5%;
-}
-.loginStyle input {
-  width: 100%;
-  margin-bottom: 10px;
-  height: 5%;
-  padding: 10px;
-  font-size: 1.1em;
-  outline-color: rgba(51, 35, 85, 0.83);
-}
-.loginStyle button {
-  font-size: 1.2em;
-  font-family: sans-serif;
-  color: #090311;
-  text-shadow: 1px 1px #f9f9f9;
-  text-decoration: none;
-  display: inline-block;
-  padding: 0.5em;
-  border-radius: 0.25em;
-  background: #f8f8f8;
-  border: 1px solid #ccc;
-  position: relative;
-  margin: 0 0 1px;
-  outline: 0;
-}
-.loginStyle ​ button:hover {
-  background: rgba(51, 35, 85, 0.31);
-}
+  padding: 5%; }
+  .loginStyle input {
+    width: 100%;
+    margin-bottom: 10px;
+    height: 5%;
+    padding: 10px;
+    font-size: 1.1em;
+    outline-color: rgba(51, 35, 85, 0.83); }
+  .loginStyle button {
+    font-size: 1.2em;
+    font-family: sans-serif;
+    color: #090311;
+    text-shadow: 1px 1px #f9f9f9;
+    text-decoration: none;
+    display: inline-block;
+    padding: 0.5em;
+    border-radius: 0.25em;
+    background: #f8f8f8;
+    border: 1px solid #ccc;
+    position: relative;
+    margin: 0 0 1px;
+    outline: 0; }
+  .loginStyle ​ button:hover {
+    background: rgba(51, 35, 85, 0.31); }
+
 body {
   box-sizing: border-box;
   font-size: 1em;
   margin: 0 auto;
-  padding: 0;
-}
-body .container {
-  margin: 0;
-}
+  padding: 0; }
+  body .container {
+    margin: 0; }

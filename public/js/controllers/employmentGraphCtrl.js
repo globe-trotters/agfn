@@ -1,7 +1,7 @@
 angular.module('myApp').controller('employmentGraphCtrl', function($scope) {
   //////TIME TO ANIMATE ///////
   var duration = 2000,
-    transition = 200;
+    transition = 200; 
 
   /////CALLING DONUT FUNCTION ARGUMENTS///////
   drawDonutChart(
