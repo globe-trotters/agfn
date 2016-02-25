@@ -78,6 +78,7 @@ angular.module('myApp').controller('housingGraphCtrl', function($scope) {
             .style("text-anchor", "middle")
             .text("Cost in $")
             .attr('fill', '#ffffff')
+            .style('margin-right', '20px')
             .style("font-size","34px")
             .style("font-family","Josefin Slab");
 
@@ -93,7 +94,7 @@ angular.module('myApp').controller('housingGraphCtrl', function($scope) {
             .attr('y', function(d) {return yRange(d.y); })
             .attr('width', xRange.rangeBand() / 2)
             .attr('height', function (d) {return ((height - margins.bottom) - yRange(d.y));})
-            .attr('fill', '#C1CED4')
+            .attr('fill', '#C1CED4');
 
         //Show Expenses Bars
         chart.selectAll('rect2')
@@ -107,10 +108,10 @@ angular.module('myApp').controller('housingGraphCtrl', function($scope) {
             .attr('y', function(d) {return yRange(d.z);})
             .attr('width', xRange.rangeBand() / 2)
             .attr('height', function (d) {return ((height - margins.bottom) - yRange(d.z));})
-            .attr('fill', '#05A8E6');
+            .attr('fill', '#25AAE1');
 
         //Legend
-        var colors = ['#05A8E6', '#C1CED4'];
+        var colors = ['#25AAE1', '#C1CED4'];
         var legendData= ['Expenses', 'Housing'];
 
         var legend = chart.append("g")
@@ -136,10 +137,13 @@ angular.module('myApp').controller('housingGraphCtrl', function($scope) {
         legendText.enter()
             .append("text")
             .attr("x", width - 45)
-            .attr('fill', '#ffffff');
+            .attr('fill', '#ffffff')
+            .style('font-size', '16px')
+            .style("font-family","Josefin Slab");
+
 
         legendText
             .attr("y", function(d, i) {return i * 20 + 9;})
-            .text(function(d) {return d;}); 
+            .text(function(d) {return d;});
     }
-})
+});

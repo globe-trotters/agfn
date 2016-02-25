@@ -2,7 +2,7 @@ angular.module('myApp', ['ui.router'])
 
 .config(function($stateProvider, $urlRouterProvider) {
 
-
+ 
   $stateProvider
   ///////USER VIEWS///////
     .state('map', {
@@ -93,5 +93,15 @@ angular.module('myApp', ['ui.router'])
             afterData: '='
         },
         controller: 'housingGraphCtrl'
+    };
+})
+.directive('employmentGraph', function() {
+    return {
+        templateUrl: './js/directives/finance/employmentGraphTmpl.html',
+        restrict: 'E',
+        scope: {
+            afterData: '='
+        },
+        controller: 'employmentGraphCtrl'
     };
 });

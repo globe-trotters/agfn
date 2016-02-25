@@ -96,30 +96,94 @@
     .adminContainer .adminStyle .adminButton:hover {
       background: rgba(51, 35, 85, 0.31); }
 
-.housingContainer {
-  padding-top: 5%;
-  width: 100%;
-  height: 100%;
+.finance {
   background-image: url("./../images/wood_1.png"); }
-  .housingContainer .graph {
+  .finance h1 {
+    margin: 0;
+    padding: 20px 20px 30px;
+    text-align: center;
+    font-family: "Josefin Slab";
+    color: #C1CED4;
+    font-size: 3em; }
+  .finance h2 {
+    margin: 0;
+    padding: 15px 15px 30px;
+    text-align: center;
+    font-family: "Josefin Slab";
+    color: #25AAE1;
+    font-size: 2.2em; }
+
+#donut {
+  width: 29rem;
+  height: 29rem;
+  margin: 0 auto;
+  display: inline-block;
+  padding: 10px;
+  margin-left: 100px;
+  padding-left: 50px; }
+  #donut text {
+    font-family: "Josefin Slab";
+    font-size: 7rem;
+    font-weight: 400;
+    line-height: 16rem;
+    fill: #25AAE1; }
+  #donut h2 {
+    color: #25AAE1;
+    font-size: 2em;
+    font-family: "Josefin Slab";
+    margin-bottom: 25px;
+    margin-right: 50px;
+    padding-right: 110px; }
+
+#donut2 {
+  width: 20rem;
+  height: 29rem;
+  margin: 0 auto;
+  display: inline-block;
+  margin-left: 50px;
+  padding: 10px; }
+  #donut2 text {
+    font-family: "Josefin Slab";
+    font-size: 7rem;
+    font-weight: 400;
+    line-height: 16rem;
+    fill: #25AAE1; }
+  #donut2 h2 {
+    color: #25AAE1;
+    font-size: 2em;
+    font-family: "Josefin Slab";
+    margin-bottom: 15px;
+    margin-right: 40px;
+    padding-left: 10px; }
+
+path.color0 {
+  fill: #25AAE1; }
+
+path.color1 {
+  fill: #C1CED4; }
+
+.graph {
+  background-image: url("./../images/wood_1.png"); }
+  .graph .graph {
     margin: auto;
     margin: 5%;
     text-align: center; }
-    .housingContainer .graph .axis path,
-    .housingContainer .graph .axis line {
+    .graph .graph .axis path,
+    .graph .graph .axis line {
       fill: none;
       stroke: #777; }
-    .housingContainer .graph .axis text {
-      font-family: 'Josefin Slab';
-      font-size: 13px; }
-    .housingContainer .graph .tick {
+    .graph .graph .axis text {
+      font-family: "Josefin Slab";
+      font-size: 13px;
+      fill: #25AAE1; }
+    .graph .graph .tick {
       stroke-dasharray: 1, 2; }
-    .housingContainer .graph .graph {
+    .graph .graph .graph {
       margin: auto;
       text-align: center; }
-    .housingContainer .graph .legend {
+    .graph .graph .legend {
       font-size: 12px; }
-    .housingContainer .graph rect {
+    .graph .graph rect {
       stroke-width: 2; }
 
 @charset "UTF-8";
@@ -158,4 +222,3 @@ body {
   padding: 0; }
   body .container {
     margin: 0; }
-

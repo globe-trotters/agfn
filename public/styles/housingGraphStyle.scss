@@ -1,8 +1,7 @@
-.housingContainer {
-  padding-top: 5%;
-  width: 100%;
-  height: 100%;
-  background-image: url('./../images/wood_1.png');
+@import 'variables';
+ 
+.graph {
+  background-image: $backgroundImage;
   .graph {
     margin: auto;
     margin: 5%;
@@ -13,8 +12,9 @@
       stroke: #777;
     }
     .axis text {
-      font-family: 'Josefin Slab';
-      font-size: 13px;
+        font-family: $graphFont;
+        font-size: 13px;
+        fill: $graphPrimaryColor;
     }
     .tick {
       stroke-dasharray: 1, 2;
