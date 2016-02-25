@@ -2,12 +2,14 @@
 
 .graph {
   background-image: $backgroundImage;
-  min-height: 100vh;
+  .graph {
     margin: auto;
+    margin: 5%;
     text-align: center;
-    .axis path, .axis line {
-        fill: none;
-        stroke: #777;
+    .axis path,
+    .axis line {
+      fill: none;
+      stroke: #777;
     }
     .axis text {
         font-family: $graphFont;
@@ -15,16 +17,17 @@
         fill: $graphPrimaryColor;
     }
     .tick {
-        stroke-dasharray: 1, 2;
+      stroke-dasharray: 1, 2;
     }
     .graph {
-        margin: auto;
-        text-align: center;
+      margin: auto;
+      text-align: center;
     }
     .legend {
-        font-size: 12px;
+      font-size: 12px;
     }
     rect {
-        stroke-width: 2;
+      stroke-width: 2;
     }
+  }
 }
