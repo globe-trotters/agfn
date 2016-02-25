@@ -96,26 +96,31 @@
     .adminContainer .adminStyle .adminButton:hover {
       background: rgba(51, 35, 85, 0.31); }
 
-.graph {
-  background-image: url("./../images/wood_1.png");
-  min-height: 100vh;
-  margin: auto;
-  text-align: center; }
-  .graph .axis path, .graph .axis line {
-    fill: none;
-    stroke: #777; }
-  .graph .axis text {
-    font-family: 'Josefin Slab';
-    font-size: 13px; }
-  .graph .tick {
-    stroke-dasharray: 1, 2; }
-  .graph .graph {
+.housingContainer {
+  padding-top: 5%;
+  width: 100%;
+  height: 100%;
+  background-image: url("./../images/wood_1.png"); }
+  .housingContainer .graph {
     margin: auto;
+    margin: 5%;
     text-align: center; }
-  .graph .legend {
-    font-size: 12px; }
-  .graph rect {
-    stroke-width: 2; }
+    .housingContainer .graph .axis path,
+    .housingContainer .graph .axis line {
+      fill: none;
+      stroke: #777; }
+    .housingContainer .graph .axis text {
+      font-family: 'Josefin Slab';
+      font-size: 13px; }
+    .housingContainer .graph .tick {
+      stroke-dasharray: 1, 2; }
+    .housingContainer .graph .graph {
+      margin: auto;
+      text-align: center; }
+    .housingContainer .graph .legend {
+      font-size: 12px; }
+    .housingContainer .graph rect {
+      stroke-width: 2; }
 
 @charset "UTF-8";
 .loginStyle {
