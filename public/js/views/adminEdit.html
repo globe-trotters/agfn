@@ -1,0 +1,23 @@
+<div class="adminContainer">
+
+<div ng-repeat="cohort in cohorts track by cohort._id">
+
+
+<!-- {{cohort.students}} -->
+<input ng-model="cohort.title" ng-change="change()"> -->
+<!-- <cohort-search cohort-data="cohort.cohortData.locationString"></cohort-search> -->
+
+<input type="date" ng-model=" cohort.startDate " ng-change="change()">
+<input type="date" ng-model=" cohort.endDate " ng-change="change()">
+
+
+
+
+</div>
+
+
+
+
+
+<!-- ///end admin container/// -->
+</div>
