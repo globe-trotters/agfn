@@ -1,0 +1,147 @@
+{
+
+  "features": [{
+      "type": "Feature",
+      "geometryfrom": {
+        "city": "Chicago",
+        "state": "IL",
+        "country": "USA",
+        "type": "Point",
+        "coordinates": [-87.6847, 41.8369]
+      },
+      "geometrycamp": {
+        "type": "Point",
+        "coordinates": [-111.6608, 40.2444],
+        "city": "Provo",
+        "state": "UT",
+        "country": "USA"
+      },
+      "geometryto": {
+        "type": "Point",
+        "coordinates": [-117.1625, 32.7150],
+        "city": "San Diego",
+        "state": "CA",
+        "country": "USA"
+      }
+  },
+  {
+      "type": "Feature",
+      "geometryfrom": {
+        "city": "Kent",
+        "state": "OH",
+        "country": "USA",
+        "type": "Point",
+        "coordinates": [-81.3611, 41.1506]
+      },
+      "geometrycamp": {
+        "type": "Point",
+        "coordinates": [-111.6608, 40.2444],
+        "city": "Provo",
+        "state": "UT",
+        "country": "USA"
+      },
+      "geometryto": {
+        "type": "Point",
+        "coordinates": [-111.8833, 40.7500],
+        "city": "Salt Lake City",
+        "state": "UT",
+        "country": "USA"
+      }
+  },
+  {
+      "type": "Feature",
+      "geometryfrom": {
+        "city": "Denver",
+        "state": "CO",
+        "country": "USA",
+        "type": "Point",
+        "coordinates": [-104.9903, 39.7392]
+      },
+      "geometrycamp": {
+        "type": "Point",
+        "coordinates": [-111.6608, 40.2444],
+        "city": "Provo",
+        "state": "UT",
+        "country": "USA"
+      },
+      "geometryto": {
+        "type": "Point",
+        "coordinates": [-111.6965, 40.2988],
+        "city": "Orem",
+        "state": "UT",
+        "country": "USA"
+      }
+  },
+  {
+      "type": "Feature",
+      "geometryfrom": {
+        "city": "Baltimore",
+        "state": "MD",
+        "country": "USA",
+        "type": "Point",
+        "coordinates": [-76.6167, 39.2833]
+      },
+      "geometrycamp": {
+        "type": "Point",
+        "coordinates": [-111.6608, 40.2444],
+        "city": "Provo",
+        "state": "UT",
+        "country": "USA"
+      },
+      "geometryto": {
+        "type": "Point",
+        "coordinates": [-77.0164, 38.9047],
+        "city": "Washington D.C.",
+        "state": "MD",
+        "country": "USA"
+      }
+  },
+  {
+      "type": "Feature",
+      "geometryfrom": {
+        "city": "Bogota",
+        "state": "Cundinamarca",
+        "country": "Colombia",
+        "type": "Point",
+        "coordinates": [-74.0758, 4.5981]
+      },
+      "geometrycamp": {
+        "type": "Point",
+        "coordinates": [-111.6608, 40.2444],
+        "city": "Provo",
+        "state": "UT",
+        "country": "USA"
+      },
+      "geometryto": {
+        "type": "Point",
+        "coordinates": [-111.8833, 40.7500],
+        "city": "Salt Lake City",
+        "state": "UT",
+        "country": "USA"
+      }
+  },
+  {
+      "type": "Feature",
+      "geometryfrom": {
+        "city": "Moscow",
+        "state": "NA",
+        "country": "Russia",
+        "type": "Point",
+        "coordinates": [37.6167, 55.75]
+      },
+      "geometrycamp": {
+        "type": "Point",
+        "coordinates": [-111.6608, 40.2444],
+        "city": "Provo",
+        "state": "UT",
+        "country": "USA"
+      },
+      "geometryto": {
+        "type": "Point",
+        "coordinates": [40, 60],
+        "city": "Salt Lake City",
+        "state": "NA",
+        "country": "Russia"
+      }
+  }]
+}

@@ -1,14 +1,24 @@
 <!DOCTYPE html>
-<html ng-app="myApp"> 
+<html ng-app="myApp">
   <head>
     <meta charset="utf-8">
 
+      <link rel="stylesheet" href="./style.css">
+      <link rel="stylesheet" href="./styles.css">
       <link href='https://fonts.googleapis.com/css?family=Josefin+Slab' rel='stylesheet' type='text/css'>
-      <script src="//d3js.org/d3.v3.min.js" charset="utf-8"></script>
+      <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+      <!-- <script src="//d3js.org/d3.v3.min.js" charset="utf-8"></script> -->
       <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
 
     <title>Globe-Trotters</title>
-    <link rel="stylesheet" href="./style.css">
+
+
+    <script src="plugins/d3.v3.min.js"></script>
+    <script src="plugins/queue.v1.min.js"></script>
+    <script src="plugins/topojson.v1.min.js"></script>
+    <script src="plugins/moment.js"></script>
+    <script src="plugins/datamaps.world.min.js"></script>
   </head>
 
   <body>
@@ -39,6 +49,13 @@
     <script src="./js/controllers/cohortSearchCtrl.js"></script>
     <script src="./js/controllers/homeSearchCtrl.js"></script>
     <script src="./js/controllers/afterSearchCtrl.js"></script>
+
+    <script src="./js/controllers/barsCtrl.js"></script>
+    <script src="./js/controllers/earthCtrl.js"></script>
+    <script src="./js/controllers/mainCtrl.js"></script>
+    <script src="./js/controllers/scrollbarCtrl.js"></script>
+
+    <script src="./js/services/service.js"></script>
 
 
   </body>
