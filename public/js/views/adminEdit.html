@@ -1,23 +1,41 @@
 <div class="adminContainer">
-
-<div ng-repeat="cohort in cohorts track by cohort._id">
-
-
-<!-- {{cohort.students}} -->
-<input ng-model="cohort.title" ng-change="change()"> -->
-<!-- <cohort-search cohort-data="cohort.cohortData.locationString"></cohort-search> -->
-
-<input type="date" ng-model=" cohort.startDate " ng-change="change()">
-<input type="date" ng-model=" cohort.endDate " ng-change="change()">
+  <div class="adminStyle">
+    <div class="studentDiv" ng-repeat="cohort in cohorts track by cohort._id">
 
 
+      <h2>{{cohort.title}}<br/>{{cohort.cohortData.locationString}}</h2>
+      <br/>
+      <input class="typeInput" placeholder="edit title" ng-model="editCohort.title">
+      <br/>
+       Start: {{cohort.startBootcamp}}
+      <input class="typeInput" placeholder="Edit Start Date" type="date" ng-model="editCohort.startDate"><br/>
+      End: {{cohort.endBootcamp}}
+      <input class="typeInput" placeholder="Edit End Date" type="date" ng-model="editCohort.endDate"></br>
+
+      <!-- {{cohort.students}} -->
+
+      <!-- ///////////To Do://////////
+      { look at cohort model to see how things are named, obvi <3 }
+
+      1.make CRUD functions for PUT (edit) for individual cohorts.
+
+      2.start with making just cohort information editable (started above) --make location editable. honestly not exactly sure how to go about that.
+
+      3.make student information editable
+            (students do not have individual IDs in database, the entire cohort is the only thing with an id. Students do not ref cohort at all
+            so goodluck, adam dearest.)
+              -name
+              -home (location, use home directive)
+              -after (location, use after directive)
+              -job (boolean) -->
 
 
-</div>
+
+    </div>
 
 
 
 
-
-<!-- ///end admin container/// -->
+  </div>
+  <!-- ///end admin container/// -->
 </div>

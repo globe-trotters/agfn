@@ -1,5 +1,6 @@
 angular.module('myApp').controller('adminCtrl', function($scope, $state, loginService, adminService) {
 
+
 $scope.show = 1;
 
   $scope.getCohorts = function() {
