@@ -5,29 +5,496 @@
 
       <h2>{{cohort.title}}<br/>{{cohort.cohortData.locationString}}</h2>
       <br/>
-      <input class="typeInput" placeholder="edit title" ng-model="editCohort.title">
+      <input class="typeInput" placeholder="edit cohort title (DM#)" ng-model="editCohort.title">
       <br/>
        Start: {{cohort.startBootcamp}}
       <input class="typeInput" placeholder="Edit Start Date" type="date" ng-model="editCohort.startDate"><br/>
       End: {{cohort.endBootcamp}}
       <input class="typeInput" placeholder="Edit End Date" type="date" ng-model="editCohort.endDate"></br>
+      Students:
+      <div class="studentDiv">
+        <input class="typeInput" value="{{cohort.students[0].name}}"><br/>
+        Before DevMtn: {{cohort.students[0].homeData.locationString}}<br/>
+        <home-search home-data="editCohort.students[0].homeData" class="typeInput"></home-search></br>
+        After DevMtn: {{cohort.students[0].afterData.locationString}}<br/>
+        <after-search after-data="editCohort.students[0].afterData" class="typeInput"></after-search></br>
+        Job: {{cohort.students[0].job}}<br/>
+        <select class="selectJob" ng-model="editCohort.students[0].job">
+          <option value="true">Yes</option>
+          <option value="false">No</option>
+        </select>
+      </div>
 
-      <!-- {{cohort.students}} -->
+            <div class="studentDiv">
+                <input class="typeInput" value="{{cohort.students[1].name}}"><br/>
+                Before DevMtn: {{cohort.students[1].homeData.locationString}}<br/>
+                <home-search home-data="editCohort.students[1].homeData" class="typeInput"></home-search></br>
+                After DevMtn: {{cohort.students[1].afterData.locationString}}<br/>
+                <after-search after-data="editCohort.students[1].afterData" class="typeInput"></after-search></br>
+                Job: {{cohort.students[1].job}}<br/>
+                <select class="selectJob" ng-model="editCohort.students[1].job">
+                  <option value="true">Yep</option>
+                  <option value="false">Nope</option>
+                </select>
+              </div>
+            <div class="studentDiv">
+                <input class="typeInput" value="{{cohort.students[2].name}}"><br/>
+                Before DevMtn: {{cohort.students[2].homeData.locationString}}<br/>
+                <home-search home-data="editCohort.students[2].homeData" class="typeInput"></home-search></br>
+                After DevMtn: {{cohort.students[2].afterData.locationString}}<br/>
+                <after-search after-data="editCohort.students[2].afterData" class="typeInput"></after-search></br>
+                Job: {{cohort.students[2].job}}<br/>
+                <select class="selectJob" ng-model="editCohort.students[2].job">
+                  <option value="true">Yep</option>
+                  <option value="false">Nope</option>
+                </select>
+              </div>
+            <div class="studentDiv">
+                <input class="typeInput" value="{{cohort.students[3].name}}"><br/>
+                Before DevMtn: {{cohort.students[3].homeData.locationString}}<br/>
+                <home-search home-data="editCohort.students[3].homeData" class="typeInput"></home-search></br>
+                After DevMtn: {{cohort.students[3].afterData.locationString}}<br/>
+                <after-search after-data="editCohort.students[3].afterData" class="typeInput"></after-search></br>
+                Job: {{cohort.students[3].job}}<br/>
+                <select class="selectJob" ng-model="editCohort.students[3].job">
+                  <option value="true">Yep</option>
+                  <option value="false">Nope</option>
+                </select>
+              </div>
+            <div class="studentDiv">
+                <input class="typeInput" value="{{cohort.students[4].name}}"><br/>
+                Before DevMtn: {{cohort.students[4].homeData.locationString}}<br/>
+                <home-search home-data="editCohort.students[4].homeData" class="typeInput"></home-search></br>
+                After DevMtn: {{cohort.students[4].afterData.locationString}}<br/>
+                <after-search after-data="editCohort.students[4].afterData" class="typeInput"></after-search></br>
+                Job: {{cohort.students[4].job}}<br/>
+                <select class="selectJob" ng-model="editCohort.students[4].job">
+                  <option value="true">Yep</option>
+                  <option value="false">Nope</option>
+                </select>
+              </div>
+            <div class="studentDiv">
+                <input class="typeInput" value="{{cohort.students[5].name}}"><br/>
+                Before DevMtn: {{cohort.students[5].homeData.locationString}}<br/>
+                <home-search home-data="editCohort.students[5].homeData" class="typeInput"></home-search></br>
+                After DevMtn: {{cohort.students[5].afterData.locationString}}<br/>
+                <after-search after-data="editCohort.students[5].afterData" class="typeInput"></after-search></br>
+                Job: {{cohort.students[5].job}}<br/>
+                <select class="selectJob" ng-model="editCohort.students[5].job">
+                  <option value="true">Yep</option>
+                  <option value="false">Nope</option>
+                </select>
+              </div>
+            <div class="studentDiv">
+                <input class="typeInput" value="{{cohort.students[6].name}}"><br/>
+                Before DevMtn: {{cohort.students[6].homeData.locationString}}<br/>
+                <home-search home-data="editCohort.students[6].homeData" class="typeInput"></home-search></br>
+                After DevMtn: {{cohort.students[6].afterData.locationString}}<br/>
+                <after-search after-data="editCohort.students[6].afterData" class="typeInput"></after-search></br>
+                Job: {{cohort.students[6].job}}<br/>
+                <select class="selectJob" ng-model="editCohort.students[6].job">
+                  <option value="true">Yep</option>
+                  <option value="false">Nope</option>
+                </select>
+              </div>
+            <div class="studentDiv">
+                <input class="typeInput" value="{{cohort.students[7].name}}"><br/>
+                Before DevMtn: {{cohort.students[7].homeData.locationString}}<br/>
+                <home-search home-data="editCohort.students[7].homeData" class="typeInput"></home-search></br>
+                After DevMtn: {{cohort.students[7].afterData.locationString}}<br/>
+                <after-search after-data="editCohort.students[7].afterData" class="typeInput"></after-search></br>
+                Job: {{cohort.students[7].job}}<br/>
+                <select class="selectJob" ng-model="editCohort.students[7].job">
+                  <option value="true">Yep</option>
+                  <option value="false">Nope</option>
+                </select>
+              </div>
+            <div class="studentDiv">
+                <input class="typeInput" value="{{cohort.students[8].name}}"><br/>
+                Before DevMtn: {{cohort.students[8].homeData.locationString}}<br/>
+                <home-search home-data="editCohort.students[8].homeData" class="typeInput"></home-search></br>
+                After DevMtn: {{cohort.students[8].afterData.locationString}}<br/>
+                <after-search after-data="editCohort.students[8].afterData" class="typeInput"></after-search></br>
+                Job: {{cohort.students[8].job}}<br/>
+                <select class="selectJob" ng-model="editCohort.students[8].job">
+                  <option value="true">Yep</option>
+                  <option value="false">Nope</option>
+                </select>
+              </div>
+            <div class="studentDiv">
+                <input class="typeInput" value="{{cohort.students[9].name}}"><br/>
+                Before DevMtn: {{cohort.students[9].homeData.locationString}}<br/>
+                <home-search home-data="editCohort.students[9].homeData" class="typeInput"></home-search></br>
+                After DevMtn: {{cohort.students[9].afterData.locationString}}<br/>
+                <after-search after-data="editCohort.students[9].afterData" class="typeInput"></after-search></br>
+                Job: {{cohort.students[9].job}}<br/>
+                <select class="selectJob" ng-model="editCohort.students[9].job">
+                  <option value="true">Yep</option>
+                  <option value="false">Nope</option>
+                </select>
+              </div>
+            <div class="studentDiv">
+                <input class="typeInput" value="{{cohort.students[10].name}}"><br/>
+                Before DevMtn: {{cohort.students[10].homeData.locationString}}<br/>
+                <home-search home-data="editCohort.students[10].homeData" class="typeInput"></home-search></br>
+                After DevMtn: {{cohort.students[10].afterData.locationString}}<br/>
+                <after-search after-data="editCohort.students[10].afterData" class="typeInput"></after-search></br>
+                Job: {{cohort.students[10].job}}<br/>
+                <select class="selectJob" ng-model="editCohort.students[10].job">
+                  <option value="true">Yep</option>
+                  <option value="false">Nope</option>
+                </select>
+              </div>
+            <div class="studentDiv">
+                <input class="typeInput" value="{{cohort.students[11].name}}"><br/>
+                Before DevMtn: {{cohort.students[11].homeData.locationString}}<br/>
+                <home-search home-data="editCohort.students[11].homeData" class="typeInput"></home-search></br>
+                After DevMtn: {{cohort.students[11].afterData.locationString}}<br/>
+                <after-search after-data="editCohort.students[11].afterData" class="typeInput"></after-search></br>
+                Job: {{cohort.students[11].job}}<br/>
+                <select class="selectJob" ng-model="editCohort.students[11].job">
+                  <option value="true">Yep</option>
+                  <option value="false">Nope</option>
+                </select>
+              </div>
+            <div class="studentDiv">
+                <input class="typeInput" value="{{cohort.students[12].name}}"><br/>
+                Before DevMtn: {{cohort.students[12].homeData.locationString}}<br/>
+                <home-search home-data="editCohort.students[12].homeData" class="typeInput"></home-search></br>
+                After DevMtn: {{cohort.students[12].afterData.locationString}}<br/>
+                <after-search after-data="editCohort.students[12].afterData" class="typeInput"></after-search></br>
+                Job: {{cohort.students[12].job}}<br/>
+                <select class="selectJob" ng-model="editCohort.students[12].job">
+                  <option value="true">Yep</option>
+                  <option value="false">Nope</option>
+                </select>
+              </div>
+            <div class="studentDiv">
+                <input class="typeInput" value="{{cohort.students[13].name}}"><br/>
+                Before DevMtn: {{cohort.students[13].homeData.locationString}}<br/>
+                <home-search home-data="editCohort.students[13].homeData" class="typeInput"></home-search></br>
+                After DevMtn: {{cohort.students[13].afterData.locationString}}<br/>
+                <after-search after-data="editCohort.students[13].afterData" class="typeInput"></after-search></br>
+                Job: {{cohort.students[13].job}}<br/>
+                <select class="selectJob" ng-model="editCohort.students[13].job">
+                  <option value="true">Yep</option>
+                  <option value="false">Nope</option>
+                </select>
+              </div>
+            <div class="studentDiv">
+                <input class="typeInput" value="{{cohort.students[14].name}}"><br/>
+                Before DevMtn: {{cohort.students[14].homeData.locationString}}<br/>
+                <home-search home-data="editCohort.students[14].homeData" class="typeInput"></home-search></br>
+                After DevMtn: {{cohort.students[14].afterData.locationString}}<br/>
+                <after-search after-data="editCohort.students[14].afterData" class="typeInput"></after-search></br>
+                Job: {{cohort.students[14].job}}<br/>
+                <select class="selectJob" ng-model="editCohort.students[14].job">
+                  <option value="true">Yep</option>
+                  <option value="false">Nope</option>
+                </select>
+              </div>
+            <div class="studentDiv">
+                <input class="typeInput" value="{{cohort.students[15].name}}"><br/>
+                Before DevMtn: {{cohort.students[15].homeData.locationString}}<br/>
+                <home-search home-data="editCohort.students[15].homeData" class="typeInput"></home-search></br>
+                After DevMtn: {{cohort.students[15].afterData.locationString}}<br/>
+                <after-search after-data="editCohort.students[15].afterData" class="typeInput"></after-search></br>
+                Job: {{cohort.students[15].job}}<br/>
+                <select class="selectJob" ng-model="editCohort.students[15].job">
+                  <option value="true">Yep</option>
+                  <option value="false">Nope</option>
+                </select>
+              </div>
+            <div class="studentDiv">
+                <input class="typeInput" value="{{cohort.students[16].name}}"><br/>
+                Before DevMtn: {{cohort.students[16].homeData.locationString}}<br/>
+                <home-search home-data="editCohort.students[16].homeData" class="typeInput"></home-search></br>
+                After DevMtn: {{cohort.students[16].afterData.locationString}}<br/>
+                <after-search after-data="editCohort.students[16].afterData" class="typeInput"></after-search></br>
+                Job: {{cohort.students[16].job}}<br/>
+                <select class="selectJob" ng-model="editCohort.students[16].job">
+                  <option value="true">Yep</option>
+                  <option value="false">Nope</option>
+                </select>
+              </div>
+            <div class="studentDiv">
+                <input class="typeInput" value="{{cohort.students[17].name}}"><br/>
+                Before DevMtn: {{cohort.students[17].homeData.locationString}}<br/>
+                <home-search home-data="editCohort.students[17].homeData" class="typeInput"></home-search></br>
+                After DevMtn: {{cohort.students[17].afterData.locationString}}<br/>
+                <after-search after-data="editCohort.students[17].afterData" class="typeInput"></after-search></br>
+                Job: {{cohort.students[17].job}}<br/>
+                <select class="selectJob" ng-model="editCohort.students[17].job">
+                  <option value="true">Yep</option>
+                  <option value="false">Nope</option>
+                </select>
+              </div>
+            <div class="studentDiv">
+                <input class="typeInput" value="{{cohort.students[18].name}}"><br/>
+                Before DevMtn: {{cohort.students[18].homeData.locationString}}<br/>
+                <home-search home-data="editCohort.students[18].homeData" class="typeInput"></home-search></br>
+                After DevMtn: {{cohort.students[18].afterData.locationString}}<br/>
+                <after-search after-data="editCohort.students[18].afterData" class="typeInput"></after-search></br>
+                Job: {{cohort.students[18].job}}<br/>
+                <select class="selectJob" ng-model="editCohort.students[18].job">
+                  <option value="true">Yep</option>
+                  <option value="false">Nope</option>
+                </select>
+              </div>
+            <div class="studentDiv">
+                <input class="typeInput" value="{{cohort.students[19].name}}"><br/>
+                Before DevMtn: {{cohort.students[19].homeData.locationString}}<br/>
+                <home-search home-data="editCohort.students[19].homeData" class="typeInput"></home-search></br>
+                After DevMtn: {{cohort.students[19].afterData.locationString}}<br/>
+                <after-search after-data="editCohort.students[19].afterData" class="typeInput"></after-search></br>
+                Job: {{cohort.students[19].job}}<br/>
+                <select class="selectJob" ng-model="editCohort.students[19].job">
+                  <option value="true">Yep</option>
+                  <option value="false">Nope</option>
+                </select>
+              </div>
+            <div class="studentDiv">
+                <input class="typeInput" value="{{cohort.students[20].name}}"><br/>
+                Before DevMtn: {{cohort.students[20].homeData.locationString}}<br/>
+                <home-search home-data="editCohort.students[20].homeData" class="typeInput"></home-search></br>
+                After DevMtn: {{cohort.students[20].afterData.locationString}}<br/>
+                <after-search after-data="editCohort.students[20].afterData" class="typeInput"></after-search></br>
+                Job: {{cohort.students[20].job}}<br/>
+                <select class="selectJob" ng-model="editCohort.students[20].job">
+                  <option value="true">Yep</option>
+                  <option value="false">Nope</option>
+                </select>
+              </div>
+            <div class="studentDiv">
+                <input class="typeInput" value="{{cohort.students[21].name}}"><br/>
+                Before DevMtn: {{cohort.students[21].homeData.locationString}}<br/>
+                <home-search home-data="editCohort.students[21].homeData" class="typeInput"></home-search></br>
+                After DevMtn: {{cohort.students[21].afterData.locationString}}<br/>
+                <after-search after-data="editCohort.students[21].afterData" class="typeInput"></after-search></br>
+                Job: {{cohort.students[21].job}}<br/>
+                <select class="selectJob" ng-model="editCohort.students[21].job">
+                  <option value="true">Yep</option>
+                  <option value="false">Nope</option>
+                </select>
+              </div>
+            <div class="studentDiv">
+                <input class="typeInput" value="{{cohort.students[22].name}}"><br/>
+                Before DevMtn: {{cohort.students[22].homeData.locationString}}<br/>
+                <home-search home-data="editCohort.students[22].homeData" class="typeInput"></home-search></br>
+                After DevMtn: {{cohort.students[22].afterData.locationString}}<br/>
+                <after-search after-data="editCohort.students[22].afterData" class="typeInput"></after-search></br>
+                Job: {{cohort.students[22].job}}<br/>
+                <select class="selectJob" ng-model="editCohort.students[22].job">
+                  <option value="true">Yep</option>
+                  <option value="false">Nope</option>
+                </select>
+              </div>
+            <div class="studentDiv">
+                <input class="typeInput" value="{{cohort.students[23].name}}"><br/>
+                Before DevMtn: {{cohort.students[23].homeData.locationString}}<br/>
+                <home-search home-data="editCohort.students[23].homeData" class="typeInput"></home-search></br>
+                After DevMtn: {{cohort.students[23].afterData.locationString}}<br/>
+                <after-search after-data="editCohort.students[23].afterData" class="typeInput"></after-search></br>
+                Job: {{cohort.students[23].job}}<br/>
+                <select class="selectJob" ng-model="editCohort.students[23].job">
+                  <option value="true">Yep</option>
+                  <option value="false">Nope</option>
+                </select>
+              </div>
+            <div class="studentDiv">
+                <input class="typeInput" value="{{cohort.students[24].name}}"><br/>
+                Before DevMtn: {{cohort.students[24].homeData.locationString}}<br/>
+                <home-search home-data="editCohort.students[24].homeData" class="typeInput"></home-search></br>
+                After DevMtn: {{cohort.students[24].afterData.locationString}}<br/>
+                <after-search after-data="editCohort.students[24].afterData" class="typeInput"></after-search></br>
+                Job: {{cohort.students[24].job}}<br/>
+                <select class="selectJob" ng-model="editCohort.students[24].job">
+                  <option value="true">Yep</option>
+                  <option value="false">Nope</option>
+                </select>
+              </div>
+            <div class="studentDiv">
+                <input class="typeInput" value="{{cohort.students[25].name}}"><br/>
+                Before DevMtn: {{cohort.students[25].homeData.locationString}}<br/>
+                <home-search home-data="editCohort.students[25].homeData" class="typeInput"></home-search></br>
+                After DevMtn: {{cohort.students[25].afterData.locationString}}<br/>
+                <after-search after-data="editCohort.students[25].afterData" class="typeInput"></after-search></br>
+                Job: {{cohort.students[25].job}}<br/>
+                <select class="selectJob" ng-model="editCohort.students[25].job">
+                  <option value="true">Yep</option>
+                  <option value="false">Nope</option>
+                </select>
+              </div>
+            <div class="studentDiv">
+                <input class="typeInput" value="{{cohort.students[26].name}}"><br/>
+                Before DevMtn: {{cohort.students[26].homeData.locationString}}<br/>
+                <home-search home-data="editCohort.students[26].homeData" class="typeInput"></home-search></br>
+                After DevMtn: {{cohort.students[26].afterData.locationString}}<br/>
+                <after-search after-data="editCohort.students[26].afterData" class="typeInput"></after-search></br>
+                Job: {{cohort.students[26].job}}<br/>
+                <select class="selectJob" ng-model="editCohort.students[26].job">
+                  <option value="true">Yep</option>
+                  <option value="false">Nope</option>
+                </select>
+              </div>
+            <div class="studentDiv">
+                <input class="typeInput" value="{{cohort.students[27].name}}"><br/>
+                Before DevMtn: {{cohort.students[27].homeData.locationString}}<br/>
+                <home-search home-data="editCohort.students[27].homeData" class="typeInput"></home-search></br>
+                After DevMtn: {{cohort.students[27].afterData.locationString}}<br/>
+                <after-search after-data="editCohort.students[27].afterData" class="typeInput"></after-search></br>
+                Job: {{cohort.students[27].job}}<br/>
+                <select class="selectJob" ng-model="editCohort.students[27].job">
+                  <option value="true">Yep</option>
+                  <option value="false">Nope</option>
+                </select>
+              </div>
+            <div class="studentDiv">
+                <input class="typeInput" value="{{cohort.students[28].name}}"><br/>
+                Before DevMtn: {{cohort.students[28].homeData.locationString}}<br/>
+                <home-search home-data="editCohort.students[28].homeData" class="typeInput"></home-search></br>
+                After DevMtn: {{cohort.students[28].afterData.locationString}}<br/>
+                <after-search after-data="editCohort.students[28].afterData" class="typeInput"></after-search></br>
+                Job: {{cohort.students[28].job}}<br/>
+                <select class="selectJob" ng-model="editCohort.students[28].job">
+                  <option value="true">Yep</option>
+                  <option value="false">Nope</option>
+                </select>
+              </div>
+            <div class="studentDiv">
+                <input class="typeInput" value="{{cohort.students[29].name}}"><br/>
+                Before DevMtn: {{cohort.students[29].homeData.locationString}}<br/>
+                <home-search home-data="editCohort.students[29].homeData" class="typeInput"></home-search></br>
+                After DevMtn: {{cohort.students[29].afterData.locationString}}<br/>
+                <after-search after-data="editCohort.students[29].afterData" class="typeInput"></after-search></br>
+                Job: {{cohort.students[29].job}}<br/>
+                <select class="selectJob" ng-model="editCohort.students[29].job">
+                  <option value="true">Yep</option>
+                  <option value="false">Nope</option>
+                </select>
+              </div>
+            <div class="studentDiv">
+                <input class="typeInput" value="{{cohort.students[30].name}}"><br/>
+                Before DevMtn: {{cohort.students[30].homeData.locationString}}<br/>
+                <home-search home-data="editCohort.students[30].homeData" class="typeInput"></home-search></br>
+                After DevMtn: {{cohort.students[30].afterData.locationString}}<br/>
+                <after-search after-data="editCohort.students[30].afterData" class="typeInput"></after-search></br>
+                Job: {{cohort.students[30].job}}<br/>
+                <select class="selectJob" ng-model="editCohort.students[30].job">
+                  <option value="true">Yep</option>
+                  <option value="false">Nope</option>
+                </select>
+              </div>
+            <div class="studentDiv">
+                <input class="typeInput" value="{{cohort.students[31].name}}"><br/>
+                Before DevMtn: {{cohort.students[31].homeData.locationString}}<br/>
+                <home-search home-data="editCohort.students[31].homeData" class="typeInput"></home-search></br>
+                After DevMtn: {{cohort.students[31].afterData.locationString}}<br/>
+                <after-search after-data="editCohort.students[31].afterData" class="typeInput"></after-search></br>
+                Job: {{cohort.students[31].job}}<br/>
+                <select class="selectJob" ng-model="editCohort.students[31].job">
+                  <option value="true">Yep</option>
+                  <option value="false">Nope</option>
+                </select>
+              </div>
+            <div class="studentDiv">
+                <input class="typeInput" value="{{cohort.students[32].name}}"><br/>
+                Before DevMtn: {{cohort.students[32].homeData.locationString}}<br/>
+                <home-search home-data="editCohort.students[32].homeData" class="typeInput"></home-search></br>
+                After DevMtn: {{cohort.students[32].afterData.locationString}}<br/>
+                <after-search after-data="editCohort.students[32].afterData" class="typeInput"></after-search></br>
+                Job: {{cohort.students[32].job}}<br/>
+                <select class="selectJob" ng-model="editCohort.students[32].job">
+                  <option value="true">Yep</option>
+                  <option value="false">Nope</option>
+                </select>
+              </div>
+            <div class="studentDiv">
+                <input class="typeInput" value="{{cohort.students[33].name}}"><br/>
+                Before DevMtn: {{cohort.students[33].homeData.locationString}}<br/>
+                <home-search home-data="editCohort.students[33].homeData" class="typeInput"></home-search></br>
+                After DevMtn: {{cohort.students[33].afterData.locationString}}<br/>
+                <after-search after-data="editCohort.students[33].afterData" class="typeInput"></after-search></br>
+                Job: {{cohort.students[33].job}}<br/>
+                <select class="selectJob" ng-model="editCohort.students[33].job">
+                  <option value="true">Yep</option>
+                  <option value="false">Nope</option>
+                </select>
+              </div>
+            <div class="studentDiv">
+                <input class="typeInput" value="{{cohort.students[34].name}}"><br/>
+                Before DevMtn: {{cohort.students[34].homeData.locationString}}<br/>
+                <home-search home-data="editCohort.students[34].homeData" class="typeInput"></home-search></br>
+                After DevMtn: {{cohort.students[34].afterData.locationString}}<br/>
+                <after-search after-data="editCohort.students[34].afterData" class="typeInput"></after-search></br>
+                Job: {{cohort.students[34].job}}<br/>
+                <select class="selectJob" ng-model="editCohort.students[34].job">
+                  <option value="true">Yep</option>
+                  <option value="false">Nope</option>
+                </select>
+              </div>
+            <div class="studentDiv">
+                <input class="typeInput" value="{{cohort.students[35].name}}"><br/>
+                Before DevMtn: {{cohort.students[35].homeData.locationString}}<br/>
+                <home-search home-data="editCohort.students[35].homeData" class="typeInput"></home-search></br>
+                After DevMtn: {{cohort.students[35].afterData.locationString}}<br/>
+                <after-search after-data="editCohort.students[35].afterData" class="typeInput"></after-search></br>
+                Job: {{cohort.students[35].job}}<br/>
+                <select class="selectJob" ng-model="editCohort.students[35].job">
+                  <option value="true">Yep</option>
+                  <option value="false">Nope</option>
+                </select>
+              </div>
+            <div class="studentDiv">
+                <input class="typeInput" value="{{cohort.students[36].name}}"><br/>
+                Before DevMtn: {{cohort.students[36].homeData.locationString}}<br/>
+                <home-search home-data="editCohort.students[36].homeData" class="typeInput"></home-search></br>
+                After DevMtn: {{cohort.students[36].afterData.locationString}}<br/>
+                <after-search after-data="editCohort.students[36].afterData" class="typeInput"></after-search></br>
+                Job: {{cohort.students[36].job}}<br/>
+                <select class="selectJob" ng-model="editCohort.students[36].job">
+                  <option value="true">Yep</option>
+                  <option value="false">Nope</option>
+                </select>
+              </div>
+            <div class="studentDiv">
+                <input class="typeInput" value="{{cohort.students[37].name}}"><br/>
+                Before DevMtn: {{cohort.students[37].homeData.locationString}}<br/>
+                <home-search home-data="editCohort.students[37].homeData" class="typeInput"></home-search></br>
+                After DevMtn: {{cohort.students[37].afterData.locationString}}<br/>
+                <after-search after-data="editCohort.students[37].afterData" class="typeInput"></after-search></br>
+                Job: {{cohort.students[37].job}}<br/>
+                <select class="selectJob" ng-model="editCohort.students[37].job">
+                  <option value="true">Yep</option>
+                  <option value="false">Nope</option>
+                </select>
+              </div>
+            <div class="studentDiv">
+                <input class="typeInput" value="{{cohort.students[38].name}}"><br/>
+                Before DevMtn: {{cohort.students[38].homeData.locationString}}<br/>
+                <home-search home-data="editCohort.students[38].homeData" class="typeInput"></home-search></br>
+                After DevMtn: {{cohort.students[38].afterData.locationString}}<br/>
+                <after-search after-data="editCohort.students[38].afterData" class="typeInput"></after-search></br>
+                Job: {{cohort.students[38].job}}<br/>
+                <select class="selectJob" ng-model="editCohort.students[38].job">
+                  <option value="true">Yep</option>
+                  <option value="false">Nope</option>
+                </select>
+              </div>
+            <div class="studentDiv">
+                <input class="typeInput" value="{{cohort.students[39].name}}"><br/>
+                Before DevMtn: {{cohort.students[39].homeData.locationString}}<br/>
+                <home-search home-data="editCohort.students[39].homeData" class="typeInput"></home-search></br>
+                After DevMtn: {{cohort.students[39].afterData.locationString}}<br/>
+                <after-search after-data="editCohort.students[39].afterData" class="typeInput"></after-search></br>
+                Job: {{cohort.students[39].job}}<br/>
+                <select class="selectJob" ng-model="editCohort.students[39].job">
+                  <option value="true">Yep</option>
+                  <option value="false">Nope</option>
+                </select>
+              </div>
 
-      <!-- ///////////To Do://////////
-      { look at cohort model to see how things are named, obvi <3 }
-
-      1.make CRUD functions for PUT (edit) for individual cohorts.
-
-      2.start with making just cohort information editable (started above) --make location editable. honestly not exactly sure how to go about that.
-
-      3.make student information editable
-            (students do not have individual IDs in database, the entire cohort is the only thing with an id. Students do not ref cohort at all
-            so goodluck, adam dearest.)
-              -name
-              -home (location, use home directive)
-              -after (location, use after directive)
-              -job (boolean) -->
+<button class="adminButton" ng-click="editCohortData(editCohort, cohort._id)">Submit Changes</button>
 
 
 

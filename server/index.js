@@ -82,6 +82,7 @@ app.delete('/api/finance/:id', financeCtrl.delete);
 app.post('/api/cohort', cohortCtrl.addCohort);
 app.get('/api/cohort', cohortCtrl.retreive);
 app.delete('/api/cohort/:id', cohortCtrl.remove);
+app.put('/api/cohort/:id', cohortCtrl.update);
 
 //student//
 app.post('/api/student', studentCtrl.addStudent);

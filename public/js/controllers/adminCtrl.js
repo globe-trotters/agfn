@@ -37,4 +37,12 @@ $scope.getCohorts();
   };
 
 
+$scope.editCohortData = function(editCohort, id) {
+  adminService.editCohortData(editCohort, id)
+  .then(function(res){
+    alert('Cohort Updated!');
+    $scope.editCohort = null;
+  })
+}
+
 });
