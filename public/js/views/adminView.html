@@ -23,19 +23,19 @@
   <hr>
 
   <center>
-    <h1>Add New Student(s)</h1></center>
+    <h1>Student(s)</h1></center>
   <!-- ///dropdown box for cohort ref(newStudent.cohort)/// ??? -->
   <!-- <select class="typeInput" ng-options="cohort as cohort.display for cohort in cohorts track by cohort._id" ng-model="newCohort.cohort"></select>
   </select> -->
 
 <center>
-  <strong>Number Of Students : </strong>
+  <strong>Approx Number Of Students (40 max) </strong>
 <br/>
 
-  <input type="number" max="40" min="1" ng-model="show">
-  <input type="submit">
+  <!-- <input type="number" max="40" min="1" ng-model="show">
+  <input type="submit"> -->
 
-<!-- <select class="selectStudents" ng-model="show">
+<select class="selectStudents" ng-model="show">
 <option value="1" selected>Number of Students</option>
   <option value="10">10</option>
   <option value="15">15</option>
@@ -44,7 +44,7 @@
   <option value="30">30</option>
   <option value="35">35</option>
   <option value="40">40 (maximum)</option>
-</select> -->
+</select>
 </center>
 
   <div class="studentDiv" ng-if="show > 0">

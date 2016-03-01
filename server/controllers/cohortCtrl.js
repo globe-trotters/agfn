@@ -45,6 +45,19 @@ module.exports = {
         res.send(result);
       }
     });
+  },
+
+  update: function(req, res){
+    console.log('hit update backend ctrl');
+    Cohort.findByIdAndUpdate(req.params.id, {$set: req.body}, function(err, result){
+      if(err){
+        res.status(500).send(err);
+      }
+      else{
+        console.log('updated successfully');
+        res.send(result);
+      }
+    })
   }
 
 

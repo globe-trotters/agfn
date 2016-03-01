@@ -40,6 +40,16 @@ angular.module('myApp').service('adminService', function($http, $state) {
     });
   };
 
+  this.editCohortData = function(editCohort, id) {
+    return $http({
+      method: 'PUT',
+      url: '/api/cohort/' + id,
+      data: editCohort
+    }).then(function(res){
+      console.log('cohort updated');
+    })
+  };
+
 
 
 });
