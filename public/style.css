@@ -222,3 +222,29 @@ body {
   padding: 0; }
   body .container {
     margin: 0; }
+
+.finance h1 {
+  color: #C1CED4;
+  text-align: center;
+  font-family: "Josefin Slab"; }
+
+.pigContainer {
+  display: flex; }
+  .pigContainer .pig1 {
+    float: left; }
+    .pigContainer .pig1 h2 {
+      color: #25AAE1;
+      text-align: center;
+      font-family: "Josefin Slab"; }
+    .pigContainer .pig1 #bank1 {
+      background-image: url("./../images/pig.png");
+      background-repeat: no-repeat; }
+  .pigContainer .pig2 {
+    float: right; }
+    .pigContainer .pig2 h2 {
+      color: #25AAE1;
+      text-align: center;
+      font-family: "Josefin Slab"; }
+    .pigContainer .pig2 #bank2 {
+      background-image: url("./../images/pig.png");
+      background-repeat: no-repeat; }
