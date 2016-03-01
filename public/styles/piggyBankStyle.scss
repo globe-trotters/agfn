@@ -1,0 +1,36 @@
+@import 'variables';
+.finance {
+h1 {
+    color:$graphSecondaryColor;
+    text-align: center;
+    font-family: $graphFont;
+}
+}
+.pigContainer {
+
+    display: flex;
+    .pig1 {
+        float: left;
+        h2 {
+            color:$graphPrimaryColor;
+            text-align: center;
+            font-family: $graphFont;
+        }
+        #bank1 {
+            background-image: url("./../images/pig.png");
+            background-repeat: no-repeat;
+        }
+    }
+    .pig2 {
+        float: right;
+        h2 {
+            color:$graphPrimaryColor;
+            text-align: center;
+            font-family: $graphFont;
+        }
+        #bank2 {
+            background-image: url("./../images/pig.png");
+            background-repeat: no-repeat;
+        }
+    }
+}

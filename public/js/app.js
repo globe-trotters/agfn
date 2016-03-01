@@ -131,6 +131,16 @@ angular.module('myApp', ['ui.router'])
         controller: 'employmentGraphCtrl'
     };
 })
+.directive('piggyBank', function() {
+    return {
+        templateUrl: './js/directives/finance/piggyBankTmpl.html',
+        restrict: 'E',
+        scope: {
+            afterData: '='
+        },
+        controller: 'piggyBankCtrl'
+    };
+})
 .directive('body', function() {
  return {
    restrict: 'E',
