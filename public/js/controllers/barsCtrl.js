@@ -1,4 +1,4 @@
-angular.module("myApp").controller("barsCtrl", function($scope, mainService, $rootScope, $element) {
+angular.module("myApp").controller("barsCtrl", function($scope, $rootScope, $element) {
 
   //***************************bars****************************
   $rootScope.cohortupdate = [];
@@ -37,21 +37,21 @@ angular.module("myApp").controller("barsCtrl", function($scope, mainService, $ro
       var retentionCount = 0;
       var jobs = 0;
 
-      for(var i = 0; i < $rootScope.cohortupdate.length; i++) {
+      $rootScope.cohortupdate.forEach(function(a) {
+        $scope.data[0] = $scope.data[0] + Object.keys(a.students).length;
+        for (var b in a.students) {
+          stateArray.push(a.students[b].homeData.state);
+          countryArray.push(a.students[b].homeData.country);
 
-        $scope.data[0] = $scope.data[0] + $rootScope.cohortupdate[i].people.length;
-
-        for (var j = 0; j < $rootScope.cohortupdate[i].people.length; j++) {
-          stateArray.push($rootScope.cohortupdate[i].people[j].geometryfrom.state);
-          countryArray.push($rootScope.cohortupdate[i].people[j].geometryfrom.country);
-          if ($rootScope.cohortupdate[i].people[j].job) {
+          if (a.students[b].job) {
             jobs++;
           }
-          if ($rootScope.cohortupdate[i].people[j].geometryto.state === "UT") {
+          if (a.students[b].afterData.state === "Utah") {
             retentionCount++;
           }
+
         }
-      }
+      });
 
       if ($scope.data[0] !== 0) {
         $scope.data[4] = (jobs/($scope.data[0])*100).toFixed(0);

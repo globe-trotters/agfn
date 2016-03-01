@@ -1,4 +1,4 @@
-angular.module("myApp").controller("earthCtrl", function($scope, $window, mainService, $interval, $rootScope ) {
+angular.module("myApp").controller("earthCtrl", function($scope, $window, $interval, $rootScope ) {
 
 //VARIABLES
 //create variables
@@ -181,21 +181,18 @@ angular.module("myApp").controller("earthCtrl", function($scope, $window, mainSe
 
       //populates arc coordinate array
       $rootScope.cohortupdate.forEach(function(a) {
-        for(var i = 0; i < a.people.length; i++) {
-
-          //for from to camp
-          if (a.people[i].geometryfrom.coordinates) {
+        for (var b in a.students) {
+          if (a.students[b].homeData.lat && a.students[b].homeData.lng) {
             linkcamp.push({
-              "source": a.people[i].geometryfrom.coordinates,
-              "target": a.people[i].geometrycamp.coordinates
+              "source": [a.students[b].homeData.lng, a.students[b].homeData.lat],
+              "target": [a.cohortData.lng, a.cohortData.lat]
             });
           }
 
-          //for camp to job
-          if (a.people[i].geometryto.coordinates) {
+          if (a.students[b].afterData.lat && a.students[b].afterData.lng) {
             linkjob.push({
-              "source": a.people[i].geometrycamp.coordinates,
-              "target": a.people[i].geometryto.coordinates
+              "source": [a.cohortData.lng, a.cohortData.lat],
+              "target": [a.students[b].afterData.lng, a.students[b].afterData.lat]
             });
           }
         }
@@ -226,7 +223,6 @@ angular.module("myApp").controller("earthCtrl", function($scope, $window, mainSe
           .enter()
           .append("path")
           .attr("class","flyer")
-          // .attr("class", "flyout")
           .attr("d", function(d) {
             return swoosh(flying_arc(d));
           });
@@ -252,7 +248,6 @@ angular.module("myApp").controller("earthCtrl", function($scope, $window, mainSe
   function flying_arc(pts) {
     var source = pts.source,
         target = pts.target;
-
     var mid = location_along_arc(source, target, 0.5);
     var result = [ proj(source),
                    sky(mid),
