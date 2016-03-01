@@ -1,5 +1,16 @@
 angular.module("myApp").service("mainService", function() {
-  this.cohorts = [
+
+  this.getCohorts = function() {
+    return $http({
+      method: 'GET',
+      url: '/api/cohort'
+    }).then(function (res) {
+      return res.data;
+    });
+  };
+
+
+  this.cohort = [
     {
       "cohortNum": "DM1",
       "start": "2014-11-10T10:20:90Z",

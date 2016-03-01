@@ -1,6 +1,13 @@
-angular.module("myApp").controller("scrollbarCtrl", function($scope, mainService, $rootScope) {
+angular.module("myApp").controller("scrollbarCtrl", function($scope, adminService, $rootScope) {
 
 //********************scrollbar
+  var afterData = [];
+
+  adminService.getCohorts()
+  .then(function(response){
+    afterData = response;
+  });
+
   $scope.scrolldate = moment().set({
     "year": 2014,
     "month": 8,
@@ -56,13 +63,6 @@ angular.module("myApp").controller("scrollbarCtrl", function($scope, mainService
       d3.select('.scroll').attr("cx", 0);
     }
     $scope.animationInterval = setInterval(forwardTimeStep, 100);
-    //
-    // g.selectAll('.scroll')
-    //
-    //   .data([{x: 450, y : 20}])
-    //   .transition()
-    //   .duration(20000)
-    //   .attr('transform', 'translate(450, 0)');
 
   };
 
@@ -73,7 +73,6 @@ angular.module("myApp").controller("scrollbarCtrl", function($scope, mainService
       clearInterval($scope.animationInterval);
       $scope.animationInterval = null;
     }
-    console.log(d3.select('.scroll').attr("cx"));
     updateEarth(d3.select('.scroll').attr("cx")*1+1);
     d3.select('.scroll').attr("cx", d3.select('.scroll').attr("cx")*1+1);
   }
@@ -86,12 +85,17 @@ angular.module("myApp").controller("scrollbarCtrl", function($scope, mainService
         .attr("cy", d.y = 20);
   }
 
+
   //drag scroll bar
   function updateEarth(time) {
+
     $rootScope.$digest();
 
 
-    var afterData = mainService.cohorts;
+
+
+
+
 
 
     var range = 450;
@@ -110,19 +114,19 @@ angular.module("myApp").controller("scrollbarCtrl", function($scope, mainService
     for (var i = 0; i < afterData.length; i++) {
 
       var newstart = moment().set({
-        "year": parseInt(afterData[i].start.slice(0,4)),
-        "month": parseInt(afterData[i].start.slice(5,7)) - 1,
-        "date": parseInt(afterData[i].start.slice(8,10))
+        "year": parseInt(afterData[i].startBootcamp.slice(0,4)),
+        "month": parseInt(afterData[i].startBootcamp.slice(5,7)) - 1,
+        "date": parseInt(afterData[i].startBootcamp.slice(8,10))
       });
       var newend = moment().set({
-        "year": parseInt(afterData[i].end.slice(0,4)),
-        "month": parseInt(afterData[i].end.slice(5,7)) - 1,
-        "date": parseInt(afterData[i].end.slice(8,10))
+        "year": parseInt(afterData[i].endBootcamp.slice(0,4)),
+        "month": parseInt(afterData[i].endBootcamp.slice(5,7)) - 1,
+        "date": parseInt(afterData[i].endBootcamp.slice(8,10))
       });
 
 
       //if scroll date is greater than the day in the object, include date in object
-      if ($scope.scrolldate > newstart && $scope.scrolldate > newend) {
+      if ($scope.scrolldate > newstart) {
         $rootScope.cohortupdate.push(afterData[i]);
       }
 
