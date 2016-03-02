@@ -74,12 +74,13 @@ body {
             }
             h2 {
                 display: inline-block;
-                float: left 
+                float: left;
+                color: white;
+                font-family: 'Open Sans Condensed', sans-serif;
+                font-size:40px;
+                margin: 0;
             }
         }
-    }
-    svg {
-        float: left;
     }
     i {
         color: #fff;

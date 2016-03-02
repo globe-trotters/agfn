@@ -288,9 +288,11 @@ body {
         margin: 15px; }
       body .scrollbar .timeplay h2 {
         display: inline-block;
-        float: left; }
-  body svg {
-    float: left; }
+        float: left;
+        color: white;
+        font-family: 'Open Sans Condensed', sans-serif;
+        font-size: 40px;
+        margin: 0; }
   body i {
     color: #fff;
     cursor: pointer; }
