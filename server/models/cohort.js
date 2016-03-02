@@ -8,7 +8,7 @@ var cohortSchema = Schema({
   cohortData: { type: Schema.Types.Mixed, required: 'true' },
   startBootcamp: { type: Date, required: 'true' },
   endBootcamp: { type: Date, required: 'true' },
-  students: {type: Schema.Types.Mixed}
+  students: [{type: Schema.Types.ObjectId, ref: 'Students'}]
 });
 
 

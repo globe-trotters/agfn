@@ -12,20 +12,20 @@
       End: {{cohort.endBootcamp}}
       <input class="typeInput" placeholder="Edit End Date" type="date" ng-model="editCohort.endDate"></br>
       Students:
-      <div class="studentDiv">
-        <input class="typeInput" value="{{cohort.students[0].name}}"><br/>
-        Before DevMtn: {{cohort.students[0].homeData.locationString}}<br/>
-        <home-search home-data="editCohort.students[0].homeData" class="typeInput"></home-search></br>
-        After DevMtn: {{cohort.students[0].afterData.locationString}}<br/>
-        <after-search after-data="editCohort.students[0].afterData" class="typeInput"></after-search></br>
-        Job: {{cohort.students[0].job}}<br/>
-        <select class="selectJob" ng-model="editCohort.students[0].job">
+      <div class="studentDiv" ng-repeat="student in cohort.students">
+        <input class="typeInput" value="{{student.name}}"><br/>
+        Before DevMtn: {{student.homeData.locationString}}<br/>
+        <home-search home-data="student.homeData" class="typeInput"></home-search></br>
+        After DevMtn: {{student.afterData.locationString}}<br/>
+        <after-search after-data="student.afterData" class="typeInput"></after-search></br>
+        Job: {{student.job}}<br/>
+        <select class="selectJob" ng-model="student.job">
           <option value="true">Yes</option>
           <option value="false">No</option>
         </select>
       </div>
 
-            <div class="studentDiv">
+            <!-- <div class="studentDiv">
                 <input class="typeInput" value="{{cohort.students[1].name}}"><br/>
                 Before DevMtn: {{cohort.students[1].homeData.locationString}}<br/>
                 <home-search home-data="editCohort.students[1].homeData" class="typeInput"></home-search></br>
@@ -492,7 +492,7 @@
                   <option value="true">Yep</option>
                   <option value="false">Nope</option>
                 </select>
-              </div>
+              </div> -->
 
 <button class="adminButton" ng-click="editCohortData(editCohort, cohort._id)">Submit Changes</button>
 
