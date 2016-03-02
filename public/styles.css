@@ -4,19 +4,23 @@
   stroke: #8d8d8d;
 }
 /*grid*/
+/*
 .graticule {
   fill: none;
   stroke: black;
   stroke-width:0.5;
   opacity:.2;
 }
+*/
 /*city labels*/
+/*
 .labels {
     font: 8px sans-serif;
     fill: black;
     opacity: .5;
     display:none;
 }
+*/
 
 .noclicks {
   pointer-events:none;
@@ -53,23 +57,29 @@
   fill:none;
 }
 
+/*
 body {
   background-image: url("./images/stars.jpg");
-  /*background-color: #000;*/
+  background-color: #000;
 }
+*/
 
+/*
 h2 {
   color: #fff;
   font-family: 'Open Sans Condensed', sans-serif;
   margin: 0;
   font-size:44px;
 }
+*/
 
+/*
 p {
   font-family: 'Open Sans Condensed', sans-serif;
   font-size:20px;
   font-weight: bold;
 }
+*/
 
 h5 {
   color: #fff;
@@ -84,15 +94,18 @@ svg {
   float: left;
 }
 
+/*
 .head {
   position: fixed;
 }
+*/
 
 i {
   color: #fff;
   cursor: pointer;
 }
 
+/*
 .bars {
   width: calc(100% - 1000px);
   height: 860px;
@@ -101,6 +114,8 @@ i {
   right:0;
   margin: 2vh 0;
 }
+*/
+/*
 .bars div {
   clear: both;
   height: 15.5vh;
@@ -116,12 +131,16 @@ i {
   padding: 4vh 10px;
   width: max-content;
 }
+*/
 
+/*
 .earth {
   width: 880px;
   float: left;
 }
+*/
 
+/*
 .moreinfo {
   position: fixed;
   top: 0;
@@ -138,7 +157,9 @@ i {
   padding: 10px;
   text-align: center;
 }
+*/
 
+/*
 .infoexit {
   position: absolute;
   color: red;
@@ -149,17 +170,23 @@ i {
   border-bottom: 2px solid red;
   padding: 0 5px;
 }
+*/
 
 
+/*
 .infoexit:hover {
   color: #fff;
   border-bottom: 2px solid #fff;
 }
+*/
 
+/*
 .zoom {
   margin: 20px;
 }
+*/
 
+/*
 .scrollbar {
   position: fixed;
   top: 40px;
@@ -171,11 +198,13 @@ i {
   z-index: 100;
   text-align: center;
 }
+*/
 
 .scroll {
   z-index: 100;
 }
 
+/*
 .timeplay {
   display: inline-block;
 }
@@ -184,10 +213,13 @@ i {
   display: inline-block;
   float: left;
 }
+*/
 
+/*
 .timeplay i {
   margin: 15px;
 }
+*/
 
 
 @media only screen and (max-width: 1200px) {

@@ -223,6 +223,140 @@ body {
   body .container {
     margin: 0; }
 
+body {
+  background-image: url("./images/stars.jpg"); }
+  body .head {
+    position: fixed; }
+    body .head h2 {
+      color: #fff;
+      font-family: 'Open Sans Condensed', sans-serif;
+      margin: 0;
+      font-size: 44px; }
+    body .head .moreinfo {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      width: 400px;
+      height: max-content;
+      background-color: #8d8d8d;
+      opacity: .8;
+      border-radius: 5px;
+      border: 1px solid #fff;
+      padding: 10px;
+      text-align: center; }
+      body .head .moreinfo h2 {
+        color: #fff;
+        font-family: 'Open Sans Condensed', sans-serif;
+        margin: 0;
+        font-size: 44px; }
+      body .head .moreinfo p {
+        font-family: 'Open Sans Condensed', sans-serif;
+        font-size: 20px;
+        font-weight: bold; }
+      body .head .moreinfo .infoexit {
+        position: absolute;
+        color: red;
+        top: 0;
+        right: 0;
+        margin: 30px;
+        cursor: pointer;
+        border-bottom: 2px solid red;
+        padding: 0 5px; }
+      body .head .moreinfo .infoexit:hover {
+        color: #fff;
+        border-bottom: 2px solid #fff; }
+    body .head .zoom {
+      margin: 20px; }
+  body .scrollbar {
+    position: fixed;
+    top: 40px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 500px;
+    height: 100px;
+    z-index: 100;
+    text-align: center; }
+    body .scrollbar .timeplay {
+      display: inline-block; }
+      body .scrollbar .timeplay i {
+        display: inline-block;
+        float: left;
+        margin: 15px; }
+      body .scrollbar .timeplay h2 {
+        display: inline-block;
+        float: left; }
+  body svg {
+    float: left; }
+  body i {
+    color: #fff;
+    cursor: pointer; }
+  body h5 {
+    color: #fff;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 20px;
+    margin: 0;
+    margin-left: 5px;
+    display: inline-block; }
+  body .earth {
+    width: 880px;
+    float: left;
+    /*location point*/
+    /*arcs*/
+    /*connect arc to shadow*/ }
+    body .earth .land {
+      fill: #5a5255;
+      stroke-opacity: 1;
+      stroke: #8d8d8d; }
+    body .earth .noclicks {
+      pointer-events: none; }
+    body .earth .point {
+      opacity: .6;
+      stroke: red; }
+    body .earth .flyin {
+      stroke-width: 1;
+      opacity: .8;
+      stroke: purple; }
+    body .earth .flyout {
+      stroke-width: 0.5;
+      opacity: .8;
+      stroke: gold; }
+    body .earth .arc {
+      stroke: black;
+      stroke-width: 0.25;
+      opacity: 0.25;
+      fill: none; }
+    body .earth .arc, body .earth .flyin, body .earth .flyout {
+      stroke-linejoin: round;
+      fill: none; }
+  body .bars {
+    width: calc(100% - 1000px);
+    height: 860px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin: 2vh 0; }
+    body .bars h2 {
+      color: #fff;
+      font-family: 'Open Sans Condensed', sans-serif;
+      margin: 0;
+      font-size: 44px; }
+    body .bars div {
+      clear: both;
+      height: 15.5vh;
+      float: right;
+      margin: 2vh 0;
+      background-color: lightblue;
+      border-top-left-radius: 20px;
+      border-bottom-left-radius: 20px; }
+    body .bars div h2 {
+      float: right;
+      padding: 4vh 10px;
+      width: max-content; }
+
 .finance h1 {
   color: #C1CED4;
   text-align: center;
