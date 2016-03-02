@@ -3,11 +3,11 @@ var Schema = mongoose.Schema;
 
 
 var studentSchema = Schema({
-  cohort: { type: String },
+  // cohort: { type: String },
   name: { type: String,  required: 'true' },
-  home: { type: Object,  required: 'true' },
-  after: { type: Object,  required: 'true' },
-  job: { type: Boolean,  required: 'true' },
+  homeData: { type:  Schema.Types.Mixed,  required: 'true' },
+  afterData: { type: Schema.Types.Mixed},
+  job: { type: Boolean},
 });
 
 

@@ -1,20 +1,42 @@
 var Cohort = require('./../models/cohort.js');
+var Students = require('./../models/student.js');
 
 module.exports = {
 
 
   addCohort: function(req, res) {
-        console.log('req.body: ', req.body.students);
-        var newCohort = new Cohort(req.body);
-        newCohort.save(function(err, result) {
-          if (err) {
-              console.error('Save Error: ', err);
-              return res.status(500).send(err);
-          } else {
-              res.send(result);
-              console.log('<<<<<<<<<<<<<<<<<< DONE >>>>>>>>>>>>>>>>>>>>')
-          }
-        });
+        console.log('req.body: ', req.body);
+        var studentIdArray = [];
+        var completed = 0;
+        for(var i = 0; i < req.body.students.length; i++){
+          Students.create(req.body.students[i], function(err, result){
+            console.log('Student Created in Backend');
+            if(err) {
+              console.log(err);
+            }
+            else{
+              studentIdArray.push(result._id);
+            }
+            completed++;
+            if(completed >= req.body.students.length){
+              console.log('Finished Creating Students', studentIdArray);
+              var newCohort= req.body.cohort;
+              newCohort.students = studentIdArray;
+              console.log('going to create ' + newCohort);
+              Cohort.create(newCohort, function(err2, result){
+                console.log('created Cohort');
+                if (err2) {
+                  console.error('Save Error: ', err2);
+                  return res.status(500).send(err2);
+                }
+                else{
+                  console.log('<<<<<<<<<<<<<<<<<< DONE >>>>>>>>>>>>>>>>>>>>');
+                   return res.send(result);
+                }
+              });
+            }
+          });
+        }
     },
 
   retreive: function(req, res){
