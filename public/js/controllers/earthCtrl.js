@@ -20,7 +20,7 @@ angular.module("myApp").controller("earthCtrl", function($scope, $window, $inter
   var sky = d3.geo.orthographic()
       .translate([width / 2.5, height / 2])//position of sky on page
       .clipAngle(90) //equal projectio as earth
-      .scale(scale*1.3) //scale of sky, slightly bigger than earth
+      .scale(scale*1.2) //scale of sky, slightly bigger than earth
       .rotate([104,-40]);//size of projection
 
   //creates path generator based on selected projection type, in our case, orthographic
@@ -172,12 +172,12 @@ angular.module("myApp").controller("earthCtrl", function($scope, $window, $inter
           .remove();
 
       //resets arc shadows
-      svg.append("g")
-          .attr("class","arc")
-          .selectAll("path")
-          .data(arcLines)
-          .exit()
-          .remove();
+      // svg.append("g")
+      //     .attr("class","arc")
+      //     .selectAll("path")
+      //     .data(arcLines)
+      //     .exit()
+      //     .remove();
 
       //populates arc coordinate array
       $rootScope.cohortupdate.forEach(function(a) {
@@ -229,15 +229,15 @@ angular.module("myApp").controller("earthCtrl", function($scope, $window, $inter
       }
 
     // append arc shadows
-      svg.append("g")
-          .attr("class","arcs")
-          .selectAll("path")
-          .data(arcLines)
-          .enter()
-          .append("path")
-          .attr("class","arc")
-          .attr("class","arcs")
-          .attr("d",path);
+      // svg.append("g")
+      //     .attr("class","arcs")
+      //     .selectAll("path")
+      //     .data(arcLines)
+      //     .enter()
+      //     .append("path")
+      //     .attr("class","arc")
+      //     .attr("class","arcs")
+      //     .attr("d",path);
 
 
       refresh();

@@ -1,7 +1,20 @@
-angular.module("myApp").controller("barsCtrl", function($scope, $rootScope, $element) {
+angular.module("myApp").controller("barsCtrl", function($scope, $rootScope, $element, adminService) {
 
   //***************************bars****************************
   $rootScope.cohortupdate = [];
+  $scope.totalStudents = 0;
+
+    adminService.getCohorts()
+    .then(function(response){
+      $rootScope.cohortData = response;
+      $rootScope.cohortData.forEach(function(a) {
+        $scope.totalStudents = $scope.totalStudents + Object.keys(a.students).length;
+        console.log($scope.totalStudents);
+      });
+      console.log($scope.totalStudents);
+    });
+
+
 
   $rootScope.$watchCollection('cohortupdate', function() {
     makebars();
@@ -20,8 +33,6 @@ angular.module("myApp").controller("barsCtrl", function($scope, $rootScope, $ele
     .style('width', function(d,i){
       return 0;
     });
-
-
 
     var makebars = function() {
 
@@ -87,6 +98,15 @@ angular.module("myApp").controller("barsCtrl", function($scope, $rootScope, $ele
       .transition(Math.random()*100)
       .duration(4000)
       .style('width', function(d,i){
+        if (d === $scope.data[0]) {
+          return (d/$scope.totalStudents)*parentWidth + 'px';
+        }
+        if (d === $scope.data[1]) {
+          return (d/100)*parentWidth + 'px';
+        }
+        if (d === $scope.data[2]) {
+          return (d/200)*parentWidth + 'px';
+        }
         return (d/100)*parentWidth + 'px';
       })
       .style('background-color', function(d,i){
