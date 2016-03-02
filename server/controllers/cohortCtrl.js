@@ -42,7 +42,7 @@ module.exports = {
   retreive: function(req, res){
     console.log('Reading!');
     Cohort.find({})
-    // .populate('students')
+    .populate('students')
     .exec()
     .then(function(err, result){
       if(err){
