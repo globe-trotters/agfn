@@ -147,9 +147,14 @@ angular.module("myApp").controller("earthCtrl", function($scope, $window, $inter
 
   //ROOTSCOPE MONITORING
 
-    $rootScope.cohortupdate = [];
+    $rootScope.duringupdate = [];
+    $rootScope.afterupdate = [];
 
-    $rootScope.$watchCollection('cohortupdate', function() {
+    $rootScope.$watchCollection('duringupdate', function() {
+      $rootScope.makearc();
+    },true);
+
+    $rootScope.$watchCollection('afterupdate', function() {
       $rootScope.makearc();
     },true);
 
@@ -180,15 +185,21 @@ angular.module("myApp").controller("earthCtrl", function($scope, $window, $inter
       //     .remove();
 
       //populates arc coordinate array
-      $rootScope.cohortupdate.forEach(function(a) {
-        for (var b in a.students) {
+
+      $rootScope.duringupdate.forEach(function(a) {
+        for (var b = 0; b < a.students.length; b++) {
+          console.log(a.students);
           if (a.students[b].homeData.lat && a.students[b].homeData.lng) {
             linkcamp.push({
               "source": [a.students[b].homeData.lng, a.students[b].homeData.lat],
               "target": [a.cohortData.lng, a.cohortData.lat]
             });
           }
+        }
+      });
 
+      $rootScope.afterupdate.forEach(function(a) {
+        for (var b = 0; b < a.students.length; b++) {
           if (a.students[b].afterData.lat && a.students[b].afterData.lng) {
             linkjob.push({
               "source": [a.cohortData.lng, a.cohortData.lat],
@@ -197,6 +208,7 @@ angular.module("myApp").controller("earthCtrl", function($scope, $window, $inter
           }
         }
       });
+
 
       //create flyin arcs
       if (linkcamp) {
