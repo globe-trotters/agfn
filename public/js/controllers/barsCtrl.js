@@ -9,9 +9,7 @@ angular.module("myApp").controller("barsCtrl", function($scope, $rootScope, $ele
       $rootScope.cohortData = response;
       $rootScope.cohortData.forEach(function(a) {
         $scope.totalStudents = $scope.totalStudents + Object.keys(a.students).length;
-        console.log($scope.totalStudents);
       });
-      console.log($scope.totalStudents);
     });
 
 

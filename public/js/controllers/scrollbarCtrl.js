@@ -6,6 +6,7 @@ angular.module("myApp").controller("scrollbarCtrl", function($scope, adminServic
   adminService.getCohorts()
   .then(function(response){
     afterData = response;
+
   });
 
   $scope.scrolldate = moment().set({
@@ -91,13 +92,6 @@ angular.module("myApp").controller("scrollbarCtrl", function($scope, adminServic
 
     $rootScope.$digest();
 
-
-
-
-
-
-
-
     var range = 450;
     var percentdrag = time/range;
     var start = moment().set({
@@ -109,10 +103,10 @@ angular.module("myApp").controller("scrollbarCtrl", function($scope, adminServic
     var timeline = end._d - start._d;
     var timelinerate = ((time / range) * timeline) + start;
     $scope.scrolldate = moment(timelinerate);
-    $rootScope.cohortupdate = [];
+    $rootScope.duringupdate = [];
+    $rootScope.afterupdate = [];
 
     for (var i = 0; i < afterData.length; i++) {
-
       var newstart = moment().set({
         "year": parseInt(afterData[i].startBootcamp.slice(0,4)),
         "month": parseInt(afterData[i].startBootcamp.slice(5,7)) - 1,
@@ -126,10 +120,14 @@ angular.module("myApp").controller("scrollbarCtrl", function($scope, adminServic
 
 
       //if scroll date is greater than the day in the object, include date in object
-      if ($scope.scrolldate > newstart) {
-        $rootScope.cohortupdate.push(afterData[i]);
+      if ($scope.scrolldate > newstart && $scope.scrolldate < newend) {
+        $rootScope.duringupdate.push(afterData[i]);
       }
 
+      if ($scope.scrolldate > newstart && $scope.scrolldate > newend) {
+        $rootScope.afterupdate.push(afterData[i]);
+        $rootScope.duringupdate.push(afterData[i]);
+      }
     }
   }
 
