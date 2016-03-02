@@ -3,20 +3,6 @@
   stroke-opacity: 1;
   stroke: #8d8d8d;
 }
-/*grid*/
-.graticule {
-  fill: none;
-  stroke: black;
-  stroke-width:0.5;
-  opacity:.2;
-}
-/*city labels*/
-.labels {
-    font: 8px sans-serif;
-    fill: black;
-    opacity: .5;
-    display:none;
-}
 
 .noclicks {
   pointer-events:none;
@@ -55,7 +41,7 @@
 
 body {
   background-image: url("./images/stars.jpg");
-  /*background-color: #000;*/
+  background-color: #000;
 }
 
 h2 {
@@ -78,10 +64,6 @@ h5 {
   margin: 0;
   margin-left: 5px;
   display: inline-block;
-}
-
-svg {
-  float: left;
 }
 
 .head {
