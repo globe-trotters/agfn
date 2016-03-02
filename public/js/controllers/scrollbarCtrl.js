@@ -59,7 +59,7 @@ angular.module("myApp").controller("scrollbarCtrl", function($scope, adminServic
         $scope.animationInterval = null;
         return;
     }
-    if (d3.select('.scroll').attr("cx")>=450) {
+    if (d3.select('.scroll').attr("cx") >= 450) {
       d3.select('.scroll').attr("cx", 0);
     }
     $scope.animationInterval = setInterval(forwardTimeStep, 100);
@@ -69,7 +69,7 @@ angular.module("myApp").controller("scrollbarCtrl", function($scope, adminServic
   //bar description
 
   function forwardTimeStep(){
-    if (d3.select('.scroll').attr("cx")>=450){
+    if (d3.select('.scroll').attr("cx") >= 450){
       clearInterval($scope.animationInterval);
       $scope.animationInterval = null;
     }
