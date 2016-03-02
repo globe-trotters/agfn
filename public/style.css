@@ -247,6 +247,8 @@ body {
       border: 1px solid #fff;
       padding: 10px;
       text-align: center; }
+      body .head .moreinfo .earth {
+        color: purple; }
       body .head .moreinfo h2 {
         color: #fff;
         font-family: 'Open Sans Condensed', sans-serif;
