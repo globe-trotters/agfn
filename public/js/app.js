@@ -178,7 +178,7 @@ angular.module('myApp', ['ui.router'])
    scope: {
      cohortupdate: '=',
      arcit: '&',
-     scrolldate: '=',
+     viewdate: '=',
      play: '='
    },
    controller: 'scrollbarCtrl'

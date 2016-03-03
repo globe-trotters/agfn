@@ -280,6 +280,8 @@ angular.module("myApp").controller("earthCtrl", function($scope, $window, $inter
     svg.selectAll(".land")
     .attr("d", path);
 
+
+
     svg.selectAll(".noclicks")
     .attr("r", proj.scale());
 
@@ -363,7 +365,7 @@ angular.module("myApp").controller("earthCtrl", function($scope, $window, $inter
     }
     scale = scale + 50;
     proj.scale(scale);
-    sky.scale(scale);
+    sky.scale(scale*1.2);
     refresh();
   };
 
@@ -374,7 +376,7 @@ angular.module("myApp").controller("earthCtrl", function($scope, $window, $inter
     }
     scale = scale - 50;
     proj.scale(scale);
-    sky.scale(scale);
+    sky.scale(scale*1.2);
     refresh();
   };
 
