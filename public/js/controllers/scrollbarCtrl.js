@@ -9,6 +9,12 @@ angular.module("myApp").controller("scrollbarCtrl", function($scope, adminServic
 
   });
 
+  $scope.viewdate = moment().set({
+    "year": 2014,
+    "month": 8,
+    "date": 7
+  }).format('MMMM DD, YYYY');
+
   $scope.scrolldate = moment().set({
     "year": 2014,
     "month": 8,
@@ -24,7 +30,7 @@ angular.module("myApp").controller("scrollbarCtrl", function($scope, adminServic
     //svg definition
   var svg = d3.select('.scrollbar')
     .append('svg')
-    .attr("height", 100)
+    .attr("height", 50)
     .attr("width", 500);
 
   //svg description
@@ -32,7 +38,7 @@ angular.module("myApp").controller("scrollbarCtrl", function($scope, adminServic
     .data([{x: 0, y : 20}])
     .enter()
     .append('g')
-    .attr("height", 100)
+    .attr("height", 50)
     .attr("width", 450)
     .attr('transform', 'translate(20, 10)');
 
@@ -71,6 +77,7 @@ angular.module("myApp").controller("scrollbarCtrl", function($scope, adminServic
 
   function forwardTimeStep(){
     if (d3.select('.scroll').attr("cx") >= 450){
+      $scope.playtime=true;
       clearInterval($scope.animationInterval);
       $scope.animationInterval = null;
     }
@@ -102,6 +109,7 @@ angular.module("myApp").controller("scrollbarCtrl", function($scope, adminServic
     var end = moment();
     var timeline = end._d - start._d;
     var timelinerate = ((time / range) * timeline) + start;
+      $scope.viewdate = moment(timelinerate).format('MMMM DD, YYYY');
     $scope.scrolldate = moment(timelinerate);
     $rootScope.duringupdate = [];
     $rootScope.afterupdate = [];

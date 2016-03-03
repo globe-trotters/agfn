@@ -54,28 +54,32 @@ body {
         }
         .zoom {
             margin: 20px;
+            width: 50px;
         }
     }
     .scrollbar {
         position: fixed;
-        top: 40px;
+        top: 5px;
         left: 0;
         right: 0;
         margin: auto;
-        width: 500px;
-        height: 100px;
+        width: 450px;
+        height: 120px;
         z-index: 100;
         text-align: center;
         .timeplay {
             display: inline-block;
+            width: 100%;
+            margin: auto;
             i {
                 display: inline-block;
-                float: left;
                 margin: 15px;
+                float: left;
+                margin-left: 30px;
             }
             h2 {
                 display: inline-block;
-                float: left;
+                float: right;
                 color: white;
                 font-family: 'Open Sans Condensed', sans-serif;
                 font-size:40px;
@@ -167,4 +171,3 @@ body {
             width: max-content;
         }
     }
-}

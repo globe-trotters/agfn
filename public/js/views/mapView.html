@@ -16,10 +16,11 @@
 
   </div>
 
-  <scrollbar class="scrollbar" cohortupdate='cohortupdate' scrolldate="scrolldate" play="play">
+  <scrollbar class="scrollbar" cohortupdate='cohortupdate' viewdate="viewdate" play="play">
     <div class="timeplay">
-      <i class="fa fa-play fa-2x" ng-hide="playtime" ng-click="play(); playtime=true"></i><i class="fa fa-pause fa-2x" ng-show="playtime" ng-click="play(); playtime=false"></i>
-        <h2>{{scrolldate}}</h2>
+      <i class="fa fa-play fa-2x" ng-hide="playtime" ng-click="play(); playtime=true"></i>
+      <i class="fa fa-pause fa-2x" ng-show="playtime" ng-click="play(); playtime=false"></i>
+        <h2>{{viewdate}}</h2>
     </div>
 
 
