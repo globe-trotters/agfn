@@ -188,7 +188,7 @@ angular.module("myApp").controller("earthCtrl", function($scope, $window, $inter
 
       $rootScope.duringupdate.forEach(function(a) {
         for (var b = 0; b < a.students.length; b++) {
-          console.log(a.students);
+          // console.log(a.students);
           if (a.students[b].homeData.lat && a.students[b].homeData.lng) {
             linkcamp.push({
               "source": [a.students[b].homeData.lng, a.students[b].homeData.lat],

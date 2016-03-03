@@ -10,7 +10,7 @@ angular.module('myApp').service('loginService', function($http, $state) {
           password: password
         }
       }).then(function(res) {
-        console.log(res);
+        // console.log(res);
         if (res.status === 200) {
           console.log('successfully logged in');
           // $state.go('');

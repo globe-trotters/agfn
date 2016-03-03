@@ -22,7 +22,7 @@ angular.module('myApp').controller('afterSearchCtrl', function($scope, $element)
     // creates object for location (backend requires location to be an object so we can get lat/long)
     $scope.afterData = {};
     var data = autocomplete.getPlace();
-    console.log(data);
+    // console.log(data);
 
     // extract state data
     var city = data.address_components[0];
@@ -54,19 +54,19 @@ angular.module('myApp').controller('afterSearchCtrl', function($scope, $element)
     $scope.afterData.map_url = data.url;
     $scope.$apply();
     // sends to afterData scope
-    console.log($scope.afterData.address_string);
-    console.log($scope.afterData.lat);
-    console.log($scope.afterData.lng);
-    console.log($scope.afterData.location);
-
-    console.log($scope.afterData.city);
-    console.log($scope.afterData.state);
-    console.log($scope.afterData.country);
+    // console.log($scope.afterData.address_string);
+    // console.log($scope.afterData.lat);
+    // console.log($scope.afterData.lng);
+    // console.log($scope.afterData.location);
+    //
+    // console.log($scope.afterData.city);
+    // console.log($scope.afterData.state);
+    // console.log($scope.afterData.country);
 
     var locationString = $scope.afterData.city +", "+ $scope.afterData.state +", "+ $scope.afterData.countryShort;
     $scope.afterData.locationString = locationString;
-    console.log($scope.afterData.locationString);
-    console.log($scope.afterData);
+    // console.log($scope.afterData.locationString);
+    // console.log($scope.afterData);
 
 
   };

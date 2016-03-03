@@ -2,7 +2,7 @@ angular.module('myApp').service('adminService', function($http, $state) {
 
 
   this.submitNewCohort = function(newCohort, newStudents) {
-    console.log("service Adding New Cohort", newCohort);
+    // console.log("service Adding New Cohort", newCohort);
     return $http({
       method: 'POST',
       url: '/api/cohort',

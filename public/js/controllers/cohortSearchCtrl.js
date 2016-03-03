@@ -22,7 +22,7 @@ angular.module('myApp').controller('cohortSearchCtrl', function($scope, $element
     // creates object for location (backend requires location to be an object so we can get lat/long)
     $scope.cohortData = {};
     var data = autocomplete.getPlace();
-    console.log(data);
+    // console.log(data);
 
     // extract state data
     var city = data.address_components[0];
@@ -54,20 +54,20 @@ angular.module('myApp').controller('cohortSearchCtrl', function($scope, $element
     $scope.cohortData.map_url = data.url;
     $scope.$apply();
     // sends to cohortData scope
-    console.log($scope.cohortData.address_string);
-    console.log($scope.cohortData.lat);
-    console.log($scope.cohortData.lng);
-    console.log($scope.cohortData.location);
-
-    console.log($scope.cohortData.city);
-    console.log($scope.cohortData.state);
-    console.log($scope.cohortData.country);
+    // console.log($scope.cohortData.address_string);
+    // console.log($scope.cohortData.lat);
+    // console.log($scope.cohortData.lng);
+    // console.log($scope.cohortData.location);
+    //
+    // console.log($scope.cohortData.city);
+    // console.log($scope.cohortData.state);
+    // console.log($scope.cohortData.country);
 
     locationString = $scope.cohortData.city +", "+ $scope.cohortData.state +", "+ $scope.cohortData.countryShort;
     $scope.cohortData.locationString = locationString;
-    console.log($scope.cohortData.locationString);
-    console.log($scope.cohortData);
-
+    // console.log($scope.cohortData.locationString);
+    // console.log($scope.cohortData);
+    //
 
   };
 
