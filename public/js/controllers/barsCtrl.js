@@ -11,12 +11,16 @@ angular.module("myApp").controller("barsCtrl", function($scope, $rootScope, $ele
         $scope.totalStudents = $scope.totalStudents + Object.keys(a.students).length;
       });
     });
+    $rootScope.duringupdate = [];
+    $rootScope.afterupdate = [];
 
+    $rootScope.$watchCollection('duringupdate', function() {
+      makebars();
+    },true);
 
-
-  $rootScope.$watchCollection('cohortupdate', function() {
-    makebars();
-  },true);
+    $rootScope.$watchCollection('afterupdate', function() {
+      makebars();
+    },true);
 
     $scope.data = [0, 0, 0, 0, 0];
 
@@ -46,19 +50,22 @@ angular.module("myApp").controller("barsCtrl", function($scope, $rootScope, $ele
       var retentionCount = 0;
       var jobs = 0;
 
-      $rootScope.cohortupdate.forEach(function(a) {
+      $rootScope.duringupdate.forEach(function(a) {
         $scope.data[0] = $scope.data[0] + Object.keys(a.students).length;
-        for (var b in a.students) {
+        for (var b = 0; b < a.students.length; b++) {
           stateArray.push(a.students[b].homeData.state);
           countryArray.push(a.students[b].homeData.country);
+        }
+      });
 
-          if (a.students[b].job) {
+      $rootScope.afterupdate.forEach(function(c) {
+        for (var d = 0; d < c.students.length; d++) {
+          if (c.students[d].job) {
             jobs++;
           }
-          if (a.students[b].afterData.state === "Utah") {
+          if (c.students[d].afterData.state === "Utah") {
             retentionCount++;
           }
-
         }
       });
 
@@ -103,7 +110,7 @@ angular.module("myApp").controller("barsCtrl", function($scope, $rootScope, $ele
           return (d/100)*parentWidth + 'px';
         }
         if (d === $scope.data[2]) {
-          return (d/200)*parentWidth + 'px';
+          return (d/100)*parentWidth + 'px';
         }
         return (d/100)*parentWidth + 'px';
       })
@@ -111,4 +118,5 @@ angular.module("myApp").controller("barsCtrl", function($scope, $rootScope, $ele
         return d3.hsl(i/$scope.data.length*360,0.5,0.5);
       });
     };
+
 });
