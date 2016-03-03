@@ -5,7 +5,7 @@ module.exports = {
 
 
   addCohort: function(req, res) {
-        console.log('req.body: ', req.body);
+        // console.log('req.body: ', req.body);
         var studentIdArray = [];
         var completed = 0;
         for(var i = 0; i < req.body.students.length; i++){
@@ -19,12 +19,12 @@ module.exports = {
             }
             completed++;
             if(completed >= req.body.students.length){
-              console.log('Finished Creating Students', studentIdArray);
+              // console.log('Finished Creating Students', studentIdArray);
               var newCohort= req.body.cohort;
               newCohort.students = studentIdArray;
-              console.log('going to create ' + newCohort);
+              // console.log('going to create ' + newCohort);
               Cohort.create(newCohort, function(err2, result){
-                console.log('created Cohort');
+                // console.log('created Cohort');
                 if (err2) {
                   console.error('Save Error: ', err2);
                   return res.status(500).send(err2);
@@ -40,11 +40,10 @@ module.exports = {
     },
 
   retreive: function(req, res){
-    console.log('Reading!');
+    // console.log('Reading!');
     Cohort.find({})
     .populate('students')
-    .exec()
-    .then(function(err, result){
+    .exec(function(err, result){
       if(err){
         console.log(err);
         res.send(err);
@@ -70,13 +69,13 @@ module.exports = {
   },
 
   update: function(req, res){
-    console.log('hit update backend ctrl');
+    // console.log('hit update backend ctrl');
     Cohort.findByIdAndUpdate(req.params.id, {$set: req.body}, function(err, result){
       if(err){
         res.status(500).send(err);
       }
       else{
-        console.log('updated successfully');
+        // console.log('updated successfully');
         res.send(result);
       }
     })

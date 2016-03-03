@@ -3,7 +3,7 @@ var User = require('../models/user.js');
 module.exports = {
 
 	addUser: function(req, res) {
-    console.log(req.body);
+    // console.log(req.body);
 		new User(req.body).save(function(err, user) {
 			if (err) {
         console.error('error: ', err);
@@ -27,7 +27,7 @@ module.exports = {
 
 
   getUser: function(req, res) {
-    console.log('hi');
+    // console.log('hi');
 		User.findById( req.query.id, function(err, user) {
 			if (err) {
 				// return console.error(err);

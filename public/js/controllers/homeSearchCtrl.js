@@ -23,7 +23,7 @@ angular.module('myApp').controller('homeSearchCtrl', function($scope, $element) 
     // creates object for location (backend requires location to be an object so we can get lat/long)
     $scope.homeData = {};
     var data = autocomplete.getPlace();
-    console.log(data);
+    // console.log(data);
 
     // extract state data
     var city = data.address_components[0];
@@ -55,19 +55,19 @@ angular.module('myApp').controller('homeSearchCtrl', function($scope, $element) 
     $scope.homeData.map_url = data.url;
     $scope.$apply();
     // sends to homeData scope
-    console.log($scope.homeData.address_string);
-    console.log($scope.homeData.lat);
-    console.log($scope.homeData.lng);
-    console.log($scope.homeData.location);
-
-    console.log($scope.homeData.city);
-    console.log($scope.homeData.state);
-    console.log($scope.homeData.country);
+    // console.log($scope.homeData.address_string);
+    // console.log($scope.homeData.lat);
+    // console.log($scope.homeData.lng);
+    // console.log($scope.homeData.location);
+    //
+    // console.log($scope.homeData.city);
+    // console.log($scope.homeData.state);
+    // console.log($scope.homeData.country);
 
     locationString = $scope.homeData.city +", "+ $scope.homeData.state +", "+ $scope.homeData.countryShort;
     $scope.homeData.locationString = locationString;
-    console.log($scope.homeData.locationString);
-    console.log($scope.homeData);
+    // console.log($scope.homeData.locationString);
+    // console.log($scope.homeData);
 
 
   };
