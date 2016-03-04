@@ -162,28 +162,33 @@ path.color0 {
 path.color1 {
   fill: #C1CED4; }
 
+h2 {
+  color: #25AAE1;
+  text-align: center;
+  font-family: "Josefin Slab"; }
+
 .graph {
   background-image: url("./../images/wood_1.png"); }
-  .graph .graph {
+  .graph #chart {
+    display: block;
     margin: auto;
-    margin: 5%;
     text-align: center; }
-    .graph .graph .axis path,
-    .graph .graph .axis line {
+    .graph #chart .axis path,
+    .graph #chart .axis line {
       fill: none;
       stroke: #777; }
-    .graph .graph .axis text {
+    .graph #chart .axis text {
       font-family: "Josefin Slab";
       font-size: 13px;
-      fill: #25AAE1; }
-    .graph .graph .tick {
+      fill: #C1CED4; }
+    .graph #chart .tick {
       stroke-dasharray: 1, 2; }
-    .graph .graph .graph {
+    .graph #chart .graph {
       margin: auto;
       text-align: center; }
-    .graph .graph .legend {
+    .graph #chart .legend {
       font-size: 12px; }
-    .graph .graph rect {
+    .graph #chart rect {
       stroke-width: 2; }
 
 @charset "UTF-8";
@@ -368,13 +373,16 @@ h5 {
     padding: 4vh 10px;
     width: max-content; }
 
-.finance h1 {
+.finance h2 {
   color: #C1CED4;
   text-align: center;
   font-family: "Josefin Slab"; }
 
 .pigContainer {
-  display: flex; }
+  display: flex;
+  margin: auto;
+  align-items: center;
+  justify-content: center; }
   .pigContainer .pig1 {
     float: left; }
     .pigContainer .pig1 h2 {
@@ -393,3 +401,32 @@ h5 {
     .pigContainer .pig2 #bank2 {
       background-image: url("./../images/pig.png");
       background-repeat: no-repeat; }
+
+h2 {
+  color: #C1CED4;
+  text-align: center;
+  font-family: "Josefin Slab"; }
+
+.graph2 {
+  background-image: url("./../images/wood_1.png"); }
+  .graph2 #chart2 {
+    display: block;
+    margin: auto;
+    text-align: center; }
+    .graph2 #chart2 .axis path,
+    .graph2 #chart2 .axis line {
+      fill: none;
+      stroke: #777; }
+    .graph2 #chart2 .axis text {
+      font-family: "Josefin Slab";
+      font-size: 13px;
+      fill: #C1CED4; }
+    .graph2 #chart2 .tick {
+      stroke-dasharray: 1, 2; }
+    .graph2 #chart2 .graph2 {
+      margin: auto;
+      text-align: center; }
+    .graph2 #chart2 .legend {
+      font-size: 12px; }
+    .graph2 #chart2 rect {
+      stroke-width: 2; }
