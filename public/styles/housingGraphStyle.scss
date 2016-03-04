@@ -1,10 +1,16 @@
 @import 'variables';
- 
+
+
+h2 {
+    color:$graphPrimaryColor;
+    text-align: center;
+    font-family: $graphFont;
+}
 .graph {
   background-image: $backgroundImage;
-  .graph {
+  #chart {
+    display:block;
     margin: auto;
-    margin: 5%;
     text-align: center;
     .axis path,
     .axis line {
@@ -14,7 +20,7 @@
     .axis text {
         font-family: $graphFont;
         font-size: 13px;
-        fill: $graphPrimaryColor;
+        fill: $graphSecondaryColor;
     }
     .tick {
       stroke-dasharray: 1, 2;
