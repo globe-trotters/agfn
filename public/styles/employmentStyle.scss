@@ -1,73 +1,80 @@
 @import 'variables';
+
 .finance { 
   background-image: $backgroundImage;
-  h1 {
-    margin: 0;
-    padding: 20px 20px 30px;
-    text-align: center;
-    font-family: $graphFont;
-    color: $graphSecondaryColor;
-    font-size: 3em;
-  }
-  h2 {
-    margin: 0;
-    padding: 15px 15px 30px;
-    text-align: center;
-    font-family: $graphFont;
-    color: $graphPrimaryColor;
-    font-size: 2.2em;
-  }
-}
-#donut {
-  width: 29rem;
-  height: 29rem;
-  margin: 0 auto;
-  display: inline-block;
-  padding: 10px;
-  margin-left: 100px;
-  padding-left: 50px;
-  text {
-    font-family: $graphFont;
-    font-size: 7rem;
-    font-weight: 400;
-    line-height: 16rem;
-    fill: $graphPrimaryColor;
-  }
-  h2 {
-    color: $graphPrimaryColor;
-    font-size: 2em;
-    font-family: $graphFont;
-    margin-bottom: 25px;
-    margin-right: 50px;
-    padding-right: 110px;
-  }
-}
-#donut2 {
-  width: 20rem;
-  height: 29rem;
-  margin: 0 auto;
-  display: inline-block;
-  margin-left: 50px;
-  padding: 10px;
-  text {
-    font-family: $graphFont;
-    font-size: 7rem;
-    font-weight: 400;
-    line-height: 16rem;
-    fill: $graphPrimaryColor;
-  }
-  h2 {
-    color: $graphPrimaryColor;
-    font-size: 2em;
-    font-family: $graphFont;
-    margin-bottom: 15px;
-    margin-right: 40px;
-    padding-left: 10px;
-  }
-}
-path.color0 {
-  fill: $graphPrimaryColor;
-}
-path.color1 {
-  fill: $graphSecondaryColor;
+      h1 {
+        margin: 0;
+        padding: 20px 20px 30px;
+        text-align: center;
+        font-family: $graphFont;
+        color: $graphSecondaryColor;
+        font-size: 3em;
+      }
+      h2 {
+        margin: 0;
+        padding: 15px 15px 30px;
+        text-align: center;
+        font-family: $graphFont;
+        color: $graphPrimaryColor;
+        font-size: 2.2em;
+      }
+    .wrapper {
+        display: flex;
+        margin: auto;
+        align-items: center;
+        justify-content: center;
+    #donut {
+      width: 29rem;
+      height: 29rem;
+     // margin: 0 auto;
+      //display: inline-block;
+//      padding: 10px;
+//      margin-left: 100px;
+//      padding-left: 50px;
+      text {
+        font-family: $graphFont;
+        font-size: 7rem;
+        font-weight: 400;
+        line-height: 16rem;
+        fill: $graphPrimaryColor;
+      }
+      h2 {
+        color: $graphPrimaryColor;
+        font-size: 2em;
+        font-family: $graphFont;
+        margin-bottom: 25px;
+        margin-right: 50px;
+        padding-right: 110px;
+      }
+    }
+    #donut2 {
+      width: 20rem;
+      height: 29rem;
+//      margin: 0 auto;
+ //     display: inline-block;
+//      margin-left: 50px;
+//      padding: 10px;
+      text {
+        font-family: $graphFont;
+        font-size: 7rem;
+        font-weight: 400;
+        line-height: 16rem;
+        fill: $graphPrimaryColor;
+      }
+      h2 {
+        color: $graphPrimaryColor;
+        font-size: 2em;
+        font-family: $graphFont;
+        margin-bottom: 25px;
+        margin-right: 40px;
+        padding-left: 35px;
+      }
+    }
+    path.color0 {
+      fill: $graphPrimaryColor;
+    }
+    path.color1 {
+      fill: $graphSecondaryColor;
+    }
+    }
 }
