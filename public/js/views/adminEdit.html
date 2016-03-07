@@ -1,5 +1,11 @@
 <div class="adminContainer">
   <div class="adminStyle">
+    <div class="adminBtns">
+      <button ng-click="logout()">logout</button>
+      <button ui-sref="adminEdit">Edit Existing Cohorts</button>
+      <button ui-sref="admin">Add Cohort</button>
+    </div>
+
     <div class="studentDiv" ng-repeat="cohort in cohorts track by cohort._id">
 
 

@@ -1,9 +1,15 @@
 @import 'variables';
 
-body {
+.mapCont {
     background-image: url("./images/stars.jpg");
+    width: 100%;
+    height: 100%;
     .head {
         position: fixed;
+        top: 4.5em;
+        padding-left: 1em;
+        width: 45vw;
+        // border: 2px solid red;
         h2 {
             color: #fff;
             font-family: 'Open Sans Condensed', sans-serif;
@@ -53,36 +59,38 @@ body {
             }
         }
         .zoom {
+            position: fixed;
             margin: 20px;
-            width: 50px;
+            width: 3em;
+            top: 20em;
         }
     }
     .scrollbar {
-        position: fixed;
-        top: 5px;
-        left: 0;
-        right: 0;
-        margin: auto;
-        width: 450px;
-        height: 120px;
-        z-index: 100;
+        // position: fixed;
+        // top: 20vh;
+        // left: 0;
+        // right: 0;
+        // margin: auto;
+        // width: 100%;
+        height: 2em;
+        // z-index: 100;
         text-align: center;
         .timeplay {
-            display: inline-block;
-            width: 100%;
-            margin: auto;
+            // display: inline-block;
+            // width: 100%;
+            // margin: auto;
             i {
                 display: inline-block;
-                margin: 15px;
                 float: left;
+                margin-top: 0.7em;
                 margin-left: 30px;
             }
             h2 {
                 display: inline-block;
-                float: right;
+                // float: right;
                 color: white;
                 font-family: 'Open Sans Condensed', sans-serif;
-                font-size:40px;
+                font-size:2.7em;
                 margin: 0;
             }
         }
@@ -94,7 +102,7 @@ body {
     h5 {
         color: #fff;
         font-family: 'Open Sans Condensed', sans-serif;
-        font-size:20px;
+        font-size:1em;
         margin: 0;
         margin-left: 5px;
         display: inline-block;
@@ -145,29 +153,37 @@ body {
     }
     .bars {
         width: 33%;
-        height: 860px;
+        height: 100vh;
         position: fixed;
-        top:0;
+        top:6em;
         right:0;
-        margin: 2vh 0;
         h2 {
-            color: #fff;
+            color: $navBgColor;
             font-family: 'Open Sans Condensed', sans-serif;
             margin: 0;
-            font-size:44px;
+            word-wrap: break-word;
+            background-color: rgba(#c1ced4, 0.67);
+            min-width: 4em;
+            text-align: center;
+            // font-size:2em;
+            // padding: 0.2em
+        }
+        .barTitle {
+          font-size: 0.8em;
         }
         div {
             clear: both;
-            height: 15.5vh;
+            // height: 6em;
             float: right;
-            margin: 2vh 0;
-            background-color: lightblue;
+            margin: 0.7em 0;
+            padding: 0.8em;
+            background-color: $graphSecondaryColor;
             border-top-left-radius: 20px;
             border-bottom-left-radius: 20px;
         }
         div h2 {
             float: right;
-            padding: 4vh 10px;
+            // padding-top: 0.6em;
             width: max-content;
         }
     }
