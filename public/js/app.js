@@ -132,7 +132,6 @@ angular.module('myApp', ['ui.router'])
         templateUrl: './js/directives/finance/housingGraphTmpl.html',
         restrict: 'E',
         scope: {
-            afterData: '='
         },
         controller: 'housingGraphCtrl'
     };
@@ -147,12 +146,20 @@ angular.module('myApp', ['ui.router'])
         controller: 'employmentGraphCtrl'
     };
 })
+    .directive('expensesGraph', function() {
+    return {
+        templateUrl: './js/directives/finance/totalExpensesGraphTmpl.html',
+        restrict: 'E',
+        scope: {
+        },
+        controller: 'totalExpensesGraphCtrl'
+    };
+})
 .directive('piggyBank', function() {
     return {
         templateUrl: './js/directives/finance/piggyBankTmpl.html',
         restrict: 'E',
         scope: {
-            afterData: '='
         },
         controller: 'piggyBankCtrl'
     };

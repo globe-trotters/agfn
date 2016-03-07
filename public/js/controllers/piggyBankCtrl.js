@@ -57,7 +57,7 @@ angular.module('myApp').controller('piggyBankCtrl', function($scope) {
             if (nodes.length >= 1) {
                 nodes[nodes.length - 1].useForce = true;
             }
-            if (nodes.length === 10) {
+            if (nodes.length === 4) {
                 window.clearInterval(interval)
             }
 
@@ -187,7 +187,7 @@ angular.module('myApp').controller('piggyBankCtrl', function($scope) {
             if (nodes.length >= 1) {
                 nodes[nodes.length - 1].useForce = true;
             }
-            if (nodes.length === 50) {
+            if (nodes.length === 49) {
                 window.clearInterval(interval)
             }
 

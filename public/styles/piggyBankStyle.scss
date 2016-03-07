@@ -1,6 +1,6 @@
 @import 'variables';
 .finance {
-h1 {
+h2 {
     color:$graphSecondaryColor;
     text-align: center;
     font-family: $graphFont;
@@ -9,6 +9,9 @@ h1 {
 .pigContainer {
 
     display: flex;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
     .pig1 {
         float: left;
         h2 {
