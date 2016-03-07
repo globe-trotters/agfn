@@ -25,50 +25,6 @@
       outline-color: rgba(51, 35, 85, 0.83);
       border: 1px solid gray;
       outline: none; }
-    .adminContainer .adminStyle [data-tip] {
-      position: relative; }
-    .adminContainer .adminStyle [data-tip]:before {
-      content: '';
-      /* hides the tooltip when not hovered */
-      display: none;
-      content: '';
-      display: none;
-      border-left: 5px solid transparent;
-      border-right: 5px solid transparent;
-      border-bottom: 5px solid #1a1a1a;
-      position: absolute;
-      z-index: 8;
-      font-size: 0;
-      line-height: 0;
-      position: absolute;
-      top: 30px;
-      left: 35px;
-      z-index: 8;
-      font-size: 0;
-      line-height: 0;
-      width: 0;
-      height: 0; }
-    .adminContainer .adminStyle [data-tip]:after {
-      display: none;
-      content: attr(data-tip);
-      position: absolute;
-      top: 35px;
-      left: 0;
-      padding: 5px 8px;
-      background: #1a1a1a;
-      color: #fff;
-      z-index: 9;
-      font-size: 0.75em;
-      height: 18px;
-      line-height: 18px;
-      -webkit-border-radius: 3px;
-      -moz-border-radius: 3px;
-      border-radius: 3px;
-      white-space: nowrap;
-      word-wrap: normal; }
-    .adminContainer .adminStyle [data-tip]:hover:before,
-    .adminContainer .adminStyle [data-tip]:hover:after {
-      display: block; }
     .adminContainer .adminStyle .selectStudents {
       width: 50%;
       margin: 0;
@@ -93,6 +49,10 @@
       position: relative;
       margin: 10px;
       outline: 0; }
+    .adminContainer .adminStyle .adminBtns {
+      width: 100%;
+      text-align: center;
+      margin: 1em; }
     .adminContainer .adminStyle .adminButton:hover {
       background: rgba(51, 35, 85, 0.31); }
 
@@ -154,6 +114,7 @@
     .finance .wrapper path.color1 {
       fill: #C1CED4; }
 
+
 h2 {
   color: #25AAE1;
   text-align: center;
@@ -187,7 +148,8 @@ h2 {
 .loginStyle {
   width: 50%;
   margin: auto;
-  padding: 5%; }
+  padding: 5%;
+  color: #25AAE1; }
   .loginStyle input {
     width: 100%;
     margin-bottom: 10px;
@@ -213,23 +175,32 @@ h2 {
     background: rgba(51, 35, 85, 0.31); }
 
 body {
-  box-sizing: border-box;
+  background-image: url("./images/stars.jpg");
   font-size: 1em;
+  position: relative;
+  box-sizing: border-box;
+  min-height: 100%;
   margin: 0 auto;
   padding: 0; }
-  body .container {
-    margin: 0; }
+  body #main {
+    position: relative;
+    z-index: 1; }
 
-body {
-  background-image: url("./images/stars.jpg"); }
-  body .head {
-    position: fixed; }
-    body .head h2 {
+.mapCont {
+  background-image: url("./images/stars.jpg");
+  width: 100%;
+  height: 100%; }
+  .mapCont .head {
+    position: fixed;
+    top: 4.5em;
+    padding-left: 1em;
+    width: 45vw; }
+    .mapCont .head h2 {
       color: #fff;
       font-family: 'Open Sans Condensed', sans-serif;
       margin: 0;
       font-size: 44px; }
-    body .head .moreinfo {
+    .mapCont .head .moreinfo {
       position: fixed;
       top: 0;
       left: 0;
@@ -244,16 +215,16 @@ body {
       border: 1px solid #fff;
       padding: 10px;
       text-align: center; }
-    body .head h2 {
+    .mapCont .head h2 {
       color: #fff;
       font-family: 'Open Sans Condensed', sans-serif;
       margin: 0;
       font-size: 44px; }
-    body .head p {
+    .mapCont .head p {
       font-family: 'Open Sans Condensed', sans-serif;
       font-size: 20px;
       font-weight: bold; }
-    body .head .infoexit {
+    .mapCont .head .infoexit {
       position: absolute;
       color: red;
       top: 0;
@@ -262,39 +233,29 @@ body {
       cursor: pointer;
       border-bottom: 2px solid red;
       padding: 0 5px; }
-    body .head .infoexit:hover {
+    .mapCont .head .infoexit:hover {
       color: #fff;
       border-bottom: 2px solid #fff; }
-  body .zoom {
+  .mapCont .zoom {
+    position: fixed;
     margin: 20px;
-    width: 50px; }
+    width: 3em;
+    top: 20em; }
 
 .scrollbar {
-  position: fixed;
-  top: 5px;
-  left: 0;
-  right: 0;
-  margin: auto;
-  width: 450px;
-  height: 120px;
-  z-index: 100;
+  height: 2em;
   text-align: center; }
-  .scrollbar .timeplay {
+  .scrollbar .timeplay i {
     display: inline-block;
-    width: 100%;
-    margin: auto; }
-    .scrollbar .timeplay i {
-      display: inline-block;
-      margin: 15px;
-      float: left;
-      margin-left: 30px; }
-    .scrollbar .timeplay h2 {
-      display: inline-block;
-      float: right;
-      color: white;
-      font-family: 'Open Sans Condensed', sans-serif;
-      font-size: 40px;
-      margin: 0; }
+    float: left;
+    margin-top: 0.7em;
+    margin-left: 30px; }
+  .scrollbar .timeplay h2 {
+    display: inline-block;
+    color: white;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 2.7em;
+    margin: 0; }
 
 i {
   color: #fff;
@@ -303,7 +264,7 @@ i {
 h5 {
   color: #fff;
   font-family: 'Open Sans Condensed', sans-serif;
-  font-size: 20px;
+  font-size: 1em;
   margin: 0;
   margin-left: 5px;
   display: inline-block; }
@@ -342,28 +303,83 @@ h5 {
 
 .bars {
   width: 33%;
-  height: 860px;
+  height: 100vh;
   position: fixed;
-  top: 0;
-  right: 0;
-  margin: 2vh 0; }
+  top: 6em;
+  right: 0; }
   .bars h2 {
-    color: #fff;
+    color: #1E1D1D;
     font-family: 'Open Sans Condensed', sans-serif;
     margin: 0;
-    font-size: 44px; }
+    word-wrap: break-word;
+    background-color: rgba(193, 206, 212, 0.67);
+    min-width: 4em;
+    text-align: center; }
+  .bars .barTitle {
+    font-size: 0.8em; }
   .bars div {
     clear: both;
-    height: 15.5vh;
     float: right;
-    margin: 2vh 0;
-    background-color: lightblue;
+    margin: 0.7em 0;
+    padding: 0.8em;
+    background-color: #C1CED4;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px; }
   .bars div h2 {
     float: right;
-    padding: 4vh 10px;
     width: max-content; }
+
+.main-nav {
+  text-align: center;
+  position: fixed;
+  z-index: 150;
+  top: 0;
+  width: 100%;
+  height: 2em;
+  padding: 1em 1em;
+  transition: all .5s;
+  text-align: center;
+  background-color: #1E1D1D;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.4); }
+  .main-nav .navBtns {
+    margin: auto;
+    width: 70%; }
+  .main-nav a {
+    font-size: .9em;
+    font-weight: bold;
+    display: inline-block;
+    margin: 0 12px;
+    padding: 1em;
+    transition: all .5s;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #C1CED4;
+    border: none; }
+  .main-nav a:hover {
+    display: inline-block;
+    padding: 4px;
+    transition: all 1s;
+    border: none;
+    background-color: #25AAE1;
+    color: #1E1D1D; }
+
+.main-nav-scrolled {
+  color: #1f1e1d;
+  height: 50px;
+  padding: 10px;
+  transition: all .5s;
+  opacity: .98;
+  background: rgba(75, 75, 75, 0.97); }
+  .main-nav-scrolled a {
+    color: #25AAE1;
+    font-size: .8em;
+    width: 95px;
+    padding: 1em;
+    transition: all .5s;
+    border-top: 2px solid #C1CED4;
+    border-right: 0;
+    border-bottom: 0;
+    border-left: 0; }
 
 .finance h2 {
   color: #C1CED4;
