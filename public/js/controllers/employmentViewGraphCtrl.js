@@ -5,10 +5,10 @@ angular.module('myApp').controller('employmentViewGraphCtrl', function($scope){
 
   /////CALLING DONUT FUNCTION ARGUMENTS///////
   drawDonutChart(
-    '#donut',
-    $('#donut').data('donut'),
-    500,
-    500,
+    '#hiring',
+    $('#hiring').data('hiring'),
+    470,
+    470,
     ".35em"
   );
   ///////DECLARING FUNCTION ////////////
@@ -24,7 +24,7 @@ angular.module('myApp').controller('employmentViewGraphCtrl', function($scope){
       format = d3.format(".0%"); ///DISPLAYS IN % FORMAT (NO DECIMALS FOR NOW)
 
     var arc = d3.svg.arc()
-      .innerRadius(radius - 20) ///THICKNESS OF DONUT////////
+      .innerRadius(radius - 35) ///THICKNESS OF DONUT////////
       .outerRadius(radius);
 
     var svg = d3.select(element).append("svg") ///SET DIMENSIONS
