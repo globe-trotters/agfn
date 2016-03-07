@@ -188,7 +188,7 @@ angular.module("myApp").controller("earthCtrl", function($scope, $window, $inter
 
       $rootScope.duringupdate.forEach(function(a) {
         for (var b = 0; b < a.students.length; b++) {
-          if (a.students[b].homeData.lat && a.students[b].homeData.lng) {
+          if (a.students[b].homeData) {
             linkcamp.push({
               "source": [a.students[b].homeData.lng, a.students[b].homeData.lat],
               "target": [a.cohortData.lng, a.cohortData.lat]
@@ -199,7 +199,7 @@ angular.module("myApp").controller("earthCtrl", function($scope, $window, $inter
 
       $rootScope.afterupdate.forEach(function(a) {
         for (var b = 0; b < a.students.length; b++) {
-          if (a.students[b].afterData.lat && a.students[b].afterData.lng) {
+          if (a.students[b].afterData) {
             linkjob.push({
               "source": [a.cohortData.lng, a.cohortData.lat],
               "target": [a.students[b].afterData.lng, a.students[b].afterData.lat]
