@@ -1,9 +1,19 @@
-body {
-  box-sizing: border-box;
-  font-size: 1em;
-  margin: 0 auto;
-  padding: 0;
-  .container {
-    margin: 0;
-  }
+body
+{
+  background-image: url("./images/stars.jpg");
+
+    font-size: 1em;
+
+    position: relative;
+
+    box-sizing: border-box;
+    min-height: 100%;
+    margin: 0 auto;
+    padding: 0;
+
+    #main
+    {
+        position: relative;
+        z-index: 1;
+    }
 }
