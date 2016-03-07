@@ -21,6 +21,11 @@ angular.module('myApp', ['ui.router'])
       templateUrl: './js/views/loginView.html',
       controller: 'loginCtrl'
     })
+    .state('employment', {
+      url: '/employment',
+      templateUrl: 'js/views/employmentView.html',
+      controller: 'employmentViewCtrl'
+    })
     .state('admin', {
       url: '/admin',
       templateUrl: './js/views/adminView.html',
@@ -190,4 +195,14 @@ angular.module('myApp', ['ui.router'])
    },
    controller: 'scrollbarCtrl'
  };
+})
+.directive('employmentViewGraph', function() {
+    return {
+        templateUrl: './js/directives/finance/employmentViewGraphTmpl.html',
+        restrict: 'E',
+        scope: {
+            afterData: '='
+        },
+        controller: 'employmentViewGraphCtrl'
+    };
 });
