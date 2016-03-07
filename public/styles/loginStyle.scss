@@ -1,7 +1,10 @@
+@import 'variables';
+
 .loginStyle {
   width: 50%;
   margin: auto;
   padding: 5%;
+  color: $graphPrimaryColor;
   input {
     width: 100%;
     margin-bottom: 10px;

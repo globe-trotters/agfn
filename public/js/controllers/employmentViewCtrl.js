@@ -1,5 +1,5 @@
 angular.module('myApp').controller('employmentViewCtrl', function($scope) {
-  $('.cohortsCounter').each(function() {
+  $('#cohortsCounter').each(function() {
     var $this = $(this);
     jQuery({
       Counter: 0
@@ -13,7 +13,7 @@ angular.module('myApp').controller('employmentViewCtrl', function($scope) {
       }
     });
   });
-  $('.studentsCounter').each(function() {
+  $('#studentsCounter').each(function() {
     var $this = $(this);
     jQuery({
       Counter: 0
@@ -27,7 +27,7 @@ angular.module('myApp').controller('employmentViewCtrl', function($scope) {
       }
     });
   });
-  $('.statesCounter').each(function() {
+  $('#statesCounter').each(function() {
     var $this = $(this);
     jQuery({
       Counter: 0

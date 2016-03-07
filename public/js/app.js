@@ -5,6 +5,10 @@ angular.module('myApp', ['ui.router'])
 
   $stateProvider
   ///////USER VIEWS///////
+    .state('home', {
+      url: '/home',
+      templateUrl: './js/views/landingTmpl.html'
+    })
     .state('map', {
       url: '/map',
       templateUrl: './js/views/mapView.html'
@@ -78,10 +82,23 @@ angular.module('myApp', ['ui.router'])
       //   }
       // }
     });
-  $urlRouterProvider.otherwise('/map');
-
+  $urlRouterProvider.otherwise('/home');
 })
 
+.directive('navBar', function() {
+  return {
+    templateUrl: './js/directives/nav/navBarTmpl.html',
+    restrict: 'E',
+    controller: 'navCtrl'
+  };
+})
+.directive('footerDir', function() {
+  return {
+    templateUrl: './js/directives/nav/footerTmpl.html',
+    restrict: 'E',
+    controller: 'mainCtrl'
+  };
+})
 .directive('cohortSearch', function() {
   return {
     templateUrl: './js/directives/location/cohortLocation.html',
@@ -92,7 +109,6 @@ angular.module('myApp', ['ui.router'])
     controller: 'cohortSearchCtrl'
   };
 })
-
 
 .directive('homeSearch', function() {
   return {
