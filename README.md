@@ -1,4 +1,4 @@
-# DevGlove
+# DevGlobe
 
 ## Synopsis
 
@@ -6,7 +6,7 @@ This project is a collaborative effort of four student developers. The app uses 
 
 ## Usage
 
-This app exists as a demonstration of skills and knowledge.  The live version can be found [here] ().
+This app exists as a demonstration of skills and knowledge.  The live version can be found [here] (http://globe.geordyn.com/#/home).
 
 ## Built With
 
