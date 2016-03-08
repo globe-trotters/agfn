@@ -14,12 +14,12 @@
       <input class="typeInput" placeholder="edit cohort title (DM#)" ng-model="editCohort.title">
       <br/>
        Start: {{cohort.startBootcamp}}
-      <input class="typeInput" placeholder="Edit Start Date" type="date" ng-model="editCohort.startDate"><br/>
+      <input class="typeInput" placeholder="Edit Start Date" type="date" ng-model="editCohort.startBootcamp"><br/>
       End: {{cohort.endBootcamp}}
-      <input class="typeInput" placeholder="Edit End Date" type="date" ng-model="editCohort.endDate"></br>
+      <input class="typeInput" placeholder="Edit End Date" type="date" ng-model="editCohort.endBootcamp"></br>
       Students:
       <div class="studentDiv" ng-repeat="student in cohort.students">
-        <input class="typeInput" value="{{student.name}}"><br/>
+        <input class="typeInput" value="{{student.name}}" ng-model= "student.name"><br/>
         Before DevMtn: {{student.homeData.locationString}}<br/>
         <home-search home-data="student.homeData" class="typeInput"></home-search></br>
         After DevMtn: {{student.afterData.locationString}}<br/>
@@ -500,7 +500,7 @@
                 </select>
               </div> -->
 
-<button class="adminButton" ng-click="editCohortData(editCohort, cohort._id)">Submit Changes</button>
+<button class="adminButton" ng-click="editCohortData(editCohort, cohort)">Submit Changes</button>
 
 
 

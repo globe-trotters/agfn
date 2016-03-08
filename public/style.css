@@ -114,6 +114,58 @@
     .finance .wrapper path.color1 {
       fill: #C1CED4; }
 
+.employmentViewContainer {
+  background-image: url("./../images/wood_1.png");
+  height: 100%;
+  width: 100%;
+  padding: 20px; }
+  .employmentViewContainer h1 {
+    color: #C1CED4;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    padding: 10px 10px 40px;
+    font-family: "Josefin Slab";
+    font-size: 4em;
+    text-align: center; }
+  .employmentViewContainer #hiring {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    display: inline-block;
+    text-align: center; }
+    .employmentViewContainer #hiring text {
+      font-family: "Josefin Slab";
+      font-size: 7.8rem;
+      font-weight: 400;
+      line-height: 16rem;
+      fill: #25AAE1; }
+    .employmentViewContainer #hiring h2 {
+      color: #25AAE1;
+      font-size: 4em;
+      font-family: "Josefin Slab";
+      text-align: center; }
+  .employmentViewContainer .counters {
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 20px; }
+    .employmentViewContainer .counters span {
+      margin: 20px;
+      color: #25AAE1;
+      font-family: "Josefin Slab";
+      font-size: 3.5em;
+      width: 20%;
+      display: inline-block;
+      position: relative;
+      top: -1em;
+      text-align: center; }
+    .employmentViewContainer .counters span label {
+      display: block;
+      position: relative;
+      top: 2.7em;
+      text-align: center;
+      font-size: 0.7em;
+      color: #C1CED4; }
+
 
 h2 {
   color: #25AAE1;

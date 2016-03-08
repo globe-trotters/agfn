@@ -1,0 +1,66 @@
+@import 'variables';
+.employmentViewContainer {
+  background-image: $backgroundImage;
+  height: 100%;
+  width: 100%;
+  padding: 20px;
+  h1 {
+    color: $graphSecondaryColor;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    padding: 10px 10px 40px;
+    font-family: $graphFont;
+    font-size: 4em;
+    text-align: center;
+  }
+  #hiring {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    display: inline-block;
+    // padding: 10px;
+    // margin-left: 100px;
+    // padding-left: 50px;
+    text-align: center;
+    text {
+      font-family: $graphFont;
+      font-size: 7.8rem;
+      font-weight: 400;
+      line-height: 16rem;
+      fill: $graphPrimaryColor;
+    }
+    h2 {
+      color: $graphPrimaryColor;
+      font-size: 4em;
+      font-family: $graphFont;
+      // margin-bottom: 25px;
+      // margin-right: 50px;
+      // padding-right: 110px;
+      text-align: center;
+    }
+  }
+  .counters {
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 20px;
+      span {
+        margin: 20px;
+        color: $graphPrimaryColor;
+        font-family: $graphFont;
+        font-size: 3.5em;
+        width: 20%;
+        display: inline-block;
+        position: relative;
+        top: -1em;
+        text-align: center;
+      }
+      span label {
+        display: block;
+        position: relative;
+        top: 2.7em;
+        text-align: center;
+        font-size: 0.7em;
+        color: $graphSecondaryColor;
+      }
+    }
+  }
