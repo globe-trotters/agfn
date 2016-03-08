@@ -72,55 +72,47 @@
     font-family: "Josefin Slab";
     color: #25AAE1;
     font-size: 2.2em; }
-
-#donut {
-  width: 29rem;
-  height: 29rem;
-  margin: 0 auto;
-  display: inline-block;
-  padding: 10px;
-  margin-left: 100px;
-  padding-left: 50px; }
-  #donut text {
-    font-family: "Josefin Slab";
-    font-size: 7rem;
-    font-weight: 400;
-    line-height: 16rem;
-    fill: #25AAE1; }
-  #donut h2 {
-    color: #25AAE1;
-    font-size: 2em;
-    font-family: "Josefin Slab";
-    margin-bottom: 25px;
-    margin-right: 50px;
-    padding-right: 110px; }
-
-#donut2 {
-  width: 20rem;
-  height: 29rem;
-  margin: 0 auto;
-  display: inline-block;
-  margin-left: 50px;
-  padding: 10px; }
-  #donut2 text {
-    font-family: "Josefin Slab";
-    font-size: 7rem;
-    font-weight: 400;
-    line-height: 16rem;
-    fill: #25AAE1; }
-  #donut2 h2 {
-    color: #25AAE1;
-    font-size: 2em;
-    font-family: "Josefin Slab";
-    margin-bottom: 15px;
-    margin-right: 40px;
-    padding-left: 10px; }
-
-path.color0 {
-  fill: #25AAE1; }
-
-path.color1 {
-  fill: #C1CED4; }
+  .finance .wrapper {
+    display: flex;
+    margin: auto;
+    align-items: center;
+    justify-content: center; }
+    .finance .wrapper #donut {
+      width: 29rem;
+      height: 29rem; }
+      .finance .wrapper #donut text {
+        font-family: "Josefin Slab";
+        font-size: 7rem;
+        font-weight: 400;
+        line-height: 16rem;
+        fill: #25AAE1; }
+      .finance .wrapper #donut h2 {
+        color: #25AAE1;
+        font-size: 2em;
+        font-family: "Josefin Slab";
+        margin-bottom: 25px;
+        margin-right: 50px;
+        padding-right: 110px; }
+    .finance .wrapper #donut2 {
+      width: 20rem;
+      height: 29rem; }
+      .finance .wrapper #donut2 text {
+        font-family: "Josefin Slab";
+        font-size: 7rem;
+        font-weight: 400;
+        line-height: 16rem;
+        fill: #25AAE1; }
+      .finance .wrapper #donut2 h2 {
+        color: #25AAE1;
+        font-size: 2em;
+        font-family: "Josefin Slab";
+        margin-bottom: 25px;
+        margin-right: 40px;
+        padding-left: 35px; }
+    .finance .wrapper path.color0 {
+      fill: #25AAE1; }
+    .finance .wrapper path.color1 {
+      fill: #C1CED4; }
 
 .employmentViewContainer {
   background-image: url("./../images/wood_1.png");
@@ -203,6 +195,120 @@ h2 {
       font-size: 12px; }
     .graph #chart rect {
       stroke-width: 2; }
+
+@import url(http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
+.info {
+  color: #C1CED4;
+  display: block;
+  margin: auto;
+  padding: 20em;
+  font-size: 1.2em;
+  font-family: sans-serif; }
+  .info .infoAbout {
+    text-align: center; }
+
+.landingCont {
+  padding-top: 10em;
+  width: 85%;
+  margin: auto;
+  justify-content: center; }
+  .landingCont figure {
+    cursor: pointer; }
+  .landingCont img {
+    height: 100%;
+    width: 100%;
+    opacity: 1.8; }
+  .landingCont figure.snip0014 {
+    color: #fff;
+    position: relative;
+    float: left;
+    overflow: hidden;
+    margin: 10px 1%;
+    min-width: 220px;
+    height: 220px;
+    max-width: 310px;
+    width: 100%;
+    background: transparent;
+    text-align: center; }
+  .landingCont figure.snip0014 * {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box; }
+  .landingCont figure.snip0014 img {
+    max-width: 100%;
+    opacity: 1;
+    width: 100%;
+    -webkit-transition: opacity 0.35s;
+    transition: opacity 0.35s; }
+  .landingCont figure.snip0014 figcaption {
+    font-size: 1.25em; }
+  .landingCont figure.snip0014 > div {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 3em 3em;
+    width: 100%;
+    height: 100%; }
+  .landingCont figure.snip0014 > div::before {
+    position: absolute;
+    top: 30px;
+    right: 50%;
+    bottom: 30px;
+    left: 50%;
+    border-left: 1px solid rgba(255, 255, 255, 0.8);
+    border-right: 1px solid rgba(255, 255, 255, 0.8);
+    content: '';
+    opacity: 0;
+    background-color: #ffffff;
+    -webkit-transition: all 0.4s;
+    transition: all 0.4s;
+    -webkit-transition-delay: 0.6s;
+    transition-delay: 0.6s; }
+  .landingCont figure.snip0014 h2,
+  .landingCont figure.snip0014 p {
+    margin: 0 0 5px;
+    opacity: 0;
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s,-webkit-transform 0.35s,-moz-transform 0.35s,-o-transform 0.35s,transform 0.35s; }
+  .landingCont figure.snip0014 h2 {
+    word-spacing: -0.15em;
+    font-weight: 300;
+    text-transform: uppercase;
+    -webkit-transform: translate3d(0%, 100%, 0);
+    transform: translate3d(0%, 100%, 0);
+    -webkit-transition-delay: 0.3s;
+    transition-delay: 0.3s; }
+  .landingCont figure.snip0014 h2 span {
+    font-weight: 800; }
+  .landingCont figure.snip0014 p {
+    font-weight: 200;
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s; }
+  .landingCont figure.snip0014 a {
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    color: #ffffff; }
+  .landingCont figure.snip0014:hover img {
+    opacity: 0.35; }
+  .landingCont figure.snip0014:hover > div h2 {
+    opacity: 1;
+    -webkit-transform: translate3d(0%, 0%, 0);
+    transform: translate3d(0%, 0%, 0);
+    -webkit-transition-delay: 0.3s;
+    transition-delay: 0.3s; }
+  .landingCont figure.snip0014:hover > div p {
+    opacity: 0.8;
+    -webkit-transition-delay: 0.6s;
+    transition-delay: 0.6s; }
+  .landingCont figure.snip0014:hover > div::before {
+    background: rgba(255, 255, 255, 0);
+    left: 30px;
+    right: 30px;
+    opacity: 1;
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s; }
 
 @charset "UTF-8";
 .loginStyle {
