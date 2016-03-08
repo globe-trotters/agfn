@@ -6,7 +6,7 @@ $scope.show = 1;
   $scope.getCohorts = function() {
     adminService.getCohorts()
     .then(function (res) {
-      // console.log(res);
+      console.log(res);
       $scope.cohorts = res;
     });
   };
@@ -20,7 +20,7 @@ $scope.getCohorts();
   };
 
   $scope.submitNewCohort = function(newCohort) {
-    // console.log("Controller Adding New Cohort", newCohort);
+    console.log("Controller Adding New Cohort", newCohort);
     adminService.submitNewCohort(newCohort, $scope.students)
       .then(function(res) {
         alert('new data submitted!');
@@ -38,8 +38,13 @@ $scope.getCohorts();
   };
 
 
-$scope.editCohortData = function(editCohort, id) {
-  adminService.editCohortData(editCohort, id)
+$scope.editCohortData = function(editCohort, cohort) {
+  if(!editCohort) {
+    editCohort = cohort;
+  }
+  editCohort.students = cohort.students;
+  console.log('editeing cohort: ', editCohort);
+  adminService.editCohortData(editCohort, cohort._id)
   .then(function(res){
     alert('Cohort Updated!');
     $scope.editCohort = null;
