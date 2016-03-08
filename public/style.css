@@ -201,7 +201,7 @@ h2 {
   color: #C1CED4;
   display: block;
   margin: auto;
-  padding: 20em;
+  width: 80%;
   font-size: 1.2em;
   font-family: sans-serif; }
   .info .infoAbout {
@@ -211,6 +211,8 @@ h2 {
   padding-top: 10em;
   width: 85%;
   margin: auto;
+  display: flex;
+  align-items: center;
   justify-content: center; }
   .landingCont figure {
     cursor: pointer; }
