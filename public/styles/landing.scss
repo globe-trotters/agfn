@@ -1,12 +1,14 @@
 @import "variables";
-
+.wrapper {
+    background-image: $backgroundImage;
+    height: 100vh;
 .info {
     color: $graphSecondaryColor;
     display: block;
     margin: auto;
-    width: 80%;
+    width: 70%;
     font-size: 1.2em;
-    font-family: sans-serif;
+    font-family: $graphFont;
     .infoAbout {
         text-align: center;
     }
@@ -35,9 +37,9 @@
         float: left;
         overflow: hidden;
         margin: 10px 1%;
-        min-width: 220px;
+        min-width: 200px;
         height: 220px;
-        max-width: 310px;
+        max-width: 260px;
         width: 100%;
         background: transparent;
         text-align: center;
@@ -89,6 +91,7 @@
     }
     figure.snip0014 h2 {
         word-spacing: -0.15em;
+        font-size: 1.2em;
         font-weight: 300;
         text-transform: uppercase;
         -webkit-transform: translate3d(0%, 100%, 0);
@@ -138,4 +141,5 @@
 
 
 
+}
 }
