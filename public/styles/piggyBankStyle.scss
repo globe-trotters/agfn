@@ -1,10 +1,10 @@
 @import 'variables';
 .finance {
-h2 {
-    color:$graphSecondaryColor;
-    text-align: center;
-    font-family: $graphFont;
-}
+    h2 {
+        color:$graphSecondaryColor;
+        text-align: center;
+        font-family: $graphFont;
+    }
 }
 .pigContainer {
 
@@ -35,5 +35,12 @@ h2 {
             background-image: url("./../images/pig.png");
             background-repeat: no-repeat;
         }
+    }
+}
+
+@media (max-width: 1000px) {
+    .pigContainer {
+        flex-wrap: wrap;
+        width: auto;
     }
 }
