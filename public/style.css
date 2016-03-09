@@ -121,8 +121,7 @@
   padding: 20px; }
   .employmentViewContainer h1 {
     color: #C1CED4;
-    margin: 0 auto;
-    margin-bottom: 40px;
+    margin: 0 auto 40px;
     padding: 10px 10px 40px;
     font-family: "Josefin Slab";
     font-size: 4em;
@@ -152,23 +151,19 @@
     margin: 0 auto;
     text-align: center;
     margin-bottom: 20px; }
-    .employmentViewContainer .counters span {
-      margin: 20px;
-      color: #25AAE1;
-      font-family: "Josefin Slab";
-      font-size: 3.5em;
-      width: 20%;
-      display: inline-block;
-      position: relative;
-      top: -1em;
-      text-align: center; }
-    .employmentViewContainer .counters span label {
-      display: block;
-      position: relative;
-      top: 0px;
-      text-align: center;
-      font-size: 0.7em;
-      color: #C1CED4; }
+    .employmentViewContainer .counters .count {
+      display: inline-block; }
+      .employmentViewContainer .counters .count span {
+        margin: 20px;
+        color: #25AAE1;
+        font-family: "Josefin Slab";
+        font-size: 3.5em;
+        display: inline-block;
+        position: relative;
+        text-align: center; }
+      .employmentViewContainer .counters .count .label {
+        color: #C1CED4;
+        font-size: 2em; }
   .employmentViewContainer .employers {
     margin-top: 20px; }
     .employmentViewContainer .employers h3 {
@@ -178,9 +173,7 @@
       font-size: 2em; }
     .employmentViewContainer .employers h1 {
       color: #C1CED4;
-      margin: 0 auto;
-      margin-top: 40px;
-      margin-bottom: 20px;
+      margin: 40px auto 20px;
       padding: 10px 10px 20px;
       font-family: "Josefin Slab";
       font-size: 4em;
