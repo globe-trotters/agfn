@@ -7,8 +7,8 @@ angular.module('myApp').controller('employmentViewGraphCtrl', function($scope){
   drawDonutChart(
     '#hiring',
     $('#hiring').data('hiring'),
-    470,
-    470,
+    400,
+    400,
     ".35em"
   );
   ///////DECLARING FUNCTION ////////////
