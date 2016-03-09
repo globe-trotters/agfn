@@ -6,7 +6,7 @@
       <div class="timeplay">
         <i class="fa fa-play fa-2x" ng-hide="playtime" ng-click="play(); playtime=true"></i>
         <i class="fa fa-pause fa-2x" ng-show="playtime" ng-click="play(); playtime=false"></i>
-          <h2>{{viewdate}}</h2>
+        <h2>{{viewdate}}</h2>
       </div>
     </scrollbar>
 
@@ -19,28 +19,30 @@
       <p>The bars on the right are a display of some specific statistics related to total student count,  where they came from, out of state retention rate, and job placement after completion of the course.</p>
       <p class="infoexit" ng-click="open=false">x</p>
     </div>
-
-  </div>
-
     <div class="zoom">
         <i class="fa fa-plus-square-o fa-3x" ng-click="zoomin()"></i><br>
         <i class="fa fa-minus-square-o fa-3x" ng-click="zoomout()"></i>
     </div>
+  </div>
 
 
 
+    <bars class="bars" data="data" cohortupdate='cohortupdate' refresh="refresh">
+
+      <div class="students"><h2>({{data[0]}}) <span class="barTitle">Students</span></h2></div>
+      <div class="states"><h2>({{data[1]}}) <span class="barTitle">States</span></h2></div>
+      <div class="countries"><h2>({{data[2]}}) <span class="barTitle">Countries</span></h2></div>
+      <div class="retention"><h2>({{data[3]}}%) <span class="barTitle">Retention</span></h2></div>
+      <div class="jobs"><h2>({{data[4]}}%) <span class="barTitle">Jobs</span></h2></div>
+    </bars>
 
 
-  <earth class="earth" id="earth" zoomin="zoomin" zoomout="zoomout" cohortupdate='cohortupdate'></earth>
+  <div class="earthwrap">
+    <earth class="earth" id="earth" zoomin="zoomin" zoomout="zoomout" cohortupdate='cohortupdate'></earth>
+  </div>
+
   <!-- END ZOOM -->
 </div>
 
-  <bars class="bars" data="data" cohortupdate='cohortupdate' refresh="refresh">
 
-    <div class="students"><h2>({{data[0]}}) <span class="barTitle">Students</span></h2></div>
-    <div class="states"><h2>({{data[1]}}) <span class="barTitle">States</span></h2></div>
-    <div class="countries"><h2>({{data[2]}}) <span class="barTitle">Countries</span></h2></div>
-    <div class="retention"><h2>({{data[3]}}%) <span class="barTitle">Retention</span></h2></div>
-    <div class="jobs"><h2>({{data[4]}}%) <span class="barTitle">Jobs</span></h2></div>
-  </bars>
 </div>

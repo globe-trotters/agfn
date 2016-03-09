@@ -1,22 +1,26 @@
 @import 'variables';
 
-     
+
 
 .mapCont {
     background-image: $galaxyBackground;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     .head {
         position: fixed;
-        top: 4.5em;
-        padding-left: 1em;
-        width: 45vw;
-        // border: 2px solid red;
+        top: 100px;
+        padding-left: 20px;
+        width: 460px;
+        i {
+          margin-left: 5px;
+          margin-bottom: 20px;
+        }
         h2 {
             color: #fff;
-            font-family: 'Open Sans Condensed', sans-serif;
+            font-family: $graphFont;
             margin: 0;
-            font-size:44px;
+            font-size:40px;
+            padding-bottom: 10px;
         }
         .moreinfo {
             position: fixed;
@@ -36,12 +40,12 @@
             }
             h2 {
                 color: #fff;
-                font-family: 'Open Sans Condensed', sans-serif;
+                font-family: $graphFont;
                 margin: 0;
-                font-size:44px;
+                font-size:40px;
             }
             p {
-                font-family: 'Open Sans Condensed', sans-serif;
+                font-family: $graphFont;
                 font-size:20px;
                 font-weight: bold;
             }
@@ -59,14 +63,15 @@
                 color: #fff;
                 border-bottom: 2px solid #fff;
             }
+            .zoom {
+                margin-left: 5px;
+                i {
+                  margin: 0;
+                }
+            }
         }
-        .zoom {
-            position: fixed;
-            margin: 20px;
-            width: 3em;
-            top: 20em;
-        }
-    
+
+
     .scrollbar {
         // position: fixed;
         // top: 20vh;
@@ -74,7 +79,7 @@
         // right: 0;
         // margin: auto;
         // width: 100%;
-        height: 2em;
+        height: 15px;
         // z-index: 100;
         text-align: center;
         .timeplay {
@@ -84,14 +89,14 @@
             i {
                 display: inline-block;
                 float: left;
-                margin-top: 0.7em;
-                margin-left: 30px;
+                margin-top: 5px;
+                margin-left: 20px;
             }
             h2 {
                 display: inline-block;
-                // float: right;
+                float: right;
                 color: white;
-                font-family: 'Open Sans Condensed', sans-serif;
+                font-family: $graphFont;
                 font-size:2.7em;
                 margin: 0;
             }
@@ -103,15 +108,15 @@
     }
     h5 {
         color: #fff;
-        font-family: 'Open Sans Condensed', sans-serif;
+        font-family: $graphFont;
         font-size:1em;
         margin: 0;
         margin-left: 5px;
         display: inline-block;
     }
     .earth {
-        width: 880px;
-        float: left;
+        width: 100%;
+        // float: left;
         .land {
             fill: #5a5255;
             stroke-opacity: 1;
@@ -151,38 +156,37 @@
             stroke-linejoin: round;
             fill:none;
         }
-        svg {
-          width: 100%;
-          height: 100%;
-        }
     }
     .bars {
         width: 33%;
         height: 100vh;
         position: fixed;
-        top:6em;
+        top:75px;
         right:0;
         h2 {
-            color: $navBgColor;
-            font-family: 'Open Sans Condensed', sans-serif;
+            color: #fff;
+            font-family: $graphFont;
             margin: 0;
             word-wrap: break-word;
-            background-color: rgba(#c1ced4, 0.67);
             min-width: 4em;
             text-align: center;
-            // font-size:2em;
-            // padding: 0.2em
+            font-size:6vh;
         }
         .barTitle {
           font-size: 0.8em;
         }
+        .states {
+            background-color: $graphSecondaryColor;
+        }
+        .retention {
+            background-color: $graphSecondaryColor;
+        }
         div {
             clear: both;
-            // height: 6em;
             float: right;
-            margin: 0.7em 0;
-            padding: 0.8em;
-            background-color: $graphSecondaryColor;
+            margin: 2vh 0;
+            padding: 2vh;
+            background-color: $graphPrimaryColor;
             border-top-left-radius: 20px;
             border-bottom-left-radius: 20px;
         }
@@ -192,4 +196,25 @@
             width: max-content;
         }
     }
+}
+
+@media (max-width: 1200px) {
+  .mapCont {
+    .earth {
+      position: absolute;
+      top: 0;
+      left: -50vh;
+      z-index: -100;
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .mapCont {
+    .bars {
+      margin-top: 200px;
+      width: 75%;
+    }
+
+  }
 }
