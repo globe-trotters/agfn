@@ -38,6 +38,12 @@
       // padding-right: 110px;
       text-align: center;
     }
+    path.color0 {
+      fill: $graphPrimaryColor;
+    }
+    path.color1 {
+      fill: $graphSecondaryColor;
+    }
   }
   .counters {
     margin: 0 auto;
@@ -57,10 +63,42 @@
       span label {
         display: block;
         position: relative;
-        top: 2.7em;
+        top: 0px;
         text-align: center;
         font-size: 0.7em;
         color: $graphSecondaryColor;
       }
     }
+    .employers {
+      margin-top: 20px;
+      h3 {
+        font-family: $graphFont;
+        color: $graphPrimaryColor;
+        text-align: center;
+        font-size: 2em;
+      }
+      h1 {
+        color: $graphSecondaryColor;
+        margin: 0 auto;
+        margin-top: 40px;
+        margin-bottom: 20px;
+        padding: 10px 10px 20px;
+        font-family: $graphFont;
+        font-size: 4em;
+        text-align: center;
+      }
+    table {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 30px;
+
+      img {
+        max-width: 200px;
+        max-height: 200px;
+        padding: 20px;
+        margin-right: 25px;
+      }
+    }
   }
+}
