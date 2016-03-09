@@ -1,10 +1,14 @@
 @import 'variables';
-
+.loginCont {
+    background-image: $backgroundImage;
+    width: 100%;
 .loginStyle {
+    background-image: $backgroundImage;
   width: 50%;
   margin: auto;
   padding: 5%;
   color: $graphPrimaryColor;
+    height: 100vh;
   input {
     width: 100%;
     margin-bottom: 10px;
@@ -31,4 +35,5 @@
   ​ button:hover {
     background: rgba(51, 35, 85, 0.31);
   }
+}
 }
