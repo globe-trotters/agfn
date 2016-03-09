@@ -356,8 +356,8 @@ body {
 
 .mapCont {
   background-image: url("./images/stars.jpg");
-  width: 100%;
-  height: 100%; }
+  width: 100vw;
+  height: 100vh; }
   .mapCont .head {
     position: fixed;
     top: 4.5em;
@@ -468,6 +468,9 @@ h5 {
   .earth .arc, .earth .flyin, .earth .flyout {
     stroke-linejoin: round;
     fill: none; }
+  .earth svg {
+    width: 100%;
+    height: 100%; }
 
 .bars {
   width: 33%;
