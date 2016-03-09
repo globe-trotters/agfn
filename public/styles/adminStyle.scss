@@ -1,70 +1,139 @@
+@import 'variables';
+
 .adminContainer {
   width: 100%;
   min-height: 100vh;
   background-image: url('./../images/wood_1.png');
   color: white;
+  font-family: $graphFont;
+
+
+  .adminBtns {
+    width: 100%;
+    text-align: center;
+    margin: 1em;
+
+  }
+  .adminButton {
+    font-size: 1em;
+    color: #090311;
+    text-shadow: 1px 1px #f9f9f9;
+    text-decoration: none;
+    display: inline-block;
+    padding: 0.5em;
+    border-radius: 0.25em;
+    background: #f8f8f8;
+    border: 1px solid #ccc;
+    position: relative;
+    margin: 10px;
+    outline: 0;
+  }
+  .adminButton:hover {
+    background: $graphPrimaryColor;
+    color: #f8f8f8;
+    text-shadow: none;
+  }
+
   .adminStyle {
-    width: 50%;
+
     margin: auto;
     padding: 5%;
+    display: flex;
+    .cohort {
+      flex: 1;
+    }
+    .students {
+      flex: 1;
+      margin-left: 1em;
+
+    }
     hr {
       display: block;
       margin: 1em auto;
       border-style: inset;
       border-width: 2px;
     }
-    .studentDiv {
-      padding: 5px;
-      margin-top: 10px;
-      border: 1px dashed #25AAE1;
-    }
-    .typeInput {
-      margin: auto;
-      width: 100%;
-      margin-bottom: 10px;
-      height: 5%;
-      font-size: 1.1em;
-      outline-color: rgba(51, 35, 85, 0.83);
-      border: 1px solid gray;
-      outline: none;
-    }
-
-    .selectStudents {
-      width: 50%;
-      margin: 0;
-      outline: none;
-      font-size: 1.3em;
-    }
-    .studentNumLabel {
-      margin: 0;
-      font-size: 1.3em;
-    }
-    .selectJob {
-      margin: 10px;
-    }
-    .adminButton {
-      font-size: 1em;
-      font-family: sans-serif;
-      color: #090311;
-      text-shadow: 1px 1px #f9f9f9;
-      text-decoration: none;
-      display: inline-block;
-      padding: 0.5em;
-      border-radius: 0.25em;
-      background: #f8f8f8;
-      border: 1px solid #ccc;
-      position: relative;
-      margin: 10px;
-      outline: 0;
-    }
-    .adminBtns {
-      width: 100%;
-      text-align: center;
-      margin: 1em;
-
-    }
-    .adminButton:hover {
-      background: rgba(51, 35, 85, 0.31);
-    }
   }
+
+  .typeInput {
+    margin: auto;
+    width: 100%;
+    margin-bottom: 0.5em;
+    height: 5%;
+    font-size: 1.1em;
+  }
+
+  .newStudents {
+    .anotherDiv {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+
+    .studentDiv {
+      min-width: 40vw;
+      padding: 1em;
+      margin: 0.5em;
+      // border: 1px dashed $graphPrimaryColor;
+      flex: 1;
+    }
+    }
+  .selectStudents {
+    width: 50%;
+    margin: 0;
+    outline: none;
+    font-size: 1.3em;
+  }
+  .studentNumLabel {
+    margin: 0;
+    font-size: 1.3em;
+  }
+  .selectJob {
+    margin: 10px;
+  }
+
+}
+
+
+  .edit {
+    color: $navBgColor;
+    .cohortInfo {
+      color: $navBgColor;
+    }
+    .classCont {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+
+    }
+    .classEdit {
+      min-width: 40vw;
+      flex: 1;
+      padding: 1em;
+      margin: 0.5em;
+      background-color: rgba(#c1ced4, 0.49);
+
+
+
+      .shadow4 {
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 20px rgba(0, 0, 0, 0.1) inset;
+
+      }
+    }
+    .studentEdit {
+      margin: 1em;
+    }
+
+
+  }
+
+
+
+
+
+
+
+
+
 }
