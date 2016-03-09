@@ -2,7 +2,11 @@
 .wrapper {
     background-image: $backgroundImage;
     height: 100vh;
+    .infoCont {
+        background-image: $backgroundImage;
+        width: 100%;
 .info {
+    background-image: $backgroundImage;
     color: $graphSecondaryColor;
     display: block;
     margin: auto;
@@ -11,8 +15,10 @@
     font-family: $graphFont;
     .infoAbout {
         text-align: center;
+        
     }
 }
+    }
 .landingCont {
     padding-top: 10em;
     width: 85%;

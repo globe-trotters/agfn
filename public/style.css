@@ -72,46 +72,46 @@
     font-family: "Josefin Slab";
     color: #25AAE1;
     font-size: 2.2em; }
-  .finance .wrapper {
+  .finance .donutWrapper {
     display: flex;
     margin: auto;
     align-items: center;
     justify-content: center; }
-    .finance .wrapper #donut {
+    .finance .donutWrapper #donut {
       width: 29rem;
       height: 29rem; }
-      .finance .wrapper #donut text {
+      .finance .donutWrapper #donut text {
         font-family: "Josefin Slab";
         font-size: 7rem;
         font-weight: 400;
         line-height: 16rem;
         fill: #25AAE1; }
-      .finance .wrapper #donut h2 {
+      .finance .donutWrapper #donut h2 {
         color: #25AAE1;
         font-size: 2em;
         font-family: "Josefin Slab";
         margin-bottom: 25px;
         margin-right: 50px;
         padding-right: 110px; }
-    .finance .wrapper #donut2 {
+    .finance .donutWrapper #donut2 {
       width: 20rem;
       height: 29rem; }
-      .finance .wrapper #donut2 text {
+      .finance .donutWrapper #donut2 text {
         font-family: "Josefin Slab";
         font-size: 7rem;
         font-weight: 400;
         line-height: 16rem;
         fill: #25AAE1; }
-      .finance .wrapper #donut2 h2 {
+      .finance .donutWrapper #donut2 h2 {
         color: #25AAE1;
         font-size: 2em;
         font-family: "Josefin Slab";
         margin-bottom: 25px;
         margin-right: 40px;
         padding-left: 35px; }
-    .finance .wrapper path.color0 {
+    .finance .donutWrapper path.color0 {
       fill: #25AAE1; }
-    .finance .wrapper path.color1 {
+    .finance .donutWrapper path.color1 {
       fill: #C1CED4; }
 
 .employmentViewContainer {
@@ -144,6 +144,10 @@
       font-size: 4em;
       font-family: "Josefin Slab";
       text-align: center; }
+    .employmentViewContainer #hiring path.color0 {
+      fill: #25AAE1; }
+    .employmentViewContainer #hiring path.color1 {
+      fill: #C1CED4; }
   .employmentViewContainer .counters {
     margin: 0 auto;
     text-align: center;
@@ -161,10 +165,36 @@
     .employmentViewContainer .counters span label {
       display: block;
       position: relative;
-      top: 2.7em;
+      top: 0px;
       text-align: center;
       font-size: 0.7em;
       color: #C1CED4; }
+  .employmentViewContainer .employers {
+    margin-top: 20px; }
+    .employmentViewContainer .employers h3 {
+      font-family: "Josefin Slab";
+      color: #25AAE1;
+      text-align: center;
+      font-size: 2em; }
+    .employmentViewContainer .employers h1 {
+      color: #C1CED4;
+      margin: 0 auto;
+      margin-top: 40px;
+      margin-bottom: 20px;
+      padding: 10px 10px 20px;
+      font-family: "Josefin Slab";
+      font-size: 4em;
+      text-align: center; }
+    .employmentViewContainer .employers table {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 30px; }
+      .employmentViewContainer .employers table img {
+        max-width: 200px;
+        max-height: 200px;
+        padding: 20px;
+        margin-right: 25px; }
 
 
 h2 {
@@ -204,15 +234,19 @@ h2 {
 .wrapper {
   background-image: url("./../images/wood_1.png");
   height: 100vh; }
-  .wrapper .info {
-    color: #C1CED4;
-    display: block;
-    margin: auto;
-    width: 70%;
-    font-size: 1.2em;
-    font-family: "Josefin Slab"; }
-    .wrapper .info .infoAbout {
-      text-align: center; }
+  .wrapper .infoCont {
+    background-image: url("./../images/wood_1.png");
+    width: 100%; }
+    .wrapper .infoCont .info {
+      background-image: url("./../images/wood_1.png");
+      color: #C1CED4;
+      display: block;
+      margin: auto;
+      width: 70%;
+      font-size: 1.2em;
+      font-family: "Josefin Slab"; }
+      .wrapper .infoCont .info .infoAbout {
+        text-align: center; }
   .wrapper .landingCont {
     padding-top: 10em;
     width: 85%;
@@ -541,7 +575,7 @@ body {
     width: 90%;
     font-family: "Josefin Slab"; }
   .main-nav a {
-    font-size: 1.4em;
+    font-size: 1.1em;
     font-weight: bold;
     display: inline-block;
     margin: 0 12px;
