@@ -144,6 +144,10 @@
       font-size: 4em;
       font-family: "Josefin Slab";
       text-align: center; }
+    .employmentViewContainer #hiring path.color0 {
+      fill: #25AAE1; }
+    .employmentViewContainer #hiring path.color1 {
+      fill: #C1CED4; }
   .employmentViewContainer .counters {
     margin: 0 auto;
     text-align: center;
@@ -161,10 +165,36 @@
     .employmentViewContainer .counters span label {
       display: block;
       position: relative;
-      top: 2.7em;
+      top: 0px;
       text-align: center;
       font-size: 0.7em;
       color: #C1CED4; }
+  .employmentViewContainer .employers {
+    margin-top: 20px; }
+    .employmentViewContainer .employers h3 {
+      font-family: "Josefin Slab";
+      color: #25AAE1;
+      text-align: center;
+      font-size: 2em; }
+    .employmentViewContainer .employers h1 {
+      color: #C1CED4;
+      margin: 0 auto;
+      margin-top: 40px;
+      margin-bottom: 20px;
+      padding: 10px 10px 20px;
+      font-family: "Josefin Slab";
+      font-size: 4em;
+      text-align: center; }
+    .employmentViewContainer .employers table {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 30px; }
+      .employmentViewContainer .employers table img {
+        max-width: 200px;
+        max-height: 200px;
+        padding: 20px;
+        margin-right: 25px; }
 
 
 h2 {
