@@ -234,15 +234,19 @@ h2 {
 .wrapper {
   background-image: url("./../images/wood_1.png");
   height: 100vh; }
-  .wrapper .info {
-    color: #C1CED4;
-    display: block;
-    margin: auto;
-    width: 70%;
-    font-size: 1.2em;
-    font-family: "Josefin Slab"; }
-    .wrapper .info .infoAbout {
-      text-align: center; }
+  .wrapper .infoCont {
+    background-image: url("./../images/wood_1.png");
+    width: 100%; }
+    .wrapper .infoCont .info {
+      background-image: url("./../images/wood_1.png");
+      color: #C1CED4;
+      display: block;
+      margin: auto;
+      width: 70%;
+      font-size: 1.2em;
+      font-family: "Josefin Slab"; }
+      .wrapper .infoCont .info .infoAbout {
+        text-align: center; }
   .wrapper .landingCont {
     padding-top: 10em;
     width: 85%;
