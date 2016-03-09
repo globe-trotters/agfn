@@ -35,52 +35,52 @@ angular.module('myApp', ['ui.router'])
       templateUrl: './js/views/adminView.html',
       controller: 'adminCtrl',
 
-      // resolve: {
-      //   user: function($state, loginService) {
-      //     return loginService.getCurrentUser()
-      //       .then(function(res) {
-      //         if (res.status != 200) {
-      //           console.log('brack');
-      //           alert('Unauthorized');
-      //           $state.go('login');
-      //
-      //         } else {
-      //           return res.data;
-      //         }
-      //       }, function(err) {
-      //         console.log('brack');
-      //         alert('Unauthorized');
-      //         $state.go('login');
-      //
-      //       });
-      //   }
-      // }
+      resolve: {
+        user: function($state, loginService) {
+          return loginService.getCurrentUser()
+            .then(function(res) {
+              if (res.status != 200) {
+                console.log('brack');
+                alert('Unauthorized');
+                $state.go('login');
+
+              } else {
+                return res.data;
+              }
+            }, function(err) {
+              console.log('brack');
+              alert('Unauthorized');
+              $state.go('login');
+
+            });
+        }
+      }
     })
     .state('adminEdit', {
       url: '/edit',
       templateUrl: './js/views/adminEdit.html',
       controller: 'adminCtrl',
 
-      // resolve: {
-      //   user: function($state, loginService) {
-      //     return loginService.getCurrentUser()
-      //       .then(function(res) {
-      //         if (res.status != 200) {
-      //           console.log('brack');
-      //           alert('Unauthorized');
-      //           $state.go('login');
-      //
-      //         } else {
-      //           return res.data;
-      //         }
-      //       }, function(err) {
-      //         console.log('brack');
-      //         alert('Unauthorized');
-      //         $state.go('login');
-      //
-      //       });
-      //   }
-      // }
+      resolve: {
+        user: function($state, loginService) {
+          return loginService.getCurrentUser()
+            .then(function(res) {
+              if (res.status != 200) {
+                console.log('brack');
+                alert('Unauthorized');
+                $state.go('login');
+
+              } else {
+                return res.data;
+              }
+            }, function(err) {
+              console.log('brack');
+              alert('Unauthorized');
+              $state.go('login');
+
+            });
+        }
+      }
     });
   $urlRouterProvider.otherwise('/home');
 })
