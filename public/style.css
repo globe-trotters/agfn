@@ -392,6 +392,7 @@ body {
   background-image: url("./images/stars.jpg");
   font-size: 1em;
   position: relative;
+  width: 100vw;
   box-sizing: border-box;
   min-height: 100%;
   margin: 0 auto;
@@ -406,14 +407,18 @@ body {
   height: 100%; }
   .mapCont .head {
     position: fixed;
-    top: 4.5em;
-    padding-left: 1em;
-    width: 45vw; }
+    top: 100px;
+    padding-left: 20px;
+    width: 460px; }
+    .mapCont .head i {
+      margin-left: 5px;
+      margin-bottom: 20px; }
     .mapCont .head h2 {
       color: #fff;
-      font-family: 'Open Sans Condensed', sans-serif;
+      font-family: "Josefin Slab";
       margin: 0;
-      font-size: 44px; }
+      font-size: 40px;
+      padding-bottom: 10px; }
     .mapCont .head .moreinfo {
       position: fixed;
       top: 0;
@@ -431,11 +436,11 @@ body {
       text-align: center; }
     .mapCont .head h2 {
       color: #fff;
-      font-family: 'Open Sans Condensed', sans-serif;
+      font-family: "Josefin Slab";
       margin: 0;
-      font-size: 44px; }
+      font-size: 40px; }
     .mapCont .head p {
-      font-family: 'Open Sans Condensed', sans-serif;
+      font-family: "Josefin Slab";
       font-size: 20px;
       font-weight: bold; }
     .mapCont .head .infoexit {
@@ -450,23 +455,23 @@ body {
     .mapCont .head .infoexit:hover {
       color: #fff;
       border-bottom: 2px solid #fff; }
-  .mapCont .zoom {
-    position: fixed;
-    margin: 20px;
-    width: 3em;
-    top: 20em; }
+    .mapCont .head .zoom {
+      margin-left: 5px; }
+      .mapCont .head .zoom i {
+        margin: 0; }
   .mapCont .scrollbar {
-    height: 2em;
+    height: 15px;
     text-align: center; }
     .mapCont .scrollbar .timeplay i {
       display: inline-block;
       float: left;
-      margin-top: 0.7em;
-      margin-left: 30px; }
+      margin-top: 5px;
+      margin-left: 20px; }
     .mapCont .scrollbar .timeplay h2 {
       display: inline-block;
+      float: right;
       color: white;
-      font-family: 'Open Sans Condensed', sans-serif;
+      font-family: "Josefin Slab";
       font-size: 2.7em;
       margin: 0; }
   .mapCont i {
@@ -474,14 +479,13 @@ body {
     cursor: pointer; }
   .mapCont h5 {
     color: #fff;
-    font-family: 'Open Sans Condensed', sans-serif;
+    font-family: "Josefin Slab";
     font-size: 1em;
     margin: 0;
     margin-left: 5px;
     display: inline-block; }
   .mapCont .earth {
-    width: 880px;
-    float: left;
+    width: 100%;
     /*location point*/
     /*arcs*/
     /*connect arc to shadow*/ }
@@ -514,29 +518,45 @@ body {
     width: 33%;
     height: 100vh;
     position: fixed;
-    top: 6em;
+    top: 75px;
     right: 0; }
     .mapCont .bars h2 {
-      color: #1E1D1D;
-      font-family: 'Open Sans Condensed', sans-serif;
+      color: #fff;
+      font-family: "Josefin Slab";
       margin: 0;
       word-wrap: break-word;
-      background-color: rgba(193, 206, 212, 0.67);
       min-width: 4em;
-      text-align: center; }
+      text-align: center;
+      font-size: 6vh; }
     .mapCont .bars .barTitle {
       font-size: 0.8em; }
+    .mapCont .bars .states {
+      background-color: #C1CED4; }
+    .mapCont .bars .retention {
+      background-color: #C1CED4; }
     .mapCont .bars div {
       clear: both;
       float: right;
-      margin: 0.7em 0;
-      padding: 0.8em;
-      background-color: #C1CED4;
+      margin: 2vh 0;
+      padding: 2vh;
+      background-color: #25AAE1;
       border-top-left-radius: 20px;
       border-bottom-left-radius: 20px; }
     .mapCont .bars div h2 {
       float: right;
       width: max-content; }
+
+@media (max-width: 1200px) {
+  .mapCont .earth {
+    position: absolute;
+    top: 0;
+    left: -50vh;
+    z-index: -100; } }
+
+@media (max-width: 1000px) {
+  .mapCont .bars {
+    margin-top: 200px;
+    width: 75%; } }
 
 .main-nav {
   text-align: center;

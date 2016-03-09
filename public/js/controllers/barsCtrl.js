@@ -74,7 +74,7 @@ angular.module("myApp").controller("barsCtrl", function($scope, $rootScope, $ele
                 retentionCount++;
               }
             }
-            
+
           }
         }
       });
@@ -124,9 +124,10 @@ angular.module("myApp").controller("barsCtrl", function($scope, $rootScope, $ele
         }
         return (d/100)*parentWidth + 'px';
       })
-      .style('background-color', function(d,i){
-        return d3.hsl(i/$scope.data.length*360,0.5,0.5);
-      });
+      // .style('background-color', function(d,i){
+      //   return d3.hsl(i/$scope.data.length*360,0.5,0.5);
+      // })
+      ;
     };
 
 });

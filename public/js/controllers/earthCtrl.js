@@ -5,20 +5,20 @@ angular.module("myApp").controller("earthCtrl", function($scope, $window, $inter
   var linkcamp = [], //coordinates for from to camp
       linkjob  = [], //coordinates for camp to job
       arcLines = [], //coordinates for arc ashadows
-      scale    = 380, //scale of earth
-      width    = 1800, //earth svg width
-      height   = 1000; //earth svg height
+      scale    = window.screen.height / 2, //scale of earth
+      width    = window.screen.width, //earth svg width
+      height   = window.screen.height; //earth svg height
 
   //view of earth
   var proj = d3.geo.orthographic()
-      .translate([width / 3.5, height / 2])//position of earth on page
+      .translate([width / 2, height / 2])//position of earth on page
       .clipAngle(90)//determines projection of map on globe
       .scale(scale) //scale of globe
       .rotate([104,-40]);//size of projection
 
   //view of sky
   var sky = d3.geo.orthographic()
-      .translate([width / 3.5, height / 2])//position of sky on page
+      .translate([width / 2, height / 2])//position of sky on page
       .clipAngle(90) //equal projectio as earth
       .scale(scale*1.2) //scale of sky, slightly bigger than earth
       .rotate([104,-40]);//size of projection
@@ -111,7 +111,7 @@ angular.module("myApp").controller("earthCtrl", function($scope, $window, $inter
 
   //of ocean
     svg.append("circle")
-      .attr("cx", width / 3.5)
+      .attr("cx", width / 2)
       .attr("cy", height / 2)
       .attr("r", proj.scale())
       .attr("class", "noclicks")
@@ -131,7 +131,7 @@ angular.module("myApp").controller("earthCtrl", function($scope, $window, $inter
 
   //of globe highlight
     svg.append("circle")
-      .attr("cx", width / 3.5)
+      .attr("cx", width / 2)
       .attr("cy", height / 2)
       .attr("r", proj.scale())
       .attr("class","noclicks")
@@ -139,7 +139,7 @@ angular.module("myApp").controller("earthCtrl", function($scope, $window, $inter
 
   //of globe shading
     svg.append("circle")
-      .attr("cx", width / 3.5)
+      .attr("cx", width / 2)
       .attr("cy", height / 2)
       .attr("r", proj.scale())
       .attr("class","noclicks")
