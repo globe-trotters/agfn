@@ -1,6 +1,8 @@
 @import 'variables';
 body {
-     
+
+
+
 
 .mapCont {
     background-image: $galaxyBackground;
@@ -66,7 +68,7 @@ body {
             width: 3em;
             top: 20em;
         }
-    
+
     .scrollbar {
         // position: fixed;
         // top: 20vh;
@@ -189,5 +191,4 @@ body {
             width: max-content;
         }
     }
-}
 }
