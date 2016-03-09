@@ -2,10 +2,11 @@
 
 
   <div class="adminStyle">
+    <div class="cohort">
 <div class="adminBtns">
-  <button ng-click="logout()">logout</button>
-  <button ui-sref="adminEdit">Edit Existing Cohorts</button>
-  <button ui-sref="admin">Add Cohort</button>
+  <button class="adminButton" ng-click="logout()">logout</button>
+  <button class="adminButton" ui-sref="adminEdit">Edit Existing Cohorts</button>
+  <button class="adminButton" ui-sref="admin">Add Cohort</button>
 </div>
   <center>
     <h1>Add New Cohort Data</h1></center>
@@ -22,10 +23,18 @@
   <input class="typeInput" type="date" placeholder="End Date" ng-model="newCohort.endBootcamp">
   <br/>
 
-  <hr>
 
-  <center>
-    <h1>Student(s)</h1></center>
+</div>
+
+<div class="students">
+
+    <div class="adminBtns">
+      <button class="adminButton" ng-click="submitNewCohort( newCohort )" type="submit">
+        Submit New Cohort
+      </button>
+</div>
+<center>
+    <h1>Students</h1></center>
   <!-- ///dropdown box for cohort ref(newStudent.cohort)/// ??? -->
   <!-- <select class="typeInput" ng-options="cohort as cohort.display for cohort in cohorts track by cohort._id" ng-model="newCohort.cohort"></select>
   </select> -->
@@ -37,42 +46,35 @@
   <input type="number" max="40" min="1" ng-model="show" ng-change="totalChange(show)">
 </center>
 
-  <div class="studentDiv" ng-repeat='student in students track by $index'>
-    <h3> #{{$index + 1}} </h3>
-    <input class="typeInput" placeholder="Student Name" ng-model="student.name">
-  <br/>
-  <home-search home-data="student.homeData"></home-search>
-  <br/>
-  <after-search after-data="student.afterData"></after-search>
-  <br/>
-  <center>
-    <strong>Is This Student Employed?</strong>
-    <select class="selectJob" ng-model="student.job">
-      <option value="true">Yep</option>
-      <option value="false">Nope</option>
-    </select>
-  </center>
-<!-- ///end student div/// -->
+
+
+</div>
+  <!-- /////////admin style div ends///////////// -->
 </div>
 
-  <!-- //////////////////////// -->
-
-  <center>
-    <button class="adminButton" ng-click="submitNewCohort( newCohort )" type="submit">
-      Submit New Cohort
-    </button>
-  </center>
 
 
 
-
-
-
-
-
-
-
-  <!-- /////////admin style div ends///////////// -->
+<div class="newStudents">
+  <div class="anotherDiv">
+<div class="studentDiv" ng-repeat='student in students track by $index'>
+  <h3> #{{$index + 1}} </h3>
+  <input class="typeInput" placeholder="Student Name" ng-model="student.name">
+<br/>
+<home-search home-data="student.homeData"></home-search>
+<br/>
+<after-search after-data="student.afterData"></after-search>
+<br/>
+<center>
+  <strong>Is This Student Employed?</strong>
+  <select class="selectJob" ng-model="student.job">
+    <option value="true">Yep</option>
+    <option value="false">Nope</option>
+  </select>
+</center>
+<!-- ///end student div/// -->
+</div>
+</div>
 </div>
 <!-- /////////admin container div ends///////////// -->
 </div>
