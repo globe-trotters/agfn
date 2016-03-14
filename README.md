@@ -21,4 +21,4 @@ Feel free to fork and submit a pull request as desired.
 
 ## License
 
-MIT?
+None
