@@ -19,7 +19,7 @@ This project is a collaborative effort of four junior developers using the MEAN 
 
 ## Contributors
 Please feel free to reach out to anyone in the group for questions regarding DevGlobe, DevMountain, or potential employment.
-* [Adam McNevin]("https://www.linkedin.com/in/adam-mcnevin-77220549")
-* [Geordyn Ader]("https://www.linkedin.com/in/geordyn")
-* [Fred Nyambati]("https://www.linkedin.com/in/fnyambati")
-* [Nicholas Marucci]("https://www.linkedin.com/in/nickmarucci")
+* [Adam McNevin]("https://linkedin.com/in/adam-mcnevin-77220549")
+* [Geordyn Ader]("https://linkedin.com/in/geordyn")
+* [Fred Nyambati]("https://linkedin.com/in/fnyambati")
+* [Nicholas Marucci]("https://linkedin.com/in/nickmarucci")
