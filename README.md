@@ -1,5 +1,4 @@
 # DevGlobe
-
 This project is a collaborative effort of four junior developers using the MEAN Stack. DevGlobe primarily uses D3.js to display past [DevMountain]("http://devmounta.in") students' "impact on the world" by mapping the locations of their jobs found after DevMountain on an interactive globe. In addition, DevGlobe compares the costs of a typical 4 year University and other bootcamps to show how much money DevMountain's courses can help students save.
 
 ## Live Site
